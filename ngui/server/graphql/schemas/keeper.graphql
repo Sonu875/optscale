@@ -1,0 +1,30 @@
+type Event {
+  time: Int
+  level: String
+  evt_class: String
+  object_id: String
+  object_type: String
+  object_name: String
+  organization_id: String
+  description: String
+  ack: Boolean
+  localized: String
+  id: String
+  read: Boolean
+  acknowledged_user: String
+}
+
+# TODO: circle back on types - required types must be exclamated (see organizationId below and generated resolversTypes)
+input RequestParam {
+  limit: Int = 80
+  level: String
+  timeStart: Int
+  timeEnd: Int
+  lastId: String
+  includeRead: Boolean = true
+  readOnGet: Boolean = true
+}
+
+type Query {
+  events(organizationId: ID!, requestParams: RequestParam): [Event]
+}

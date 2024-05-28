@@ -1,0 +1,5 @@
+ARG BUILDTAG=build
+FROM diworker:${BUILDTAG}
+
+COPY diworker/test-requirements.txt diworker/.pylintrc ./diworker/
+RUN pip install --no-cache-dir -r diworker/test-requirements.txt
