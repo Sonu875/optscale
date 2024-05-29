@@ -78,7 +78,7 @@ class CleanMongoDB(object):
 
     def get_session(self):
         engine = create_engine(
-            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4' %
+            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4&collation=utf8mb4_unicode_ci' %
             self.config_client.rest_db_params(),
             pool_size=200,
             max_overflow=25,

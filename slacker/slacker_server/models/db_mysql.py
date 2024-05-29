@@ -7,7 +7,7 @@ from slacker.slacker_server.models.migrator import Migrator
 class MySQLDB(BaseDB):
     def _get_engine(self):
         return create_engine(
-            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4' %
+            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4&collation=utf8mb4_unicode_ci' %
             self._config.slacker_db_params(),
             # inactive connections are invalidated in ~10 minutes (600 seconds)
             pool_recycle=500,

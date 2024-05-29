@@ -9,7 +9,7 @@ class MySQLDB(BaseDB):
         user, password, host, db = self._config.auth_db_params()
         return create_engine(
             f'mysql+mysqlconnector://{user}:{password}@{host}/{db}'
-            f'?charset=utf8mb4',
+            f'?charset=utf8mb4&collation=utf8mb4_unicode_ci',
             # inactive connections are invalidated by server
             # in ~10 minutes (600 seconds)
             pool_recycle=500,

@@ -26,14 +26,14 @@ TAGS = {"public": "yes"}
 
 def _get_session_to_auth_db(config_client):
     user, password, host, db_name = config_client.auth_db_params()
-    auth_url = f'mysql+mysqlconnector://{user}:{password}@{host}/{db_name}?charset=utf8mb4'
+    auth_url = f'mysql+mysqlconnector://{user}:{password}@{host}/{db_name}?charset=utf8mb4&collation=utf8mb4_unicode_ci'
     engine = create_engine(auth_url, encoding='utf-8')
     return sessionmaker(bind=engine)()
 
 
 def _get_session_to_my_db(config_client):
     user, password, host, db_name = config_client.rest_db_params()
-    mydb_url = f'mysql+mysqlconnector://{user}:{password}@{host}/{db_name}?charset=utf8mb4'
+    mydb_url = f'mysql+mysqlconnector://{user}:{password}@{host}/{db_name}?charset=utf8mb4&collation=utf8mb4_unicode_ci'
     engine = create_engine(mydb_url, encoding='utf-8')
     return sessionmaker(bind=engine)()
 

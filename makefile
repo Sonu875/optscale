@@ -1,23 +1,31 @@
-# Define a target for building the source
-.PHONY: build
+# Define variables
+DOCKER_IMAGE_REST_API=rest_api-app
+DOCKER_IMAGE_ETCD=etcd:local
+DOCKER_IMAGE_MARIADB=mariadb:local
+HELM_REPO_NGINX_STABLE=https://helm.nginx.com/stable
+NGINX_RELEASE_NAME=nginx-ingress
+OPTSCALE_RELEASE_NAME=optscale
+
+# Targets
+.PHONY: all clean build docker helm kubectl
+
+all: clean build docker helm kubectl
+
+clean:
+	helm delete optscale
+
 build:
-	@echo "Running build script..."
 	source build.sh
 
-# Define a target for applying the Kubernetes deployment
-.PHONY: apply
-apply:
-	@echo "Applying Kubernetes deployment..."
-	kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.44.0/deploy/static/provider/cloud/deploy.yaml
+docker:
+	docker build rest_api -t $(DOCKER_IMAGE_REST_API)
+	docker pull hystax/etcd:2023110701-public -t $(DOCKER_IMAGE_ETCD)
+	docker pull mariadb -t $(DOCKER_IMAGE_MARIADB)
 
-# Define a target for installing Helm chart
-.PHONY: install
-install:
-	@echo "Installing Helm chart..."
-	helm install optscale optscale-deploy/optscale
+helm:
+	helm repo add nginx-stable $(HELM_REPO_NGINX_STABLE)
+	helm install $(NGINX_RELEASE_NAME) nginx-stable/nginx-ingress --set rbac.create=true
+	helm install $(OPTSCALE_RELEASE_NAME) optscale-deploy/optscale
 
-# Define a target that runs all commands in sequence
-.PHONY: all
-all: build apply install
-	@echo "All commands executed successfully."
-
+kubectl:
+	kubectl port-forward svc/nginx-ingress-controller 8002:80

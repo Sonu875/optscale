@@ -27,7 +27,7 @@ TAGS = {"public": "yes"}
 
 def _get_session_to_auth_db(config_cl):
     user, password, host, db_name = config_cl.auth_db_params()
-    auth_url = 'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4' % (
+    auth_url = 'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4&collation=utf8mb4_unicode_ci' % (
         user, password, host, db_name)
     engine = create_engine(auth_url, encoding='utf-8')
     return sessionmaker(bind=engine)()
@@ -35,7 +35,7 @@ def _get_session_to_auth_db(config_cl):
 
 def _get_session_to_my_db(config_cl):
     user, password, host, db_name = config_cl.rest_db_params()
-    mydb_url = 'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4' % (
+    mydb_url = 'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4&collation=utf8mb4_unicode_ci' % (
         user, password, host, db_name)
     engine = create_engine(mydb_url, encoding='utf-8')
     return sessionmaker(bind=engine)()

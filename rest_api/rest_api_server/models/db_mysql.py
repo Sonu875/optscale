@@ -9,7 +9,7 @@ from rest_api.rest_api_server.models.migrator import Migrator
 class MySQLDB(BaseDB):
     def _get_engine(self):
         return create_engine(
-            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4' %
+            'mysql+mysqlconnector://%s:%s@%s/%s?charset=utf8mb4&collation=utf8mb4_unicode_ci' %
             self._config.rest_db_params(),
             pool_size=200,
             max_overflow=25,
