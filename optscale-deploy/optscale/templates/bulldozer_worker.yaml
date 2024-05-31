@@ -24,7 +24,6 @@ spec:
 {{ include "wait_for_service" .Values.rabbitmq | indent 6 }}
 {{ include "wait_for_service" .Values.rest_api | indent 6 }}
 {{ include "wait_for_service" .Values.bulldozer_api | indent 6 }}
-{{ include "wait_for_service" .Values.arcee | indent 6 }}
       containers:
       - name: {{ $config.name }}
         image: "{{ $config.image.repository }}:{{ $config.image.tag }}"
