@@ -1,3 +1,0 @@
-import AcquireEnvironmentDropdownButtonContainer from "./AcquireEnvironmentDropdownButtonContainer";
-
-export default AcquireEnvironmentDropdownButtonContainer;

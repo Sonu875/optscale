@@ -1,2 +1,0 @@
-class AtlassianClientException(Exception):
-    pass
