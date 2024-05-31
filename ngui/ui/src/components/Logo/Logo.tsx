@@ -8,6 +8,7 @@ import logoShortWhite from "assets/logo/logo_short_white.svg";
 import logoShortWhiteDemo from "assets/logo/logo_short_white_demo.svg";
 import logoFullWhite from "assets/logo/logo_white.svg";
 import logoFullWhiteDemo from "assets/logo/logo_white_demo.svg";
+import logoCipeDemo from "assets/logo/logo_cipe_demo_2.svg";
 import { HOME } from "urls";
 import { LOGO_SIZE } from "utils/constants";
 import { capitalize } from "utils/strings";
@@ -19,6 +20,7 @@ const logosMap = {
   logoShortDemo,
   logoFullWhiteDemo,
   logoShortWhiteDemo,
+  logoCipeDemo,
   logo
 };
 
@@ -29,7 +31,7 @@ const getLogo = (demo, white, size) => {
   if (white) {
     return logosMap[`logo${capitalize(size)}White`];
   }
-  return logosMap.logo;
+  return logosMap.logoCipeDemo;
 };
 
 const Logo = ({
