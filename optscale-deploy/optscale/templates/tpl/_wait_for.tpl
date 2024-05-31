@@ -8,7 +8,7 @@
       secretKeyRef:
         name: mariadb-secret
         key: password
-  command: ['sh', '-c', 'apt-get update && apt-get install -y mysql-client && until mysql --connect-timeout=2 -h {{ .Values.mariadb.service.name }}.default.svc.cluster.local -p$MYSQL_ROOT_PASSWORD -e "SELECT 1"; do sleep 2; done']
+  command: ['sh', '-c', ' apt-get install -y mysql-client && until mysql --connect-timeout=2 -h {{ .Values.mariadb.service.name }}.default.svc.cluster.local -p$MYSQL_ROOT_PASSWORD -e "SELECT 1"; do sleep 2; done']
 {{- end -}}
 
 {{- define "wait_for_service" -}}

@@ -133,9 +133,9 @@ spec:
             - containerPort: 19291
               name: remote
               protocol: TCP
-          resources:
-            limits:
-              memory: {{ $config.memory_limit }}Mi
+          # resources:
+          #   limits:
+          #     memory: {{ $config.memory_limit }}Mi
           command:
             - thanos
           args:

@@ -151,8 +151,8 @@ const Greeter = ({ form, oAuthForm }: GreeterProps) => {
       key: "link",
       children: (
         <div className={classes.linkWrapper}>
-          <LiveDemoButton onClick={() => navigate(LIVE_DEMO)} />
-          <OptScaleLink />
+          {/* <LiveDemoButton onClick={() => navigate(LIVE_DEMO)} /> */}
+          {/* <OptScaleLink /> */}
         </div>
       )
     },
@@ -174,17 +174,17 @@ const Greeter = ({ form, oAuthForm }: GreeterProps) => {
     {
       key: "bannerAndText",
       className: classes.centeredFlexColumnDirection,
-      children: <ImagesWithCaptions />
+      children: <></>
     },
     {
       key: "customers",
       className: classes.centeredFlexColumnDirection,
-      children: <CustomersGallery />
+      children: <></>
     },
     {
       key: "integrations",
       className: classes.centeredFlexColumnDirection,
-      children: <IntegrationsGallery />
+      children: <></>
     }
   ];
 
