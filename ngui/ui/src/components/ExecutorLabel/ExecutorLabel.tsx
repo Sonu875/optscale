@@ -3,7 +3,7 @@ import CloudTypeIcon from "components/CloudTypeIcon";
 import IconLabel from "components/IconLabel";
 import { AWS_CNR, AZURE_CNR } from "utils/constants";
 
-// ML profiling: map cloud types to OptScale data source types
+// ML profiling: map cloud types to OptiCloud data source types
 const PLATFORM_TYPE_TO_DATA_SOURCE_TYPE = Object.freeze({
   azure: AZURE_CNR,
   aws: AWS_CNR

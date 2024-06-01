@@ -227,6 +227,10 @@ class Aws(S3CloudMixin):
                 DEFAULT_BASE_URL, 'ec2', region,
                 'ElasticIpDetails:AllocationId', resource_value),
         }
+        print("test.................")
+        print(BUCKET_CLOUD_LINK_PATTERN % (
+                DEFAULT_BASE_URL, 's3', resource_value, region))
+        print("test..................")
         return cloud_link_map.get(resource_type)
 
     def _set_cloud_link(self, resource_obj, region):

@@ -4,8 +4,8 @@ import { addons } from "@storybook/addons";
 addons.setConfig({
   theme: create({
     base: "light",
-    brandTitle: "Hystax OptScale",
-    brandUrl: "https://optscale.hystax.com/",
+    brandTitle: "OptiCloud",
+    brandUrl: "",
     barSelectedColor: "#184286"
   })
 });

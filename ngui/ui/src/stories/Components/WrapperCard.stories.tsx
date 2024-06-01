@@ -9,7 +9,7 @@ export default {
   }
 };
 
-export const basic = () => <WrapperCard title="Optscale" buttonText="Go to OptScale" />;
+export const basic = () => <WrapperCard title="Optscale" buttonText="Go to OptiCloud" />;
 
 export const withText = () => (
   <WrapperCard title="Optscale" button={{ show: true, messageId: "goToDashboard" }}>

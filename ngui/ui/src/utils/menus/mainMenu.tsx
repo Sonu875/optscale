@@ -30,7 +30,7 @@ import users from "./usersMenuItem";
 export default [
   {
     id: MAIN_MENU_SECTION_IDS.HOME,
-    items: [home, recommendations, resources, pools, environments]
+    items: [home, recommendations, resources, pools]
   },
   {
     id: MAIN_MENU_SECTION_IDS.FINOPS,
@@ -47,7 +47,7 @@ export default [
   {
     id: MAIN_MENU_SECTION_IDS.POLICIES,
     menuSectionTitle: <MainMenuSectionTitle messageId="policies" />,
-    items: [anomalies, quotas, taggingPolicies, resourceLifecycle, powerSchedulesMenuItem],
+    items: [anomalies],
     mode: OPTSCALE_MODE.FINOPS
   },
   {
@@ -59,6 +59,6 @@ export default [
   {
     id: MAIN_MENU_SECTION_IDS.SYSTEM,
     menuSectionTitle: <MainMenuSectionTitle messageId="system" />,
-    items: [users, dataSources, integrations, events, settings]
+    items: [users, dataSources, events, settings]
   }
 ];

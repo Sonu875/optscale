@@ -38,7 +38,7 @@ const linksDefinition = {
   "Hystax documentation urls": [
     {
       link: DOCS_HYSTAX_OPTSCALE,
-      usages: ['Page title -> "DOCUMENTATION" button', '"OptScale Privacy Policy" alert dialog']
+      usages: ['Page title -> "DOCUMENTATION" button', '"OptiCloud Privacy Policy" alert dialog']
     },
     {
       link: DOCS_HYSTAX_AUTO_BILLING_AWS,
