@@ -13,4 +13,4 @@ The RI/SP Coverage page gives you a visualization of your compute usage covered 
 - Hover over the graph to see detailed numbers for each day.
 - Switch between "Usage" and "Expenses" to view different aspects of your RI/SP utilization.
 
-Want to learn more? Check out this post - [How to use OptScale to optimize RI/SP usage](https://hystax.com/how-to-use-optscale-to-optimize-ri-sp-usage-for-ml-ai-teams/)
+Want to learn more? Check out this post - [How to use OptiCloud to optimize RI/SP usage](https://hystax.com/how-to-use-optscale-to-optimize-ri-sp-usage-for-ml-ai-teams/)

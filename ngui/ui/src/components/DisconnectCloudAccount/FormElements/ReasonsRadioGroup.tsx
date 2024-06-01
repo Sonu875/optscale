@@ -14,7 +14,7 @@ export const REASONS = {
 export const getReasonValue = (reason) =>
   ({
     [REASONS.SAVINGS]: "The product does not give enough cost savings",
-    [REASONS.FEATURES]: "OptScale does not work as expected / not enough features",
+    [REASONS.FEATURES]: "OptiCloud does not work as expected / not enough features",
     [REASONS.GOAL]: "I have achieved my goal and am not interested in it anymore",
     [REASONS.OTHER]: "Other"
   })[reason];

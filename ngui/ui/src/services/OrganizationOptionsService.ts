@@ -72,7 +72,7 @@ const useGetOption = () => {
   return { isGetOrganizationOptionLoading: isLoading, value: jsonValue, getOption };
 };
 
-// OptScale mode is a special option, it is "global", meaning that other components visibility might rely on it
+// OptiCloud mode is a special option, it is "global", meaning that other components visibility might rely on it
 // They are wrapped with ModeWrapper, which might cause side effects. One that is known is a conflict between optscale_mode and other options.
 // This is a "quick" fix, the implementation will most likely to be changed once we migrate to Apollo and implement a new initialization process.
 // Note that there is no name passed to useApiState intentionally.

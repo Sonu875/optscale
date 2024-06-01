@@ -1,4 +1,4 @@
 apiVersion: v1
-description: A Helm chart for OptScale on Kubernetes
-name: optscale
+description: A Helm chart for Cloud cost on Kubernetes
+name: opticloud
 version: 0.1.0

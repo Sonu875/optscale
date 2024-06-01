@@ -44,7 +44,7 @@ spec:
 
       containers:
       - name: {{ $config.name }}
-        image: rest_api-app
+        image: rest_api-app:local
         imagePullPolicy: {{ $config.image.pullPolicy }}
         ports:
         - containerPort: {{ $config.service.internalPort }}
