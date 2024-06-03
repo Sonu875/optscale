@@ -6,9 +6,9 @@ from keeper.report_server.exceptions import Err
 from keeper.report_server.utils import Config
 from keeper.report_server.handlers.base import BaseAuthHandler
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
-from optscale_client.auth_client.client_v2 import Client as AuthClient
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
 
 
 LOG = logging.getLogger(__name__)

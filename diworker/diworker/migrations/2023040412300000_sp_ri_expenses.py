@@ -6,7 +6,7 @@ from dateutil.relativedelta import relativedelta
 from diworker.diworker.importers.aws import AWSReportImporter
 from diworker.diworker.migrations.base import BaseMigration
 from pymongo import UpdateOne
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 """
 Regenerate expenses for Reserved Instances and Savings Plan resources:

@@ -24,7 +24,7 @@ const Jira = ({
       title={<Title icon={<JiraIcon />} label={<FormattedMessage id="jira" />} />}
       button={
         <ButtonLoader
-          messageId="getOptScaleJiraApp"
+          messageId="getOptiCloudJiraApp"
           isLoading={isGetJiraOrganizationStatusLoading}
           startIcon={<JiraIcon />}
           color="primary"

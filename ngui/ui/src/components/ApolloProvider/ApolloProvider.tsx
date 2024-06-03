@@ -29,7 +29,7 @@ const ApolloClientProvider = ({ children }) => {
   const httpLink = new HttpLink({
     uri: `${httpBase}/api`,
     headers: {
-      "x-optscale-token": token
+      "x-opticloud-token": token
     }
   });
 

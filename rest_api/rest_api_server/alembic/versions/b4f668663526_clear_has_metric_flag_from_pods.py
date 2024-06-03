@@ -9,7 +9,7 @@ import os
 import sqlalchemy as sa
 from alembic import op
 from sqlalchemy.orm import Session
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 from pymongo import MongoClient, UpdateMany
 
 

@@ -1,7 +1,7 @@
 from katara.katara_worker.consts import CURRENCY_MAP
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 class Base(object):

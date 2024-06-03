@@ -3,7 +3,6 @@ import { SCOPE_TYPES } from "utils/constants";
 import { useIsAllowed, useIsAllowedForSome } from "./useAllowedActions";
 import { useApiData } from "./useApiData";
 
-// TODO: There are thoughts to change the approach here, to make it more readable and flexible. The discussed options can be seen at the link - https://gitlab.com/hystax/ngui/-/merge_requests/1669
 const getAllowedActionsConfiguration = (employeeId, resourceId, currentEmployeeId) => {
   if (!employeeId) {
     return { requiredActions: ["MANAGE_RESOURCES"] };

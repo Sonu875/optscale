@@ -7,7 +7,7 @@ import pydevd_pycharm
 from etcd import Lock as EtcdLock
 from tornado.web import RedirectHandler
 
-import optscale_client.config_client.client
+import opticloud_client.config_client.client
 
 
 import rest_api.rest_api_server.handlers.v1 as h_v1
@@ -542,7 +542,7 @@ def get_handler_version(h_v, handler, default_version=h_v1):
 
 
 def make_app(db_type, etcd_host, etcd_port, wait=False):
-    config_cl = optscale_client.config_client.client.Client(
+    config_cl = opticloud_client.config_client.client.Client(
         host=etcd_host, port=etcd_port)
     if wait:
         config_cl.wait_configured()

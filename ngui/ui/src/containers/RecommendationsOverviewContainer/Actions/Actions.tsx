@@ -8,7 +8,7 @@ import { FormattedMessage } from "react-intl";
 import IconButton from "components/IconButton";
 import MailTo from "components/MailTo";
 import Tooltip from "components/Tooltip";
-import { DOCS_HYSTAX_CLEANUP_SCRIPTS, EMAIL_SALES } from "urls";
+import { DOCS_CIPE_CLEANUP_SCRIPTS, EMAIL_SALES } from "urls";
 import { Menu } from "../RecommendationCard";
 import { useDownloadCleanupScripts, useDownloadItems, usePinItems, useSettingItems } from "./hooks";
 
@@ -24,7 +24,7 @@ const DownloadCleanupScripts = ({ recommendation }) => {
           id="cleanupScriptDescription"
           values={{
             link: (chunks) => (
-              <Link href={DOCS_HYSTAX_CLEANUP_SCRIPTS} data-test-id="link_cleanup_script" target="_blank" rel="noopener">
+              <Link href={DOCS_CIPE_CLEANUP_SCRIPTS} data-test-id="link_cleanup_script" target="_blank" rel="noopener">
                 {chunks}
               </Link>
             )

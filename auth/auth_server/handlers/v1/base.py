@@ -7,9 +7,9 @@ from auth.auth_server.exceptions import Err
 from auth.auth_server.models.db_base import BaseDB
 from auth.auth_server.utils import ModelEncoder, run_task
 
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   UnauthorizedException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 LOG = logging.getLogger(__name__)
 

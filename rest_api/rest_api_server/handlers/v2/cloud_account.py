@@ -1,8 +1,8 @@
 import json
 
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   ForbiddenException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.models.enums import CloudTypes
 from rest_api.rest_api_server.controllers.cloud_account import CloudAccountAsyncController
 from rest_api.rest_api_server.exceptions import Err

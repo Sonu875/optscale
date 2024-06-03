@@ -7,8 +7,8 @@ from concurrent.futures import ThreadPoolExecutor
 
 from keeper.report_server.exceptions import Err
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
-from optscale_client.config_client.client import Client as ConfigClient
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
+from opticloud_client.config_client.client import Client as ConfigClient
 
 
 MAX_32_INT = 2**31 - 1

@@ -9,7 +9,7 @@ from keeper.report_server.model import Feedback
 from keeper.report_server.controllers.base_async import BaseAsyncControllerWrapper
 from keeper.report_server.controllers.event_base import EventBaseController
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 
 LOG = logging.getLogger(__name__)

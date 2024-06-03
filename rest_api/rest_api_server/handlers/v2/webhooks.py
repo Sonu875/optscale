@@ -9,7 +9,7 @@ from rest_api.rest_api_server.handlers.v1.base_async import (
     BaseAsyncCollectionHandler, BaseAsyncItemHandler)
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.models.types import WebhookObjectTypes, WebhookActionTypes
 from rest_api.rest_api_server.utils import object_to_xlsx
 

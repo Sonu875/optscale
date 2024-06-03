@@ -12,13 +12,13 @@ from keeper.report_server.handlers.v2.receive import (
     ReceiveHandler,
 )
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     UnauthorizedException,
     NotFoundException,
     WrongArgumentsException,
     ForbiddenException,
 )
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class EventAsyncHandler(ReceiveHandler):

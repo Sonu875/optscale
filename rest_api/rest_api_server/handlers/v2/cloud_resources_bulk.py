@@ -1,5 +1,5 @@
 import json
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.cloud_resource import (
     CloudResourceAsyncController)
 from rest_api.rest_api_server.exceptions import Err

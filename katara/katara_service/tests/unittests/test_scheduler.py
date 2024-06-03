@@ -21,7 +21,7 @@ class TestScheduler(TestControllerBase):
         schedules = []
         if schedules_count > 0:
             recipient = Recipient(
-                role_purpose='optscale_engineer',
+                role_purpose='opticloud_engineer',
                 scope_id='some scope')
             self.db_session.add(recipient)
 

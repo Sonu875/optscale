@@ -4,8 +4,8 @@ from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncItemHandler
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.utils import run_task
 
-from tools.optscale_exceptions.common_exc import NotFoundException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class InfraProfilingTokenAsyncCollectionHandler(BaseAsyncItemHandler,

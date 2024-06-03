@@ -8,7 +8,7 @@ it("renders without crashing without children", () => {
   const root = createRoot(div);
   root.render(
     <TestProvider>
-      <IconError messageId="hystax" />
+      <IconError messageId="cipe" />
     </TestProvider>
   );
   root.unmount();
@@ -19,8 +19,8 @@ it("renders without crashing with children", () => {
   const root = createRoot(div);
   root.render(
     <TestProvider>
-      <IconError messageId="hystax" />
-      <Button variant="contained" color="primary" messageId="hystax" />
+      <IconError messageId="cipe" />
+      <Button variant="contained" color="primary" messageId="cipe" />
     </TestProvider>
   );
   root.unmount();

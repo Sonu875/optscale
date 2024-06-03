@@ -2,7 +2,7 @@ from rest_api.rest_api_server.controllers.shareable_resource_bulk import Shareab
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncCollectionHandler
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.utils import run_task
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.exceptions import Err
 
 

@@ -9,7 +9,7 @@ from rest_api.rest_api_server.controllers.pool import PoolController
 from rest_api.rest_api_server.controllers.cloud_resource import CloudResourceController
 from rest_api.rest_api_server.controllers.employee import EmployeeController
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException, NotFoundException,
     FailedDependency)
 from rest_api.rest_api_server.controllers.organization import OrganizationController

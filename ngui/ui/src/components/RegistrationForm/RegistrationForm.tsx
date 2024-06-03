@@ -7,7 +7,7 @@ import { Link as RouterLink, useLocation } from "react-router-dom";
 import ButtonLoader from "components/ButtonLoader";
 import Input from "components/Input";
 import PasswordInput from "components/PasswordInput";
-import { HYSTAX_PRIVACY_POLICY, LOGIN } from "urls";
+import { CIPE_PRIVACY_POLICY, LOGIN } from "urls";
 import { getQueryParams } from "utils/network";
 import { emailRegex } from "utils/strings";
 import { notOnlyWhiteSpaces } from "../../utils/validation";
@@ -146,18 +146,18 @@ const RegistrationForm = ({ onSubmit, isLoading = false, isInvited }) => {
           size="large"
           fullWidth
         />
-        <Typography variant="caption" align="center" component="div">
+        {/* <Typography variant="caption" align="center" component="div">
           <FormattedMessage
-            id="agreeToHystaxPrivacyPolicyUponRegistration"
+            id="agreeToCIPEPrivacyPolicyUponRegistration"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_privacy_policy" href={HYSTAX_PRIVACY_POLICY} target="_blank" rel="noopener">
+                <Link data-test-id="link_privacy_policy" href={CIPE_PRIVACY_POLICY} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               )
             }}
           />
-        </Typography>
+        </Typography> */}
       </Box>
       <Box display="flex" justifyContent="center">
         <Typography>

@@ -1,7 +1,7 @@
 import { type ReactNode } from "react";
 import Grid from "@mui/material/Grid";
 import ModeWrapper from "components/ModeWrapper";
-import { OPTSCALE_MODE } from "utils/constants";
+import { OPTICLOUD_MODE } from "utils/constants";
 import { getSquareNodesStyle } from "utils/layouts";
 
 type DashboardGridLayoutProps = {
@@ -24,18 +24,18 @@ const DashboardGridLayout = ({
     {
       key: "topResourcesExpensesCard",
       node: topResourcesExpensesCard,
-      mode: OPTSCALE_MODE.FINOPS
+      mode: OPTICLOUD_MODE.FINOPS
     },
     { key: "recommendationsCard", node: recommendationsCard },
     {
       key: "policiesCard",
       node: policiesCard,
-      mode: OPTSCALE_MODE.FINOPS
+      mode: OPTICLOUD_MODE.FINOPS
     },
     {
       key: "poolsRequiringAttentionCard",
       node: poolsRequiringAttentionCard,
-      mode: OPTSCALE_MODE.FINOPS
+      mode: OPTICLOUD_MODE.FINOPS
     }
   ].filter(({ node }) => Boolean(node));
 

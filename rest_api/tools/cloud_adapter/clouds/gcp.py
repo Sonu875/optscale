@@ -84,7 +84,7 @@ DEFAULT_KWARGS = {
 
 BASE_CONSOLE_LINK = "https://console.cloud.google.com"
 DEFAULT_CURRENCY = "USD"
-OPTSCALE_TRACKING_TAG = "optscale_tracking_id"
+OPTICLOUD_TRACKING_TAG = "opticloud_tracking_id"
 STANDARD_BILLING_PREFIX = "gcp_billing_export_v1"
 
 COMPUTE_SERVICE_ID = "6F81-5844-456A"
@@ -236,8 +236,8 @@ class GcpResource:
         return hashlib.sha1(self._cloud_object.self_link.encode()).hexdigest()
 
     def _need_to_update_tags(self):
-        optscale_tag_value = self.tags.get(OPTSCALE_TRACKING_TAG)
-        return optscale_tag_value != self.cloud_resource_hash
+        opticloud_tag_value = self.tags.get(OPTICLOUD_TRACKING_TAG)
+        return opticloud_tag_value != self.cloud_resource_hash
 
     def _set_tag(self, key, value):
         raise NotImplemented()
@@ -245,7 +245,7 @@ class GcpResource:
     def post_discover(self):
         if not self._need_to_update_tags():
             return
-        self._set_tag(OPTSCALE_TRACKING_TAG, self.cloud_resource_hash)
+        self._set_tag(OPTICLOUD_TRACKING_TAG, self.cloud_resource_hash)
 
     def _get_project_id(self):
         return self._cloud_adapter.project_id

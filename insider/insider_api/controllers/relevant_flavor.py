@@ -2,7 +2,7 @@ import re
 from botocore.exceptions import ClientError as AwsClientError
 from grpc._channel import _InactiveRpcError
 from pymongo import MongoClient
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, UnauthorizedException, WrongArgumentsException)
 from tools.cloud_adapter.clouds.azure import Azure
 from tools.cloud_adapter.exceptions import AuthorizationException

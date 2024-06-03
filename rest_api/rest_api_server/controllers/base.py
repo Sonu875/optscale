@@ -11,8 +11,8 @@ from retrying import retry
 from sqlalchemy.exc import IntegrityError, ResourceClosedError
 from sqlalchemy import and_, exists
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from tools.optscale_exceptions.common_exc import (
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, FailedDependency, ConflictException,
     UnauthorizedException, NotFoundException)
 from rest_api.rest_api_server.exceptions import Err
@@ -23,8 +23,8 @@ from rest_api.rest_api_server.utils import (
     should_retry, SupportedFiltersMixin, check_list_attribute,
     check_regex_attribute, check_bool_attribute, check_int_attribute, get_nil_uuid)
 
-from optscale_client.arcee_client.client import Client as ArceeClient
-from optscale_client.bulldozer_client.client import Client as BulldozerClient
+from opticloud_client.arcee_client.client import Client as ArceeClient
+from opticloud_client.bulldozer_client.client import Client as BulldozerClient
 
 ACTIVITIES_EXCHANGE_NAME = 'activities-tasks'
 LOG = logging.getLogger(__name__)

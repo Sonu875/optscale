@@ -15,9 +15,9 @@ from rest_api.rest_api_server.models.models import (
     Invite, InviteAssignment, Organization, Pool)
 from rest_api.rest_api_server.utils import CURRENCY_MAP, query_url
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, HeraldException, WrongArgumentsException)
 
 LOG = logging.getLogger(__name__)
@@ -64,9 +64,9 @@ class InviteController(BaseController):
                show_link=False):
         def get_highest_role(current, new):
             roles_order_map = {
-                'optscale_member': 0,
-                'optscale_engineer': 1,
-                'optscale_manager': 2,
+                'opticloud_member': 0,
+                'opticloud_engineer': 1,
+                'opticloud_manager': 2,
             }
             if roles_order_map.get(current, 0) > roles_order_map.get(new, 0):
                 return cur_role
@@ -110,7 +110,7 @@ class InviteController(BaseController):
             cur_role = scope_name_role_map.get(scope_name)
             new_role = assignment_info.get('purpose')
             scope_name_role_map[scope_name] = get_highest_role(
-                cur_role, new_role) or 'optscale_member'
+                cur_role, new_role) or 'opticloud_member'
         meta = {
             'owner': {
                 'name': user_info.get('display_name'),
@@ -279,7 +279,7 @@ class InviteController(BaseController):
         return url
 
     def send_notification(self, email, url, organization_name, organization_id, currency):
-        subject = 'OptScale invitation notification'
+        subject = 'OptiCloud invitation notification'
         template_params = {
             'texts': {
                 'organization': {
@@ -288,7 +288,7 @@ class InviteController(BaseController):
                     'currency_code': CURRENCY_MAP.get(currency, '$')
                 },
                 'title': "User Invitation",
-                'login_button': 'Go to Optscale'
+                'login_button': 'Go to OptiCloud'
             },
             'links': {
                 'login_button': url

@@ -1148,28 +1148,28 @@ class TestRole(TestAuthBase):
         self.assertEqual(response['error']['reason'],
                          'some is not a valid purpose')
 
-        code, response = self.client.get_purposed_role('optscale_manager')
+        code, response = self.client.get_purposed_role('opticloud_manager')
         self.assertEqual(code, 404)
         self.assertEqual(response['error']['reason'],
-                         'Role with purpose optscale_manager not found')
+                         'Role with purpose opticloud_manager not found')
 
         secret = self.client.secret
         self.client.secret = 'bad_secret'
-        code, response = self.client.get_purposed_role('optscale_manager')
+        code, response = self.client.get_purposed_role('opticloud_manager')
         self.assertEqual(code, 403)
         self.assertEqual(response['error']['reason'], 'Bad secret')
         self.client.secret = None
-        code, response = self.client.get_purposed_role('optscale_manager')
+        code, response = self.client.get_purposed_role('opticloud_manager')
         self.assertEqual(code, 401)
         self.client.secret = secret
 
         role = Role(name='some name', type_=self.type_partner,
                     lvl=self.type_partner, scope_id=self.partner_1_scope_id,
-                    description='asd', purpose='optscale_manager')
+                    description='asd', purpose='opticloud_manager')
         session = self.db_session
         session.add(role)
         session.commit()
-        code, response = self.client.get_purposed_role('optscale_manager')
+        code, response = self.client.get_purposed_role('opticloud_manager')
         self.assertEqual(code, 200)
         self.assertEqual(response['id'], role.id)
         self.assertEqual(response['purpose'], role.purpose.value)

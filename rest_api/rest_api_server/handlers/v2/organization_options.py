@@ -1,7 +1,7 @@
 import json
 
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.organization_options import OrganizationOptionsAsyncController
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncItemHandler

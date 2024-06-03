@@ -1,6 +1,4 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 RUN mkdir -p /var/lib/bulldozer
 WORKDIR /usr/src/app/bulldozer/bulldozer_worker
 ENV PYTHONPATH=/usr/src/app/
@@ -14,10 +12,10 @@ RUN chmod +x ./terraform
 COPY bulldozer/bulldozer_worker/requirements.txt ./requirements.txt
 
 WORKDIR /usr/src/app/
-COPY optscale_client/arcee_client optscale_client/arcee_client
-COPY optscale_client/bulldozer_client optscale_client/bulldozer_client
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
+COPY opticloud_client/arcee_client opticloud_client/arcee_client
+COPY opticloud_client/bulldozer_client opticloud_client/bulldozer_client
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
 
 RUN pip install --no-cache-dir -r bulldozer/bulldozer_worker/requirements.txt
 COPY bulldozer/bulldozer_worker/*.py bulldozer/bulldozer_worker/

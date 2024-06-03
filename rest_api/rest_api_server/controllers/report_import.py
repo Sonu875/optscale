@@ -3,7 +3,7 @@ import uuid
 from sqlalchemy import and_, true, or_, exists
 from datetime import datetime
 import boto3
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, FailedDependency, WrongArgumentsException
 )
 from boto3.session import Config as BotoConfig

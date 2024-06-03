@@ -6,7 +6,7 @@ import etcd
 from kombu import Connection as QConnection, Exchange
 from kombu.pools import producers
 
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 LOG = logging.getLogger(__name__)

@@ -6,7 +6,7 @@ from typing import Optional
 from etcd import EtcdKeyError
 
 from zcrmsdk.src.com.zoho.crm.api.dc import USDataCenter, DataCenter
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 
 ETCD_EMAIL_KEY = "regapp_email"

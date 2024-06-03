@@ -80,7 +80,7 @@ class TestRecipientApi(TestBase):
 
     def test_recipient_create(self):
         payload = {
-            "role_purpose": 'optscale_manager',
+            "role_purpose": 'opticloud_manager',
             "scope_id": str(uuid.uuid4()),
         }
         code, recipient = self.client.recipient_create(**payload)
@@ -109,7 +109,7 @@ class TestRecipientApi(TestBase):
 
     def test_recipient_create_multi_assigned(self):
         payload = {
-            "role_purpose": 'optscale_manager',
+            "role_purpose": 'opticloud_manager',
             "user_id": str(uuid.uuid4()),
             "scope_id": str(uuid.uuid4()),
         }
@@ -118,7 +118,7 @@ class TestRecipientApi(TestBase):
 
     def test_recipient_create_wrong_porpose(self):
         payload = {
-            "role_purpose": 'optscale_slave',
+            "role_purpose": 'opticloud_slave',
             "scope_id": str(uuid.uuid4()),
         }
         code, _ = self.client.recipient_create(**payload)
@@ -126,7 +126,7 @@ class TestRecipientApi(TestBase):
 
     def test_recipient_create_wrong_meta(self):
         payload = {
-            "role_purpose": 'optscale_manager',
+            "role_purpose": 'opticloud_manager',
             "scope_id": str(uuid.uuid4()),
             "meta": {
                 "k1": "v1",

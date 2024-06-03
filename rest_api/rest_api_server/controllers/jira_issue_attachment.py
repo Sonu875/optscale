@@ -8,7 +8,7 @@ from rest_api.rest_api_server.controllers.employee import (
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.exceptions import Err
 from sqlalchemy.sql import and_, exists
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     ConflictException, NotFoundException, ForbiddenException)
 from rest_api.rest_api_server.models.models import JiraIssueAttachment, ShareableBooking
 

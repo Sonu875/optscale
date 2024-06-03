@@ -3,10 +3,10 @@ import { NIL as NIL_UUID } from "uuid";
 export const BASE_LAYOUT_CONTAINER_ID = "mainLayoutWrapper";
 
 // Roles
-export const ORGANIZATION_MANAGER = "organization_optscale_manager"; // Not a real role, just to distinguish from a Pool manager
-export const MANAGER = "optscale_manager";
-export const ENGINEER = "optscale_engineer";
-export const MEMBER = "optscale_member";
+export const ORGANIZATION_MANAGER = "organization_opticloud_manager"; // Not a real role, just to distinguish from a Pool manager
+export const MANAGER = "opticloud_manager";
+export const ENGINEER = "opticloud_engineer";
+export const MEMBER = "opticloud_member";
 
 export const ROLE_PURPOSES = Object.freeze({
   [ORGANIZATION_MANAGER]: "organizationManager",
@@ -327,7 +327,7 @@ export const PDF_ELEMENTS = Object.freeze({
     initPortrait: "inits portrait doc",
     newPortraitPage: "new portrait page",
     newLandscapePage: "new landscape page",
-    logo: "optscale logotype",
+    logo: "opticloud logotype",
     spacer: "vertical spacer",
     footer: "footer copyright"
   })
@@ -470,7 +470,7 @@ export const COST_MODEL_TYPES = Object.freeze({
   ENVIRONMENT: "environment"
 });
 
-export const OPTSCALE_RESOURCE_TYPES = Object.freeze({
+export const OPTICLOUD_RESOURCE_TYPES = Object.freeze({
   CLUSTER: "cluster",
   ENVIRONMENT: "environment",
   REGULAR: "regular"
@@ -935,8 +935,8 @@ export const LAYOUT_TYPES = Object.freeze({
   RESOURCE_RAW_EXPENSES_COLUMNS: "resource_raw_expenses_columns"
 });
 
-export const OPTSCALE_MODE_OPTION = "optscale_mode";
-export const OPTSCALE_MODE = Object.freeze({
+export const OPTICLOUD_MODE_OPTION = "opticloud_mode";
+export const OPTICLOUD_MODE = Object.freeze({
   FINOPS: "finops",
   MLOPS: "mlops"
 });

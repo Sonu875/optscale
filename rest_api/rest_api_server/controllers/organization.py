@@ -14,13 +14,13 @@ from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import RolePurposes, OrganizationConstraintTypes
 from rest_api.rest_api_server.models.models import (
     CloudAccount, CloudTypes, Organization, Pool, ShareableBooking)
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     FailedDependency, NotFoundException, UnauthorizedException,
     WrongArgumentsException)
 from rest_api.rest_api_server.utils import Config, CURRENCY_MAP
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from optscale_client.katara_client.client import Client as KataraClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.katara_client.client import Client as KataraClient
 
 LOG = logging.getLogger(__name__)
 
@@ -112,13 +112,13 @@ class OrganizationController(BaseController):
 
         _, manager_recipient = self.katara_client.recipient_create(
             scope_id=org_id,
-            role_purpose=RolePurposes.optscale_manager.value)
+            role_purpose=RolePurposes.opticloud_manager.value)
         _, engineer_recipient = self.katara_client.recipient_create(
             scope_id=org_id,
-            role_purpose=RolePurposes.optscale_engineer.value)
+            role_purpose=RolePurposes.opticloud_engineer.value)
         _, member_recipient = self.katara_client.recipient_create(
             scope_id=org_id,
-            role_purpose=RolePurposes.optscale_member.value)
+            role_purpose=RolePurposes.opticloud_member.value)
         # hardcoded for now. Will be moved somewhere else later (UI/Herald)
         report_crontab_recipients_map = {
             POOL_EXCEED_REPORT_NAME:

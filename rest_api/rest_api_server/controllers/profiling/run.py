@@ -12,7 +12,7 @@ from rest_api.rest_api_server.controllers.profiling.base import (
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import RunStates
 
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 DAY_IN_HOURS = 24
 BYTES_IN_MB = 1024 * 1024

@@ -6,10 +6,10 @@ from auth.auth_server.handlers.v1.base import (BaseAsyncAuthItemHandler,
                                                BaseAsyncAuthCollectionHandler)
 from auth.auth_server.utils import ModelEncoder, as_dict
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, ConflictException,
     ForbiddenException, UnauthorizedException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 LOG = logging.getLogger(__name__)
 

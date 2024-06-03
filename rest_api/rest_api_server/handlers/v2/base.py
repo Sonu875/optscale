@@ -1,4 +1,4 @@
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.handlers.v1.base import BaseHandler as BaseHandler_v1
 

@@ -13,8 +13,8 @@ from pymongo import MongoClient
 from kombu import Connection, Exchange, Queue
 from kombu.mixins import ConsumerMixin
 from kombu.utils.debug import setup_logging
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from risp.risp_worker.migrator import Migrator
 
 

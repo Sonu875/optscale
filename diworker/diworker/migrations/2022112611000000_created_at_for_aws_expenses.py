@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime, timezone
 from diworker.diworker.migrations.base import BaseMigration
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 """
 Set created_at for AWS expenses and create index AWSRawExpenses

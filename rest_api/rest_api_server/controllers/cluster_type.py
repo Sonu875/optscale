@@ -22,7 +22,7 @@ from rest_api.rest_api_server.utils import (
     RetriableException, should_retry, encoded_tags, update_tags,
     timestamp_to_day_start)
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ConflictException, NotFoundException)
 
 

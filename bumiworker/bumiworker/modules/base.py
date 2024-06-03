@@ -9,7 +9,7 @@ from kombu import Exchange
 from kombu.pools import producers
 from pymongo import MongoClient, UpdateOne
 
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 from bumiworker.bumiworker.consts import ArchiveReason
 

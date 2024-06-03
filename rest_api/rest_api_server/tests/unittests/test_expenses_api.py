@@ -4,7 +4,7 @@ from unittest.mock import patch
 from copy import deepcopy
 from freezegun import freeze_time
 from pymongo import UpdateMany
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.models.db_factory import DBFactory, DBType
 from rest_api.rest_api_server.models.db_base import BaseDB
 from rest_api.rest_api_server.models.models import Checklist

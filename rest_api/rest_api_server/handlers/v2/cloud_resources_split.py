@@ -1,8 +1,8 @@
 import json
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
-from tools.optscale_exceptions.common_exc import (ForbiddenException,
+from tools.opticloud_exceptions.common_exc import (ForbiddenException,
                                                   WrongArgumentsException)
 from rest_api.rest_api_server.controllers.assignment import AssignmentAsyncController
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncCollectionHandler
@@ -57,7 +57,7 @@ class SplitResourcesAsyncCollectionHandler(BaseAsyncCollectionHandler,
                         - resource_id: d7a8a215-2a61-404c-b4e3-5f1267ea3d0d
                           cloud_account_id: 0f469512-8d88-4509-b5b9-76b14606d616
                           created_at: '2020-04-14T09:02:40'
-                          name: OptScale server
+                          name: opticloud server
                           resource_type: vm
                           employee_id: 75fc97bc-4f3b-4d25-9715-a8b35273f58d
                           cloud_resource_id: f418a69a-4b38-4654-8765-cbbe01bb1202

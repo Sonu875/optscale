@@ -1,7 +1,7 @@
 import logging
 from diworker.diworker.migrations.base import BaseMigration
 from pymongo import IndexModel
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 """
 Reworked indexes for performance reasons

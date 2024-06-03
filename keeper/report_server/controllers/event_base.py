@@ -7,7 +7,7 @@ from keeper.report_server.exceptions import Err
 from keeper.report_server.model import ReadEvent, Event
 from keeper.report_server.controllers.base import BaseController
 
-from tools.optscale_exceptions.common_exc import UnauthorizedException
+from tools.opticloud_exceptions.common_exc import UnauthorizedException
 
 
 LOG = logging.getLogger(__name__)

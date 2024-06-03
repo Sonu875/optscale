@@ -3,7 +3,7 @@ from unittest.mock import patch
 
 import tornado.testing
 
-from optscale_client.katara_client.client import (
+from opticloud_client.katara_client.client import (
     FetchMethodHttpProvider,
     Client as KataraClient
 )
@@ -37,7 +37,7 @@ class TestBase(tornado.testing.AsyncHTTPTestCase):
     def setUp(self):
         super().setUp()
         secret = gen_id()
-        patch('optscale_client.config_client.client.Client.cluster_secret',
+        patch('opticloud_client.config_client.client.Client.cluster_secret',
               return_value=secret).start()
         http_provider = FetchMethodHttpProvider(self.fetch, rethrow=False)
         self.client = KataraClient(http_provider=http_provider)
@@ -64,7 +64,7 @@ class TestBase(tornado.testing.AsyncHTTPTestCase):
         recipients = []
         for _ in range(count):
             recipient = Recipient(
-                role_purpose='optscale_manager',
+                role_purpose='opticloud_manager',
                 scope_id=str(uuid.uuid4()))
             session.add(recipient)
             recipients.append(recipient)

@@ -17,9 +17,9 @@ ADD https://repo1.maven.org/maven2/com/google/guava/guava/21.0/guava-21.0.jar $S
 WORKDIR $SPARK_HOME/work-dir/
 ENV PYTHONPATH $SPARK_HOME/work-dir/
 
-COPY tools/optscale_exceptions tools/optscale_exceptions
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
+COPY tools/opticloud_exceptions tools/opticloud_exceptions
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
 
 COPY docker_images/ohsu/requirements.txt docker_images/ohsu/
 RUN pip install --no-cache-dir -r docker_images/ohsu/requirements.txt

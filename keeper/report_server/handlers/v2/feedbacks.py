@@ -2,8 +2,8 @@ from keeper.report_server.exceptions import Err
 from keeper.report_server.handlers.v2.receive import ReceiveHandler
 from keeper.report_server.controllers.feedback import FeedbackAsyncController
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException,
     UnauthorizedException,
 )
@@ -76,7 +76,7 @@ class FeedbacksAsyncHandler(ReceiveHandler):
               items:
                 type: object
                 example:
-                  email: sd@hystax.com
+                  email: sd@paloaltonetworks.com
                   url: dashboard
                   text: my first feedback
                   time: 1576046177
@@ -160,7 +160,7 @@ class FeedbacksAsyncHandler(ReceiveHandler):
             schema:
               type: object
               example:
-                email: sd@hystax.com
+                email: sd@paloaltonetworks.com
                 url: dashboard
                 text: my first feedback
                 time: 1576046177

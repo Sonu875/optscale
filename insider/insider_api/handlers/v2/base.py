@@ -4,8 +4,8 @@ import traceback
 from json.decoder import JSONDecodeError
 import tornado.web
 
-from tools.optscale_exceptions.common_exc import UnauthorizedException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import UnauthorizedException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from insider.insider_api.exceptions import Err
 from insider.insider_api.utils import ModelEncoder
 

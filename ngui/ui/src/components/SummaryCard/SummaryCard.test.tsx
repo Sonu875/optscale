@@ -7,7 +7,7 @@ it("renders without crashing", () => {
   const root = createRoot(div);
   root.render(
     <TestProvider>
-      <SummaryCard value="$123456.321" caption="This is some caption" help={{ show: true, messageId: "hystax" }} />
+      <SummaryCard value="$123456.321" caption="This is some caption" help={{ show: true, messageId: "cipe" }} />
     </TestProvider>
   );
   root.unmount();

@@ -7,8 +7,8 @@ from auth.auth_server.handlers.v1.base import (BaseAsyncAuthItemHandler,
                                                BaseAsyncAuthCollectionHandler,
                                                WrongArgumentsException)
 from auth.auth_server.utils import ModelEncoder
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   ForbiddenException)
 
 

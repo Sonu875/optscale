@@ -10,7 +10,7 @@ import HtmlSymbol from "components/HtmlSymbol";
 import KeyValueLabel from "components/KeyValueLabel/KeyValueLabel";
 import SubTitle from "components/SubTitle";
 import { ProfilingIntegrationModalContext } from "contexts/ProfilingIntegrationModalContext";
-import { ML_TASK_METRICS, ML_TASKS, PYPI_OPTSCALE_ARCEE } from "urls";
+import { ML_TASK_METRICS, ML_TASKS, PYPI_OPTICLOUD_ARCEE } from "urls";
 
 const Pre = ({ children }) => {
   const theme = useTheme();
@@ -518,7 +518,7 @@ const ProfilingIntegration = ({ profilingToken, taskKey, isLoading }) => (
           id="mlProfilingIntegration.checkOptscaleArceePypi"
           values={{
             link: (chunks) => (
-              <Link data-test-id="link_check_pypi" href={PYPI_OPTSCALE_ARCEE} target="_blank" rel="noopener">
+              <Link data-test-id="link_check_pypi" href={PYPI_OPTICLOUD_ARCEE} target="_blank" rel="noopener">
                 {chunks}
               </Link>
             )

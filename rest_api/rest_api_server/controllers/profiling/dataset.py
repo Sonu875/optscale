@@ -6,7 +6,7 @@ from rest_api.rest_api_server.controllers.profiling.base import (
     BaseProfilingController)
 from rest_api.rest_api_server.exceptions import Err
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, ConflictException)
 
 

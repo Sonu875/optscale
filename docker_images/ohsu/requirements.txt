@@ -1,7 +1,7 @@
 boto
 tornado==6.3.3
 
-# OptScale packages
--e tools/optscale_exceptions
--e optscale_client/config_client
--e optscale_client/rest_api_client
+# opticloud packages
+-e tools/opticloud_exceptions
+-e opticloud_client/config_client
+-e opticloud_client/rest_api_client

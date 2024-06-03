@@ -6,9 +6,9 @@ from metroculus.metroculus_api.controllers.activity_breakdown import (
 from metroculus.metroculus_api.handlers.v2.base import SecretHandler
 from metroculus.metroculus_api.utils import ModelEncoder
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, UnauthorizedException, NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 LOG = logging.getLogger(__name__)
 

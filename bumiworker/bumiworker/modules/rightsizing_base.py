@@ -8,8 +8,8 @@ from math import ceil
 import re
 from requests import HTTPError
 
-from optscale_client.insider_client.client import Client as InsiderClient
-from optscale_client.metroculus_client.client import Client as MetroculusClient
+from opticloud_client.insider_client.client import Client as InsiderClient
+from opticloud_client.metroculus_client.client import Client as MetroculusClient
 
 from bumiworker.bumiworker.modules.base import ModuleBase
 

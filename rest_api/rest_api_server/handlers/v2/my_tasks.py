@@ -1,8 +1,8 @@
 import json
 
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   WrongArgumentsException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.my_tasks import MyTasksAsyncController
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncItemHandler

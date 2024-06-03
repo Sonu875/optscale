@@ -3,7 +3,7 @@ import re
 from datetime import datetime, timedelta
 from calendar import monthrange
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 from sqlalchemy import Enum, true, or_
 from sqlalchemy.exc import IntegrityError
@@ -15,7 +15,7 @@ from tools.cloud_adapter.exceptions import (
     CloudConnectionError, S3ConnectionError)
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, ForbiddenException,
     ConflictException, TimeoutException, FailedDependency)
 from rest_api.rest_api_server.controllers.cloud_resource import CloudResourceController
@@ -224,7 +224,7 @@ class CloudAccountController(BaseController):
                 reason=warning)
 
     def send_cloud_account_email(self, cloud_account, action='created'):
-        recipient = self._config.optscale_email_recipient()
+        recipient = self._config.opticloud_email_recipient()
         if not recipient:
             return
         control_panel_name = self._config.public_ip()

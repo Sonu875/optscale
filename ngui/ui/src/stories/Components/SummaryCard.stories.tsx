@@ -20,7 +20,7 @@ export default {
 export const basic = () => <SummaryCard value="$123456.321" caption="This is some caption" />;
 
 export const withHelp = () => (
-  <SummaryCard value="$123456.321" caption="This is some caption" help={{ show: true, messageId: "hystax" }} />
+  <SummaryCard value="$123456.321" caption="This is some caption" help={{ show: true, messageId: "cipe" }} />
 );
 
 export const withKnobs = (args) => (
@@ -28,7 +28,7 @@ export const withKnobs = (args) => (
     value={args.value}
     caption={args.caption}
     color={args.color}
-    help={{ show: args.withHelp, messageId: "hystax" }}
+    help={{ show: args.withHelp, messageId: "cipe" }}
     button={{ show: args.withButton, icon: <ArrowForwardOutlinedIcon /> }}
   />
 );

@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { RecommendationModal } from "components/SideModalManager/SideModals";
 import { useGetIsRecommendationsDownloadAvailable } from "hooks/useGetIsRecommendationsDownloadAvailable";
 import { useOpenSideModal } from "hooks/useOpenSideModal";
-import { useOptscaleRecommendations } from "hooks/useOptscaleRecommendations";
+import { useOpticloudRecommendations } from "hooks/useOpticloudRecommendations";
 import { ALL_SERVICES, useRecommendationServices } from "hooks/useRecommendationServices";
 import { useRiSpExpensesSummary } from "hooks/useRiSpExpensesSummary";
 import { useSyncQueryParamWithState } from "hooks/useSyncQueryParamWithState";
@@ -65,7 +65,7 @@ const RecommendationsOverviewContainer = ({ selectedDataSources }) => {
 
   const { data, isDataReady } = useGetOptimizationsOverview(selectedDataSources);
 
-  const optscaleRecommendations = useOptscaleRecommendations();
+  const OptiCloudRecommendations = useOpticloudRecommendations();
 
   const organizationRecommendationOptions = options
     .filter(
@@ -117,7 +117,7 @@ const RecommendationsOverviewContainer = ({ selectedDataSources }) => {
       setService={setService}
       service={service}
       recommendationsData={{ ...data, organizationOptions: organizationRecommendationOptions }}
-      recommendationClasses={optscaleRecommendations}
+      recommendationClasses={OptiCloudRecommendations}
       downloadLimit={downloadLimit}
       riSpExpensesSummary={riSpExpensesSummary}
       isRiSpExpensesSummaryLoading={isRiSpExpensesSummaryLoading}

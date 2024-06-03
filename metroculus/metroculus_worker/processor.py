@@ -5,7 +5,7 @@ from kombu.log import get_logger
 from datetime import datetime, timedelta, timezone
 from pymongo import MongoClient, UpdateOne
 from clickhouse_driver import Client as ClickHouseClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
 
 LOG = get_logger(__name__)

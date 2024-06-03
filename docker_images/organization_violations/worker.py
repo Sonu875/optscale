@@ -15,8 +15,8 @@ from kombu import Exchange, Queue
 from kombu.pools import producers
 import urllib3
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 LOG = get_logger(__name__)

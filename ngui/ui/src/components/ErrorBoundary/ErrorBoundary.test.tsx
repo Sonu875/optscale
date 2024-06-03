@@ -9,7 +9,7 @@ it("renders without crashing", () => {
   root.render(
     <TestProvider>
       <ErrorBoundary>
-        <FormattedMessage id="hystax" />
+        <FormattedMessage id="cipe" />
       </ErrorBoundary>
     </TestProvider>
   );

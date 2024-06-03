@@ -1,6 +1,6 @@
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
-from tools.optscale_exceptions.common_exc import ForbiddenException
+from tools.opticloud_exceptions.common_exc import ForbiddenException
 
 from rest_api.rest_api_server.controllers.assignment_bulk import (
     AssignmentAsyncBulkController)

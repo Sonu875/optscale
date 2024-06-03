@@ -65,7 +65,7 @@ app.use(
     context: async ({ req }) => {
       const { cache } = server;
 
-      const token = req.headers["x-optscale-token"] as string;
+      const token = req.headers["x-opticloud-token"] as string;
 
       return {
         // We create new instances of our data sources with each request,

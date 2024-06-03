@@ -2,7 +2,7 @@ import json
 import os
 import logging
 from bson.objectid import ObjectId
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from datetime import datetime
 from pymongo import MongoClient
 from sqlalchemy import create_engine

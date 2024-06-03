@@ -1,4 +1,4 @@
-# How to apply SSL certificate to OptScale NGINX
+# How to apply SSL certificate to OptiCloud NGINX
 
 Copy Key and CRT files to host as the following files: ```/tmp/key.pem``` and ```/tmp/cert.pem```
 

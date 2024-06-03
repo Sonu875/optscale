@@ -9,17 +9,17 @@ export default {
   }
 };
 
-export const basic = () => <WrapperCard title="Optscale" buttonText="Go to OptiCloud" />;
+export const basic = () => <WrapperCard title="OptiCloud" buttonText="Go to OptiCloud" />;
 
 export const withText = () => (
-  <WrapperCard title="Optscale" button={{ show: true, messageId: "goToDashboard" }}>
+  <WrapperCard title="OptiCloud" button={{ show: true, messageId: "goToDashboard" }}>
     Some text
   </WrapperCard>
 );
 
 export const withInternalLink = (args) => (
   <WrapperCard
-    title="Optscale"
+    title="OptiCloud"
     button={{
       show: true,
       messageId: "goToDashboard",
@@ -32,7 +32,7 @@ export const withInternalLink = (args) => (
 
 export const withExternalLink = (args) => (
   <WrapperCard
-    title="Optscale"
+    title="OptiCloud"
     button={{
       show: true,
       messageId: "buy",
@@ -45,7 +45,7 @@ export const withExternalLink = (args) => (
 
 export const withTitleButton = () => (
   <WrapperCard
-    title="Optscale"
+    title="OptiCloud"
     titleButton={{
       type: "button",
       tooltip: {
@@ -62,7 +62,7 @@ export const withTitleButton = () => (
 
 export const withTitleIconButton = () => (
   <WrapperCard
-    title="Optscale"
+    title="OptiCloud"
     titleButton={{
       type: "icon",
       tooltip: {

@@ -19,15 +19,15 @@ google-api-python-client==1.7.11
 google-auth-oauthlib==0.4.0
 aliyun-python-sdk-core==2.15.1
 
-# OptScale packages
+# OptiCloud packages
 -e tools/cloud_adapter
--e tools/optscale_exceptions
--e tools/optscale_types
--e optscale_client/config_client
--e optscale_client/auth_client
--e optscale_client/herald_client
--e optscale_client/katara_client
--e optscale_client/metroculus_client
--e optscale_client/arcee_client
--e optscale_client/insider_client
--e optscale_client/bulldozer_client
+-e tools/opticloud_exceptions
+-e tools/opticloud_types
+-e opticloud_client/config_client
+-e opticloud_client/auth_client
+-e opticloud_client/herald_client
+-e opticloud_client/katara_client
+-e opticloud_client/metroculus_client
+-e opticloud_client/arcee_client
+-e opticloud_client/insider_client
+-e opticloud_client/bulldozer_client

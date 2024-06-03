@@ -1,17 +1,4 @@
-#!/usr/bin/env bash
-#-------------------------------------------------------------------
-# Hystax
-# Copyright 2016-2023 Hystax
-# All Rights Reserved
-#
-# NOTICE:  Hystax permits you to use this file in accordance
-# with the terms of the Hystax license agreement
-# accompanying it.  If you have received this file from a source
-# other than Hystax, then your use, modification, or distribution
-# of it requires the prior written permission of Hystax.
-#-------------------------------------------------------------------
-
-echo "OptScale cleanup script for instances_in_stopped_state_for_a_long_time recommendations module.
+echo "OptiCloud cleanup script for instances_in_stopped_state_for_a_long_time recommendations module.
 Script will deallocate all instances based on json file downloaded from recommendations page.
 Only instances related to cloud account ###CLOUD_ACCOUNT_NAME### which is associated with
 ###CLOUD_ACCOUNT_TYPE### - ###CLOUD_ACCOUNT_ACCOUNT_ID### will be deallocated."

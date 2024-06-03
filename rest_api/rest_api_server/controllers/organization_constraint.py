@@ -7,7 +7,7 @@ from rest_api.rest_api_server.controllers.available_filters import (
     AvailableFiltersController)
 from rest_api.rest_api_server.controllers.base import FilterValidationMixin
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 from sqlalchemy import Enum, and_
 from rest_api.rest_api_server.models.enums import OrganizationConstraintTypes as OrgCTypes
@@ -404,9 +404,9 @@ class OrganizationConstraintController(ConstraintBaseController,
     def _extend_filters(self, organization_id, filters):
         extended_filters = {}
         if filters:
-            optscale_filters = [x[0] for x in JOINED_ENTITY_MAP.values()]
+            opticloud_filters = [x[0] for x in JOINED_ENTITY_MAP.values()]
             for filter_name, value in filters.items():
-                if filter_name not in optscale_filters:
+                if filter_name not in opticloud_filters:
                     extended_filters[filter_name] = value
             entities = self.get_filters_entities(organization_id, filters)
             for entity_name, v in JOINED_ENTITY_MAP.items():

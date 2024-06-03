@@ -1,12 +1,10 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH=/usr/src/app/
 
-COPY tools/optscale_exceptions tools/optscale_exceptions
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
+COPY tools/opticloud_exceptions tools/opticloud_exceptions
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
 COPY tools/cloud_adapter tools/cloud_adapter
 
 ADD risp/risp_worker/migrations risp/risp_worker/migrations

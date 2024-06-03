@@ -8,7 +8,7 @@ import FormButtonsWrapper from "components/FormButtonsWrapper";
 import Input from "components/Input";
 import Logo from "components/Logo";
 import GenerateLiveDemoContainer from "containers/GenerateLiveDemoContainer";
-import { FINOPS, HYSTAX_PRIVACY_POLICY } from "urls";
+import { FINOPS, CIPE_PRIVACY_POLICY } from "urls";
 import { DEFAULT_MAX_INPUT_LENGTH } from "utils/constants";
 import { SPACING_4 } from "utils/layouts";
 import { getQueryParams } from "utils/network";
@@ -131,18 +131,18 @@ const LiveDemo = () => {
               dataTestId="btn_proceed_to_live_demo"
             />
           </FormButtonsWrapper>
-          <Typography variant="caption" align="center" component="div">
+          {/* <Typography variant="caption" align="center" component="div">
             <FormattedMessage
-              id="agreeToHystaxPrivacyPolicy"
+              id="agreeToCIPEPrivacyPolicy"
               values={{
                 link: (chunks) => (
-                  <Link data-test-id="link_privacy_policy" href={HYSTAX_PRIVACY_POLICY} target="_blank" rel="noopener">
+                  <Link data-test-id="link_privacy_policy" href={CIPE_PRIVACY_POLICY} target="_blank" rel="noopener">
                     {chunks}
                   </Link>
                 )
               }}
             />
-          </Typography>
+          </Typography> */}
         </form>
       </Box>
     </Stack>

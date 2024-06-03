@@ -6,13 +6,13 @@ export default {
 };
 
 export const basic = () => (
-  <MenuItem messageId="hystax">
+  <MenuItem messageId="cipe">
     <ExitToAppOutlinedIcon />
   </MenuItem>
 );
 
 export const withOnclick = () => (
-  <MenuItem messageId="hystax" onClick={() => console.log("IconMenuItem clicked")}>
+  <MenuItem messageId="cipe" onClick={() => console.log("IconMenuItem clicked")}>
     <ExitToAppOutlinedIcon />
   </MenuItem>
 );

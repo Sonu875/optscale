@@ -2,9 +2,9 @@ import json
 from datetime import datetime, timezone
 from bson import ObjectId
 
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   WrongArgumentsException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.pool import PoolAsyncController
 from rest_api.rest_api_server.controllers.expense import (
     RawExpenseAsyncController, CleanExpenseAsyncController,

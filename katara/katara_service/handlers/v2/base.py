@@ -7,7 +7,7 @@ from katara.katara_service.exceptions import Err
 from katara.katara_service.models.db_base import BaseDB
 from katara.katara_service.utils import ModelEncoder
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     ForbiddenException,
     WrongArgumentsException,
     NotFoundException,
@@ -15,7 +15,7 @@ from tools.optscale_exceptions.common_exc import (
     UnauthorizedException
 )
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

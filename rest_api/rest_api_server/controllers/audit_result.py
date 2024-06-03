@@ -3,7 +3,7 @@ from sqlalchemy import exists, and_
 from rest_api.rest_api_server.models.models import Organization
 from rest_api.rest_api_server.controllers.base import BaseController
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 from rest_api.rest_api_server.exceptions import Err
 from botocore.exceptions import ClientError as BotoCoreClientError
 from boto3.session import Config as BotoConfig

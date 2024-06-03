@@ -27,7 +27,7 @@ class TestUSerRolesApi(TestAuthBase):
         self.manager_role = Role(name='Manager', type_=self.type_partner,
                                  lvl=self.type_partner,
                                  scope_id=self.partner1_scope_id,
-                                 purpose='optscale_manager',
+                                 purpose='opticloud_manager',
                                  description='Manager role')
         session.add(self.manager_role)
         self.assignment_manager = Assignment(self.user_partner1,
@@ -45,7 +45,7 @@ class TestUSerRolesApi(TestAuthBase):
                                   type_id=self.type_partner.id)
         self.engineer_role = Role(name='Engineer', type_=self.type_partner,
                                   lvl=self.type_partner,
-                                  purpose='optscale_engineer',
+                                  purpose='opticloud_engineer',
                                   scope_id=self.partner2_scope_id,
                                   description='Engineer role')
         session.add(self.engineer_role)

@@ -7,11 +7,11 @@ from json.decoder import JSONDecodeError
 import functools
 import requests
 import tornado.web
-from optscale_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
 from tornado.ioloop import IOLoop
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.db_base import BaseDB
 from rest_api.rest_api_server.models.models import (

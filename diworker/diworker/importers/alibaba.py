@@ -7,7 +7,7 @@ from pymongo import UpdateOne
 
 from diworker.diworker.importers.base import BaseReportImporter
 from diworker.diworker.utils import bytes_to_gb, retry_mongo_upsert
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 LOG = logging.getLogger(__name__)
 CHUNK_SIZE = 200
@@ -68,7 +68,7 @@ class AlibabaReportImporter(BaseReportImporter):
     def _process_system_disk_item(self, chunk, current_day, billing_item,
                                   system_disk_ids):
         # Alibaba bills system disks as a part of instance
-        # expenses. It doesn't fit into OptScale model well, so
+        # expenses. It doesn't fit into opticloud model well, so
         # let's replace instance IDs with disk IDs and get rid of
         # instance-related information
         instance_id = billing_item['InstanceID']
@@ -197,16 +197,16 @@ class AlibabaReportImporter(BaseReportImporter):
             'Usage'
         ] + self._get_discount_fields()
 
-    def get_update_fields(self, optscale_f_incl=True):
+    def get_update_fields(self, opticloud_f_incl=True):
         cloud_fields = [
             'NickName',
             'Zone',
             'InstanceSpec',
             'InstanceConfig'
         ] + self.get_cost_related_fields()
-        optscale_fields = ['cost']
-        if optscale_f_incl:
-            return cloud_fields + optscale_fields
+        opticloud_fields = ['cost']
+        if opticloud_f_incl:
+            return cloud_fields + opticloud_fields
         else:
             return cloud_fields
 
@@ -277,7 +277,7 @@ class AlibabaReportImporter(BaseReportImporter):
         LOG.debug('Detected resource info: %s', info)
         return info
 
-    def get_unique_field_list(self, optscale_f_incl=True, inst_id_incl=False):
+    def get_unique_field_list(self, opticloud_f_incl=True, inst_id_incl=False):
         base_fields = [
             'CommodityCode',
             'Item',
@@ -288,18 +288,18 @@ class AlibabaReportImporter(BaseReportImporter):
             'UsageUnit',
             'ListPrice'
         ]
-        optscale_fields = ['start_date', 'resource_id', 'cloud_account_id']
+        opticloud_fields = ['start_date', 'resource_id', 'cloud_account_id']
         inst_id = ['InstanceID']
-        if optscale_f_incl:
-            base_fields += optscale_fields
+        if opticloud_f_incl:
+            base_fields += opticloud_fields
         if inst_id_incl:
             base_fields += inst_id
         return base_fields
 
     def _merge_same_billing_items(self, items):
-        unique_fields = self.get_unique_field_list(optscale_f_incl=False,
+        unique_fields = self.get_unique_field_list(opticloud_f_incl=False,
                                                    inst_id_incl=True)
-        update_fields = self.get_update_fields(optscale_f_incl=False)
+        update_fields = self.get_update_fields(opticloud_f_incl=False)
         cost_related_fields = self.get_cost_related_fields()
 
         b_item_map = {}
@@ -391,7 +391,7 @@ class AlibabaReportImporter(BaseReportImporter):
                                               clean_expenses, cloud_expenses):
         _, organization = self.rest_cl.organization_get(
             cloud_account['organization_id'])
-        recipient = self.config_cl.optscale_error_email_recipient()
+        recipient = self.config_cl.opticloud_error_email_recipient()
         if not recipient:
             return
         title = "Incorrect expenses for Alibaba cloud account"

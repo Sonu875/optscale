@@ -20,7 +20,7 @@ from rest_api.rest_api_server.models.models import (Organization, CloudAccount,
 from rest_api.rest_api_server.utils import (
     raise_does_not_exist_exception, generate_discovered_cluster_resources_stat)
 
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 
 LOG = logging.getLogger(__name__)

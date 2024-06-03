@@ -46,10 +46,10 @@ requirements = [
 ]
 
 setup(name='cloud-adapter',
-      description='OptScale Cloud adapter',
-      url='http://hystax.com',
-      author='Hystax',
-      author_email='info@hystax.com',
+      description='OptiCloud Cloud adapter',
+      url='',
+      author='CIPE',
+      author_email='',
       package_dir={'cloud_adapter': ''},
       packages=['cloud_adapter', 'cloud_adapter.clouds', 'cloud_adapter.lib',
                 'cloud_adapter.lib.azure_partner'],

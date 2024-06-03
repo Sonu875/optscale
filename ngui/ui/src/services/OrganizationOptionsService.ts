@@ -34,7 +34,7 @@ import { useApiData } from "hooks/useApiData";
 import { useApiState } from "hooks/useApiState";
 import { useOrganizationInfo } from "hooks/useOrganizationInfo";
 import { isError, checkError } from "utils/api";
-import { OPTSCALE_MODE_OPTION } from "utils/constants";
+import { OPTICLOUD_MODE_OPTION } from "utils/constants";
 import { parseJSON } from "utils/strings";
 
 const useGet = (withValues) => {
@@ -73,10 +73,10 @@ const useGetOption = () => {
 };
 
 // OptiCloud mode is a special option, it is "global", meaning that other components visibility might rely on it
-// They are wrapped with ModeWrapper, which might cause side effects. One that is known is a conflict between optscale_mode and other options.
+// They are wrapped with ModeWrapper, which might cause side effects. One that is known is a conflict between Opticloud_mode and other options.
 // This is a "quick" fix, the implementation will most likely to be changed once we migrate to Apollo and implement a new initialization process.
 // Note that there is no name passed to useApiState intentionally.
-const useGetOptscaleMode = () => {
+const useGetOptiCloudMode = () => {
   const dispatch = useDispatch();
   const { organizationId } = useOrganizationInfo();
 
@@ -86,7 +86,7 @@ const useGetOptscaleMode = () => {
 
   useEffect(() => {
     if (shouldInvoke) {
-      dispatch(getOrganizationOption(organizationId, OPTSCALE_MODE_OPTION));
+      dispatch(getOrganizationOption(organizationId, OPTICLOUD_MODE_OPTION));
     }
   }, [dispatch, organizationId, shouldInvoke]);
 
@@ -332,7 +332,7 @@ function OrganizationOptionsService() {
   return {
     useGet,
     useGetOption,
-    useGetOptscaleMode,
+    useGetOptiCloudMode,
     useUpdateOption,
     useCreateOption,
     useDeleteOption,

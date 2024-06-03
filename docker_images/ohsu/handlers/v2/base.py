@@ -4,7 +4,7 @@ import traceback
 from json.decoder import JSONDecodeError
 import tornado.web
 from docker_images.ohsu.exceptions import Err
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

@@ -15,7 +15,7 @@ const BillingReportBucketDescription = () => (
         }}
       />
     </Typography>
-    <Typography gutterBottom>
+    {/* <Typography gutterBottom>
       <FormattedMessage
         id="createNebiusDescription.billingReportBucketDocumentationReference"
         values={{
@@ -26,7 +26,7 @@ const BillingReportBucketDescription = () => (
           )
         }}
       />
-    </Typography>
+    </Typography> */}
   </Alert>
 );
 

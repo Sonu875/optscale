@@ -1,12 +1,12 @@
 #!/bin/sh -eu
 
 function initializeEnvironmentVariables(){
-    echo "window.optscale = window.optscale || {};";
+    echo "window.opticloud = window.opticloud || {};";
     for i in `env | grep '^VITE'`
     do
         key=$(echo "$i" | cut -d"=" -f1);
         val=$(echo "$i" | cut -d"=" -f2);
-        echo "window.optscale.${key}='${val}' ;";
+        echo "window.opticloud.${key}='${val}' ;";
     done
 }
 

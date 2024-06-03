@@ -9,8 +9,8 @@ from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerW
 from rest_api.rest_api_server.controllers.employee import EmployeeController
 from rest_api.rest_api_server.utils import check_string_attribute
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
-from tools.optscale_exceptions.common_exc import NotFoundException, WrongArgumentsException
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
+from tools.opticloud_exceptions.common_exc import NotFoundException, WrongArgumentsException
 
 
 LOG = logging.getLogger(__name__)

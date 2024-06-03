@@ -1,8 +1,8 @@
 import json
 
-from tools.optscale_exceptions.common_exc import ForbiddenException
+from tools.opticloud_exceptions.common_exc import ForbiddenException
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.assignment_request import (
     AssignmentRequestAsyncController)
 from rest_api.rest_api_server.exceptions import Err

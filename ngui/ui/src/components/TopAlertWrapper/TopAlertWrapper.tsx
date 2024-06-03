@@ -9,7 +9,7 @@ import { useApiData } from "hooks/useApiData";
 import { useApiState } from "hooks/useApiState";
 import { useOrganizationInfo } from "hooks/useOrganizationInfo";
 import { useRootData } from "hooks/useRootData";
-import { GITHUB_HYSTAX_OPTSCALE_REPO } from "urls";
+import { GITHUB_CIPE_OPTICLOUD_REPO } from "urls";
 import { AZURE_TENANT, ENVIRONMENT } from "utils/constants";
 import { SPACING_1 } from "utils/layouts";
 import { updateOrganizationTopAlert as updateOrganizationTopAlertActionCreator } from "./actionCreators";
@@ -130,39 +130,39 @@ const TopAlertWrapper = ({ blacklistIds = [] }) => {
         },
         dataTestId: "top_alert_data_proceeded"
       },
-      {
-        id: ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT,
-        // isExistingUser — true only if user was logged in/visited optscale before. Set in migrations.
-        // organizationId — wont be presented on initial load (so storedAlerts will be empty, so even if banner was closed, we would not know that,
-        //                  so we need to wait for organizationId. But if user is not logged in — there also wont be organizationId, so we use next flag)
-        // userId — presented after login
-        // this check means "condition: not logged in new user (!isExistingUser && !userId) OR new user and we know organization id (!isExistingUser && organizationId)"
-        condition: !isExistingUser && (!userId || organizationId),
-        getContent: () => (
-          <Box sx={{ textAlign: "center" }}>
-            <FormattedMessage
-              id="openSourceAnnouncement"
-              values={{
-                star: (chunks) => (
-                  <GitHubInlineButton
-                    ariaLabelMessageId="starHystaxOnGithub"
-                    dataIcon="octicon-star"
-                    href={GITHUB_HYSTAX_OPTSCALE_REPO}
-                  >
-                    {chunks}
-                  </GitHubInlineButton>
-                )
-              }}
-            />
-          </Box>
-        ),
-        type: "info",
-        triggered: isTriggered(ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT),
-        onClose: () => {
-          updateOrganizationTopAlert({ id: ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT, closed: true });
-        },
-        dataTestId: "top_alert_open_source_announcement"
-      }
+      // {
+      //   id: ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT,
+      //   // isExistingUser — true only if user was logged in/visited OPTICLOUD before. Set in migrations.
+      //   // organizationId — wont be presented on initial load (so storedAlerts will be empty, so even if banner was closed, we would not know that,
+      //   //                  so we need to wait for organizationId. But if user is not logged in — there also wont be organizationId, so we use next flag)
+      //   // userId — presented after login
+      //   // this check means "condition: not logged in new user (!isExistingUser && !userId) OR new user and we know organization id (!isExistingUser && organizationId)"
+      //   condition: !isExistingUser && (!userId || organizationId),
+      //   // getContent: () => (
+      //   //   <Box sx={{ textAlign: "center" }}>
+      //   //     <FormattedMessage
+      //   //       id="openSourceAnnouncement"
+      //   //       values={{
+      //   //         star: (chunks) => (
+      //   //           <GitHubInlineButton
+      //   //             ariaLabelMessageId="starCIPEOnGithub"
+      //   //             dataIcon="octicon-star"
+      //   //             href={GITHUB_CIPE_OPTICLOUD_REPO}
+      //   //           >
+      //   //             {chunks}
+      //   //           </GitHubInlineButton>
+      //   //         )
+      //   //       }}
+      //   //     />
+      //   //   </Box>
+      //   // ),
+      //   type: "info",
+      //   triggered: isTriggered(ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT),
+      //   onClose: () => {
+      //     updateOrganizationTopAlert({ id: ALERT_TYPES.OPEN_SOURCE_ANNOUNCEMENT, closed: true });
+      //   },
+      //   dataTestId: "top_alert_open_source_announcement"
+      // }
     ];
   }, [
     storedAlerts,

@@ -7,7 +7,7 @@ import {
   LocalStorageBottleneck,
   SpotInstancesUsage
 } from "containers/RecommendationsOverviewContainer/recommendations/ml";
-import { useOptscaleRecommendations } from "./useOptscaleRecommendations";
+import { useOpticloudRecommendations } from "./useOpticloudRecommendations";
 
 const ML_RECOMMENDATIONS = Object.fromEntries(
   [CrossRegionTraffic, ExecutorsReservation, ExecutorsUpgrade, GpuMemory, LocalStorageBottleneck, SpotInstancesUsage].map(
@@ -16,7 +16,7 @@ const ML_RECOMMENDATIONS = Object.fromEntries(
 );
 
 export const useAllRecommendations = () => {
-  const optscaleRecommendation = useOptscaleRecommendations();
+  const opticloudRecommendation = useOpticloudRecommendations();
 
-  return useMemo(() => ({ ...ML_RECOMMENDATIONS, ...optscaleRecommendation }), [optscaleRecommendation]);
+  return useMemo(() => ({ ...ML_RECOMMENDATIONS, ...opticloudRecommendation }), [opticloudRecommendation]);
 };

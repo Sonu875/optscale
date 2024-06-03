@@ -9,7 +9,7 @@ import Markdown from "components/Markdown";
 import SideModalTitle from "components/SideModalTitle";
 import CommunityDocsContext from "contexts/CommunityDocsContext/CommunityDocsContext";
 import { intl } from "translations/react-intl-config";
-import { GITHUB_HYSTAX_OPTSCALE_REPO, getDocsFileUrl } from "urls";
+import { GITHUB_CIPE_OPTICLOUD_REPO, getDocsFileUrl } from "urls";
 import { SPACING_2 } from "utils/layouts";
 import useStyles from "./DocsPanel.styles";
 
@@ -21,7 +21,7 @@ const STATUSES = {
 };
 
 const GithubLink = (chunks) => (
-  <Link href={GITHUB_HYSTAX_OPTSCALE_REPO} target="_blank" rel="noopener noreferrer">
+  <Link href={GITHUB_CIPE_OPTICLOUD_REPO} target="_blank" rel="noopener noreferrer">
     {chunks}
   </Link>
 );
@@ -74,57 +74,58 @@ const DocsPanel = () => {
   }, [documentationUrl, isCommunityDocsOpened]);
 
   return (
-    <Paper className={classes.wrapper} elevation={0}>
-      <AppBar color="info" position="static">
-        <Toolbar className={classes.toolbar}>
-          <SideModalTitle sx={{ flexGrow: 1 }}>
-            <FormattedMessage id="communityDocs" />
-          </SideModalTitle>
-          <IconButton icon={<CloseIcon />} onClick={setIsCommunityDocsOpened} color="inherit" />
-        </Toolbar>
-      </AppBar>
-      <Box className={classes.content}>
-        {status === STATUSES.LOADING && (
-          <Box className={classes.loader}>
-            <CircularProgress />
-          </Box>
-        )}
-        {status === STATUSES.OK && (
-          <>
-            <Box m={SPACING_2}>
-              <Markdown transformImageUri={(uri) => `/docs/${uri}`}>{markdown}</Markdown>
-            </Box>
-            <InlineSeverityAlert
-              messageId="contributeToDocs"
-              messageValues={{
-                documentationUrl: <DocumentationUrl url={documentationUrl} />,
-                github: GithubLink,
-                action: intl.formatMessage({ id: "edit" }).toLocaleLowerCase()
-              }}
-            />
-          </>
-        )}
-        {status === STATUSES.MISSING && (
-          <InlineSeverityAlert
-            messageId="noCommunityDocumentation"
-            messageValues={{
-              br: <br />,
-              contributeMessage: (
-                <FormattedMessage
-                  id="contributeToDocs"
-                  values={{
-                    documentationUrl: <DocumentationUrl url={documentationUrl} />,
-                    github: GithubLink,
-                    action: intl.formatMessage({ id: "add" }).toLocaleLowerCase()
-                  }}
-                />
-              )
-            }}
-          />
-        )}
-        {status === STATUSES.ERROR && <FormattedMessage id="communityDocsError" />}
-      </Box>
-    </Paper>
+    <></>
+    // <Paper className={classes.wrapper} elevation={0}>
+    //   <AppBar color="info" position="static">
+    //     <Toolbar className={classes.toolbar}>
+    //       <SideModalTitle sx={{ flexGrow: 1 }}>
+    //         <FormattedMessage id="communityDocs" />
+    //       </SideModalTitle>
+    //       <IconButton icon={<CloseIcon />} onClick={setIsCommunityDocsOpened} color="inherit" />
+    //     </Toolbar>
+    //   </AppBar>
+    //   <Box className={classes.content}>
+    //     {status === STATUSES.LOADING && (
+    //       <Box className={classes.loader}>
+    //         <CircularProgress />
+    //       </Box>
+    //     )}
+    //     {status === STATUSES.OK && (
+    //       <>
+    //         <Box m={SPACING_2}>
+    //           <Markdown transformImageUri={(uri) => `/docs/${uri}`}>{markdown}</Markdown>
+    //         </Box>
+    //         <InlineSeverityAlert
+    //           messageId="contributeToDocs"
+    //           messageValues={{
+    //             documentationUrl: <DocumentationUrl url={documentationUrl} />,
+    //             github: GithubLink,
+    //             action: intl.formatMessage({ id: "edit" }).toLocaleLowerCase()
+    //           }}
+    //         />
+    //       </>
+    //     )}
+    //     {status === STATUSES.MISSING && (
+    //       <InlineSeverityAlert
+    //         messageId="noCommunityDocumentation"
+    //         messageValues={{
+    //           br: <br />,
+    //           contributeMessage: (
+    //             <FormattedMessage
+    //               id="contributeToDocs"
+    //               values={{
+    //                 documentationUrl: <DocumentationUrl url={documentationUrl} />,
+    //                 github: GithubLink,
+    //                 action: intl.formatMessage({ id: "add" }).toLocaleLowerCase()
+    //               }}
+    //             />
+    //           )
+    //         }}
+    //       />
+    //     )}
+    //     {status === STATUSES.ERROR && <FormattedMessage id="communityDocsError" />}
+    //   </Box>
+    // </Paper>
   );
 };
 

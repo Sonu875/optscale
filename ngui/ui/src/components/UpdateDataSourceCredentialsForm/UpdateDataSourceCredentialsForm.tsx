@@ -33,12 +33,12 @@ import {
 import FormButtonsWrapper from "components/FormButtonsWrapper";
 import InlineSeverityAlert from "components/InlineSeverityAlert";
 import {
-  DOCS_HYSTAX_AUTO_BILLING_AWS,
-  DOCS_HYSTAX_CONNECT_ALIBABA_CLOUD,
-  DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT,
-  DOCS_HYSTAX_CONNECT_GCP_CLOUD,
-  DOCS_HYSTAX_DISCOVER_RESOURCES,
-  GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR,
+  DOCS_CIPE_AUTO_BILLING_AWS,
+  DOCS_CIPE_CONNECT_ALIBABA_CLOUD,
+  DOCS_CIPE_CONNECT_AZURE_ACCOUNT,
+  DOCS_CIPE_CONNECT_GCP_CLOUD,
+  DOCS_CIPE_DISCOVER_RESOURCES,
+  GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR,
   DATABRICKS_CREATE_SERVICE_PRINCIPAL
 } from "urls";
 import {
@@ -65,7 +65,7 @@ const Description = ({ type, config }) => {
               id="createAwsLinkedDocumentationReference3"
               values={{
                 discoverResourcesLink: (chunks) => (
-                  <Link data-test-id="link_iam_user" href={DOCS_HYSTAX_DISCOVER_RESOURCES} target="_blank" rel="noopener">
+                  <Link data-test-id="link_iam_user" href={DOCS_CIPE_DISCOVER_RESOURCES} target="_blank" rel="noopener">
                     {chunks}
                   </Link>
                 )
@@ -76,7 +76,7 @@ const Description = ({ type, config }) => {
               id="createAwsRootDocumentationReference"
               values={{
                 link: (chunks) => (
-                  <Link data-test-id="link_guide" href={DOCS_HYSTAX_AUTO_BILLING_AWS} target="_blank" rel="noopener">
+                  <Link data-test-id="link_guide" href={DOCS_CIPE_AUTO_BILLING_AWS} target="_blank" rel="noopener">
                     {chunks}
                   </Link>
                 ),
@@ -93,7 +93,7 @@ const Description = ({ type, config }) => {
             id="createAzureSubscriptionDocumentationReference"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
+                <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               ),
@@ -109,7 +109,7 @@ const Description = ({ type, config }) => {
             id="createAzureSubscriptionDocumentationReference"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
+                <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               ),
@@ -125,7 +125,7 @@ const Description = ({ type, config }) => {
             id="createAlibabaDocumentationReference"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_ALIBABA_CLOUD} target="_blank" rel="noopener">
+                <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_ALIBABA_CLOUD} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               ),
@@ -159,7 +159,7 @@ const Description = ({ type, config }) => {
             id="createGCPDocumentationReference"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_GCP_CLOUD} target="_blank" rel="noopener">
+                <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_GCP_CLOUD} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               ),
@@ -240,7 +240,7 @@ const UpdateCredentialsWarning = ({ type }) => {
           messageId="k8sUpdateWarning"
           messageValues={{
             link: (chunks) => (
-              <Link data-test-id="link_guide" href={GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
+              <Link data-test-id="link_guide" href={GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
                 {chunks}
               </Link>
             )

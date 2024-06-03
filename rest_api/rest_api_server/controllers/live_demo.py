@@ -11,12 +11,12 @@ from kombu import Connection as QConnection, Exchange
 from bson.objectid import ObjectId
 from pymongo import UpdateOne
 
-from optscale_client.config_client.client import etcd
+from opticloud_client.config_client.client import etcd
 from datetime import datetime, timedelta
 from sqlalchemy import and_, true
 
 from tools.cloud_adapter.model import ResourceTypes
-from tools.optscale_exceptions.common_exc import InternalServerError
+from tools.opticloud_exceptions.common_exc import InternalServerError
 from rest_api.rest_api_server.controllers.base import (
     BaseController, MongoMixin, BaseProfilingTokenController, ClickHouseMixin)
 from rest_api.rest_api_server.controllers.base_async import (
@@ -33,7 +33,7 @@ from rest_api.rest_api_server.models.models import (
     ProfilingToken, PowerSchedule)
 from rest_api.rest_api_server.utils import (
     gen_id, encode_config, timestamp_to_day_start)
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 
 LOG = logging.getLogger(__name__)
@@ -577,7 +577,7 @@ class LiveDemoController(BaseController, MongoMixin, ClickHouseMixin):
             config.update({
                 'url': 'https://%s.com' % gen_id(),
                 'port': 4433,
-                'user': 'optscale'
+                'user': 'opticloud'
             })
         obj['config'] = encode_config(config)
         obj['organization_id'] = organization_id
@@ -1375,7 +1375,7 @@ class LiveDemoController(BaseController, MongoMixin, ClickHouseMixin):
         }
 
     def _send_subscribe_email(self, email, subscribe):
-        recipient = self._config.optscale_email_recipient()
+        recipient = self._config.opticloud_email_recipient()
         if not recipient:
             return
         subject = f'[{self._config.public_ip()}] New live demo subscriber'

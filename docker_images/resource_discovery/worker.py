@@ -17,8 +17,8 @@ import urllib3
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
 from tools.cloud_adapter.exceptions import InvalidResourceTypeException
 from tools.cloud_adapter.model import ResourceTypes, RES_MODEL_MAP
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 CHUNK_SIZE = 200

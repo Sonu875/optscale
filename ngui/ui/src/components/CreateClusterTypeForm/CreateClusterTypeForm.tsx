@@ -9,7 +9,7 @@ import FormButtonsWrapper from "components/FormButtonsWrapper";
 import InlineSeverityAlert from "components/InlineSeverityAlert";
 import PageContentWrapper from "components/PageContentWrapper";
 import SubmitButtonLoader from "components/SubmitButtonLoader";
-import { CLUSTER_TYPES, DOCS_HYSTAX_CLUSTERS, RESOURCES } from "urls";
+import { CLUSTER_TYPES, DOCS_CIPE_CLUSTERS, RESOURCES } from "urls";
 import { SPACING_1 } from "utils/layouts";
 import { NameField, TagKeyField } from "./FormElements";
 
@@ -53,7 +53,7 @@ const CreateClusterTypeForm = ({ onSubmit, onCancel, isSubmitLoading = false }) 
           messageValues={{
             strong: (chunks) => <strong>{chunks}</strong>,
             link: (chunks) => (
-              <Link data-test-id="link_read_more" href={DOCS_HYSTAX_CLUSTERS} target="_blank" rel="noopener">
+              <Link data-test-id="link_read_more" href={DOCS_CIPE_CLUSTERS} target="_blank" rel="noopener">
                 {chunks}
               </Link>
             )

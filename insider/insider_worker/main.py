@@ -11,7 +11,7 @@ from kombu import Connection
 from kombu.utils.debug import setup_logging
 from kombu import Exchange, Queue
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from insider.insider_worker.migrator import Migrator
 from insider.insider_worker.processors.factory import get_processor_class
 

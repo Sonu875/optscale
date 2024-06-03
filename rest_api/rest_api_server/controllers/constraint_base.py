@@ -5,7 +5,7 @@ from datetime import datetime, time, timedelta
 from sqlalchemy.sql import and_, exists
 from sqlalchemy import Enum
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 from rest_api.rest_api_server.models.enums import ConstraintTypes
 from rest_api.rest_api_server.models.models import OrganizationOption

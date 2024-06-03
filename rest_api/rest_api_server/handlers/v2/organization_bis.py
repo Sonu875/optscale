@@ -1,7 +1,7 @@
 import json
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.organization_bi import (
     OrganizationBIAsyncController,
     BIAsyncController,

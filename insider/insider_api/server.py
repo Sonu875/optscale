@@ -5,7 +5,7 @@ import argparse
 import tornado.ioloop
 import tornado.web
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 import insider.insider_api.handlers.v2 as handlers
 from insider.insider_api.urls import urls_v2

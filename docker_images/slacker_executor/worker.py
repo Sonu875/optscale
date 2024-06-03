@@ -11,10 +11,10 @@ from kombu import Exchange, Queue, binding
 from requests import HTTPError
 import urllib3
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
-from optscale_client.slacker_client.client import Client as SlackerClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.slacker_client.client import Client as SlackerClient
 
 LOG = get_logger(__name__)
 QUEUE_NAME = 'slacker-task'

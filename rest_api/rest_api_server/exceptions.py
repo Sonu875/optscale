@@ -171,7 +171,7 @@ class Err(enum.Enum):
     OE0344 = [
         "%s should be a dictionary",
         ["Field name"],
-        ["optscale_params"]
+        ["opticloud_params"]
     ]
     OE0356 = [
         "%s should be a valid IPv4",

@@ -36,7 +36,7 @@ class ViolatedConstraints(Base):
             'email': [self.report_data['user_email']],
             'template_type': 'resource_owner_violation_report',
             'subject':
-                'Action required: Hystax OptScale Resource Constraints Report',
+                'Action required: CIPE opticloud Resource Constraints Report',
             'template_params': {
                 'texts': {
                     'user': self.report_data,

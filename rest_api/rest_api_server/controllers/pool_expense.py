@@ -1,7 +1,7 @@
 from calendar import monthrange
 from datetime import datetime, timedelta
 
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.controllers.organization import PoolController

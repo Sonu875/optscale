@@ -1,12 +1,12 @@
 from datetime import datetime
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 import logging
 import json
 from kombu.pools import producers
 from kombu import Connection as QConnection, Exchange
 import requests
 from tools.cloud_adapter.model import ResourceTypes
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, ForbiddenException)
 from rest_api.rest_api_server.controllers.base import (BaseController, MongoMixin,
                                                        ResourceFormatMixin)
@@ -173,7 +173,7 @@ class ShareableBookingController(BaseController, MongoMixin,
         )).one_or_none()
         if organization is None:
             return
-        recipient = self._config.optscale_email_recipient()
+        recipient = self._config.opticloud_email_recipient()
         if not recipient:
             return
         template_params = {
@@ -191,7 +191,7 @@ class ShareableBookingController(BaseController, MongoMixin,
             url=self._config.herald_url(),
             secret=self._config.cluster_secret()
         ).email_send(
-            [recipient], 'OptScale shareable resources notification',
+            [recipient], 'OptiCloud shareable resources notification',
             template_type="first_shareable_resources",
             template_params=template_params)
 

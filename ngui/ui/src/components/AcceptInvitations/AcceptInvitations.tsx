@@ -46,7 +46,7 @@ const AcceptInvitations = ({ invitations = [], activateScope, isLoadingProps = {
       </Box>
       <Box>
         <ButtonLoader
-          messageId="proceedToOptScale"
+          messageId="proceedToOptiCloud"
           size="medium"
           color="primary"
           variant="contained"

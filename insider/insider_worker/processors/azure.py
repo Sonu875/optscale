@@ -4,7 +4,7 @@ from requests.exceptions import SSLError
 from kombu import Connection as QConnection
 from kombu import Exchange
 from kombu.pools import producers
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from insider.insider_worker.processors.base import BasePriceProcessor
 from insider.insider_worker.http_client.client import Client
 

@@ -7,8 +7,8 @@ import tornado.web
 from metroculus.metroculus_api.exceptions import Err
 from metroculus.metroculus_api.utils import ModelEncoder
 
-from tools.optscale_exceptions.common_exc import UnauthorizedException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import UnauthorizedException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

@@ -2,7 +2,7 @@ import logging
 from collections import OrderedDict
 from datetime import datetime, timedelta
 from requests import HTTPError
-from optscale_client.insider_client.client import Client as InsiderClient
+from opticloud_client.insider_client.client import Client as InsiderClient
 
 from bumiworker.bumiworker.modules.base import ModuleBase
 

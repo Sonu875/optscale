@@ -4,7 +4,7 @@ import re
 from calendar import monthrange
 from datetime import datetime, timedelta
 from collections import defaultdict
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     FailedDependency, NotFoundException, WrongArgumentsException)
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.exceptions import Err

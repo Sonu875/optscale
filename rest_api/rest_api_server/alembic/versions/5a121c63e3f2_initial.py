@@ -316,8 +316,8 @@ def upgrade():
         sa.Column('invite_id', Uuid(length=36), nullable=False),
         sa.Column('scope_id', Uuid(length=36), nullable=False),
         sa.Column('scope_type', sa.Enum('ORGANIZATION', 'POOL'), nullable=False),
-        sa.Column('purpose', sa.Enum('optscale_member', 'optscale_engineer',
-                                     'optscale_manager'), nullable=False),
+        sa.Column('purpose', sa.Enum('opticloud_member', 'opticloud_engineer',
+                                     'opticloud_manager'), nullable=False),
         sa.ForeignKeyConstraint(['invite_id'], ['invite.id'], ),
         sa.PrimaryKeyConstraint('id', 'invite_id', 'scope_id'),
         sa.UniqueConstraint('invite_id', 'scope_id', name='uc_invite_id_scope_id')

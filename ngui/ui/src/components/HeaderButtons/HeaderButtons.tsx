@@ -18,7 +18,7 @@ import ProfileMenuContainer from "containers/ProfileMenuContainer";
 import { CommunityDocsContext } from "contexts/CommunityDocsContext";
 import { useMainMenuState } from "hooks/useMainMenuState";
 import { useIsUpMediaQuery } from "hooks/useMediaQueries";
-import { DOCS_HYSTAX_OPTSCALE } from "urls";
+import { DOCS_CIPE_OPTICLOUD } from "urls";
 import useStyles from "./HeaderButtons.styles";
 
 const HeaderButtons = () => {
@@ -55,7 +55,7 @@ const HeaderButtons = () => {
         <IconButton
           dataTestId="btn_doc"
           color="primary"
-          href={DOCS_HYSTAX_OPTSCALE}
+          href={DOCS_CIPE_OPTICLOUD}
           icon={<MenuBookOutlinedIcon />}
           tooltip={{
             show: true,
@@ -106,7 +106,7 @@ const HeaderButtons = () => {
         <Menu anchorEl={anchorEl} open={Boolean(anchorEl)} onClose={closeMobileMenu}>
           <Box className={classes.customMenuItem}>
             <IconButton
-              href={DOCS_HYSTAX_OPTSCALE}
+              href={DOCS_CIPE_OPTICLOUD}
               icon={<MenuBookOutlinedIcon />}
               size="medium"
               color="primary"

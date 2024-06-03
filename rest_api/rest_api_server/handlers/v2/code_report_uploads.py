@@ -1,5 +1,5 @@
 from tornado.web import stream_request_body
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.controllers.code_report_upload import CodeReportAsyncController
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncItemHandler
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler

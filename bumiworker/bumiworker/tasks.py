@@ -13,8 +13,8 @@ from pymongo import MongoClient, UpdateOne
 from bumiworker.bumiworker.consts import TaskState
 from bumiworker.bumiworker.modules.module import call_module, list_modules
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 LOG = get_logger(__name__)
@@ -233,7 +233,7 @@ class SetSucceeded(CompleteBase):
 class SetSucceededNotifiable(SetSucceeded):
     def send_modules_fail_service_email(self, organization_id, failed_modules):
         _, org = self.rest_cl.organization_get(organization_id)
-        recipient = self.config_cl.optscale_error_email_recipient()
+        recipient = self.config_cl.opticloud_error_email_recipient()
         if not recipient:
             return
         subject = '[%s] Recommendation module failed' % self.config_cl.public_ip()
@@ -561,7 +561,7 @@ class SetFailed(CompleteBase):
 class SetFailedNotifiable(SetFailed):
     def send_failure_service_email(self, organization_id, reason,
                                    failed_modules):
-        recipient = self.config_cl.optscale_error_email_recipient()
+        recipient = self.config_cl.opticloud_error_email_recipient()
         if not recipient:
             return
         subject = '[%s] Bumi task execution failed' % self.config_cl.public_ip()

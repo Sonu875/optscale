@@ -59,7 +59,7 @@ def downgrade():
                                 description='DR plan operator',
                                 lvl_id=type_pool.id, is_active=True)
     role_admin = Role(name=ADMIN, type_=type_root,
-                      description='Hystax Admin', lvl_id=type_root.id,
+                      description='CIPE Admin', lvl_id=type_root.id,
                       is_active=True)
     actions = session.query(Action).all()
     for action in actions:

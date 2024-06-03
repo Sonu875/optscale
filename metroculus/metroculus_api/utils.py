@@ -4,7 +4,7 @@ import json
 from decimal import Decimal
 
 from bson import ObjectId
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 from metroculus.metroculus_api.exceptions import Err
 

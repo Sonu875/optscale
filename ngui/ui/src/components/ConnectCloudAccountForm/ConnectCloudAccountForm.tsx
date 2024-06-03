@@ -53,13 +53,13 @@ import K8sLogoIcon from "icons/K8sLogoIcon";
 import NebiusLogoIcon from "icons/NebiusLogoIcon";
 import { intl } from "translations/react-intl-config";
 import {
-  DOCS_HYSTAX_AUTO_BILLING_AWS,
-  DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT,
-  DOCS_HYSTAX_DISCOVER_RESOURCES,
-  GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR,
-  GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS,
-  DOCS_HYSTAX_CONNECT_ALIBABA_CLOUD,
-  DOCS_HYSTAX_CONNECT_GCP_CLOUD,
+  DOCS_CIPE_AUTO_BILLING_AWS,
+  DOCS_CIPE_CONNECT_AZURE_ACCOUNT,
+  DOCS_CIPE_DISCOVER_RESOURCES,
+  GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR,
+  GITHUB_CIPE_EXTRACT_LINKED_REPORTS,
+  DOCS_CIPE_CONNECT_ALIBABA_CLOUD,
+  DOCS_CIPE_CONNECT_GCP_CLOUD,
   DATABRICKS_CREATE_SERVICE_PRINCIPAL
 } from "urls";
 import { trackEvent, GA_EVENT_CATEGORIES } from "utils/analytics";
@@ -437,7 +437,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAwsRootDocumentationReference",
         values: {
           link: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_AUTO_BILLING_AWS} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_AUTO_BILLING_AWS} target="_blank" rel="noopener">
               {chunks}
             </Link>
           ),
@@ -451,7 +451,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAwsLinkedDocumentationReference1",
         values: {
           autoBillingAwsLink: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_AUTO_BILLING_AWS} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_AUTO_BILLING_AWS} target="_blank" rel="noopener">
               {chunks}
             </Link>
           )
@@ -464,11 +464,11 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
           extractLinkedReports: (
             <Link
               data-test-id="extract_linked_reports"
-              href={GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS}
+              href={GITHUB_CIPE_EXTRACT_LINKED_REPORTS}
               target="_blank"
               rel="noopener"
             >
-              {GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS}
+              {GITHUB_CIPE_EXTRACT_LINKED_REPORTS}
             </Link>
           )
         }
@@ -478,7 +478,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAwsLinkedDocumentationReference3",
         values: {
           discoverResourcesLink: (chunks) => (
-            <Link data-test-id="link_iam_user" href={DOCS_HYSTAX_DISCOVER_RESOURCES} target="_blank" rel="noopener">
+            <Link data-test-id="link_iam_user" href={DOCS_CIPE_DISCOVER_RESOURCES} target="_blank" rel="noopener">
               {chunks}
             </Link>
           )
@@ -491,7 +491,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAzureSubscriptionDocumentationReference",
         values: {
           link: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
               {chunks}
             </Link>
           ),
@@ -505,7 +505,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAzureSubscriptionDocumentationReference",
         values: {
           link: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_AZURE_ACCOUNT} target="_blank" rel="noopener">
               {chunks}
             </Link>
           ),
@@ -527,8 +527,8 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createKubernetesDocumentationReference3",
         values: {
           kubernetesConnectGuide: (
-            <Link data-test-id="link_guide" href={GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
-              {GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR}
+            <Link data-test-id="link_guide" href={GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
+              {GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR}
             </Link>
           ),
           p: (chunks) => <p>{chunks}</p>
@@ -541,7 +541,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createAlibabaDocumentationReference",
         values: {
           link: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_ALIBABA_CLOUD} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_ALIBABA_CLOUD} target="_blank" rel="noopener">
               {chunks}
             </Link>
           ),
@@ -569,7 +569,7 @@ const renderConnectionTypeInfoMessage = ({ connectionType }) =>
         messageId: "createGCPDocumentationReference",
         values: {
           link: (chunks) => (
-            <Link data-test-id="link_guide" href={DOCS_HYSTAX_CONNECT_GCP_CLOUD} target="_blank" rel="noopener">
+            <Link data-test-id="link_guide" href={DOCS_CIPE_CONNECT_GCP_CLOUD} target="_blank" rel="noopener">
               {chunks}
             </Link>
           ),

@@ -8,9 +8,9 @@ from requests.exceptions import HTTPError
 from docker_images.ohsu.controllers.base import BaseController
 from docker_images.ohsu.controllers.base_async import BaseAsyncControllerWrapper
 from docker_images.ohsu.exceptions import Err
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 LOG = logging.getLogger(__name__)

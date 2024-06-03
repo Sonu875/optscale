@@ -5,7 +5,7 @@ from katara.katara_service.exceptions import Err
 from katara.katara_service.models.db_mysql import MySQLDB
 from katara.katara_service.models.db_test import TestDB
 
-from tools.optscale_exceptions.common_exc import InvalidModelTypeException
+from tools.opticloud_exceptions.common_exc import InvalidModelTypeException
 
 
 class DBType(Enum):

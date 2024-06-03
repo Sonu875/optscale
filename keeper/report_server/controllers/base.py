@@ -2,11 +2,11 @@ from requests import HTTPError
 
 from keeper.report_server.exceptions import Err
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     UnauthorizedException,
     WrongArgumentsException,
 )
-from optscale_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
 
 
 class BaseController(object):
@@ -45,7 +45,7 @@ class BaseController(object):
     @staticmethod
     def raise_from_validation_error(exc):
         """
-        Raise an OptScale exception from mongo validation error
+        Raise an opticloud exception from mongo validation error
         :type exc: ValidationError
         """
 

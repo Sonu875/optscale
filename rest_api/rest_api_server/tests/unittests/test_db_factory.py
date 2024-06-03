@@ -1,7 +1,7 @@
 import unittest
 
 from rest_api.rest_api_server.models.db_factory import DBType, DBFactory
-from tools.optscale_exceptions.common_exc import InvalidModelTypeException
+from tools.opticloud_exceptions.common_exc import InvalidModelTypeException
 from rest_api.rest_api_server.models.db_base import BaseDB
 
 

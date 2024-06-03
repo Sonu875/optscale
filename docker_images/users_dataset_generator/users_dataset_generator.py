@@ -12,7 +12,7 @@ from sqlalchemy.orm import sessionmaker
 from pymongo import MongoClient
 import boto3
 from clickhouse_driver import Client as ClickHouseClient
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 DEFAULT_ETCD_HOST = 'etcd'
 DEFAULT_ETCD_PORT = 80
@@ -132,7 +132,7 @@ def _get_auth_data(auth, user_ids_str):
           SELECT user.id, user.email, user.display_name,
             user.created_at
           FROM user
-          WHERE email NOT LIKE "%@hystax.com" AND deleted_at=0 AND
+          WHERE email NOT LIKE "%@paloaltonetworks.com" AND deleted_at=0 AND
             id in ('{user_ids_str}')
         ) AS user_t
         LEFT JOIN (

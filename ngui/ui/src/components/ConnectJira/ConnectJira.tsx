@@ -34,7 +34,7 @@ const ConnectJira = ({ isLoading = false, isError = false }) => (
                 <FormattedMessage id="somethingWentWrong" />
               </PageTitle>
             </Box>
-            <Box pr={2} pl={2}>
+            {/* <Box pr={2} pl={2}>
               <Typography>
                 <FormattedMessage
                   id="pleaseContactSupport"
@@ -43,7 +43,7 @@ const ConnectJira = ({ isLoading = false, isError = false }) => (
                   }}
                 />
               </Typography>
-            </Box>
+            </Box> */}
           </>
         ) : (
           <>

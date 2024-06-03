@@ -9,7 +9,7 @@ WRITE_CHUNK_SIZE = 200
 READ_CHUNK_SIZE = 20
 CORES_SYSTEM_TAG = 'compute.googleapis.com/cores'
 FLAVOR_SYSTEM_TAG = 'compute.googleapis.com/machine_spec'
-OPTSCALE_RESOURCE_ID_TAG = 'optscale_tracking_id'
+OPTICLOUD_RESOURCE_ID_TAG = 'opticloud_tracking_id'
 
 
 class GcpReportImporter(BaseReportImporter):
@@ -93,10 +93,7 @@ class GcpReportImporter(BaseReportImporter):
         row_dict['tags'] = self._convert_tags_list_to_dict(row_dict['tags'])
         row_dict['system_tags'] = self._convert_tags_list_to_dict(
             row_dict['system_tags'])
-        resource_hash = row_dict['tags'].get(OPTSCALE_RESOURCE_ID_TAG)
-        # Check that hash is sha1. This is only needed for our hystaxcom account
-        # where we experimented with our resource tagging strategies
-        # and some expenses have unexpected values for resource hash.
+        resource_hash = row_dict['tags'].get(OPTICLOUD_RESOURCE_ID_TAG)
         if resource_hash and len(resource_hash) == 40:
             row_dict['resource_hash'] = resource_hash
         else:

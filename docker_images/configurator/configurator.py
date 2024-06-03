@@ -13,7 +13,7 @@ from boto3.session import Config as BotoConfig
 from sqlalchemy import create_engine
 from pymongo import MongoClient
 from influxdb import InfluxDBClient
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 
 LOG = logging.getLogger(__name__)
 

@@ -6,7 +6,7 @@ from sqlalchemy import and_
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import Organization, Pool
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
 
 LOG = logging.getLogger(__name__)

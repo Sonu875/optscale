@@ -4,8 +4,8 @@ from auth.auth_server.controllers.scope import ScopeAsyncController
 from auth.auth_server.exceptions import Err
 from auth.auth_server.handlers.v1.base import BaseAuthHandler
 from auth.auth_server.utils import ModelEncoder
-from tools.optscale_exceptions.common_exc import NotFoundException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class ScopeAsyncHandler(BaseAuthHandler):

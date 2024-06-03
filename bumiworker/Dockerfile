@@ -1,14 +1,12 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH /usr/src/app/
 
-COPY optscale_client/herald_client optscale_client/herald_client
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/metroculus_client optscale_client/metroculus_client
-COPY optscale_client/insider_client optscale_client/insider_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
+COPY opticloud_client/herald_client opticloud_client/herald_client
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/metroculus_client opticloud_client/metroculus_client
+COPY opticloud_client/insider_client opticloud_client/insider_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
 COPY tools/cloud_adapter tools/cloud_adapter
 
 COPY bumiworker/requirements.txt ./bumiworker/requirements.txt

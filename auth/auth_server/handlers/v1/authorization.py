@@ -3,10 +3,10 @@ from auth.auth_server.controllers.authorization import (
     AuthorizationAsyncController)
 from auth.auth_server.handlers.v1.base import BaseAsyncAuthCollectionHandler
 from auth.auth_server.utils import ModelEncoder
-from tools.optscale_exceptions.common_exc import (ForbiddenException,
+from tools.opticloud_exceptions.common_exc import (ForbiddenException,
                                                   WrongArgumentsException,
                                                   NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class AuthorizationAsyncHandler(BaseAsyncAuthCollectionHandler):

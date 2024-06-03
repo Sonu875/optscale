@@ -37,7 +37,7 @@ const ML_RECOMMENDATIONS = Object.fromEntries(
   )
 );
 
-export const OPTSCALE_RECOMMENDATIONS = Object.fromEntries(
+export const OPTICLOUD_RECOMMENDATIONS = Object.fromEntries(
   [
     VolumesNotAttachedForLongTime,
     ShortLivingInstances,
@@ -66,4 +66,4 @@ export const OPTSCALE_RECOMMENDATIONS = Object.fromEntries(
   ].map((Rec) => [new Rec().type, Rec])
 );
 
-export const ALL_RECOMMENDATIONS = { ...ML_RECOMMENDATIONS, ...OPTSCALE_RECOMMENDATIONS };
+export const ALL_RECOMMENDATIONS = { ...ML_RECOMMENDATIONS, ...OPTICLOUD_RECOMMENDATIONS };

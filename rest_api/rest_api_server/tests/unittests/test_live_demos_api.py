@@ -7,7 +7,7 @@ from unittest.mock import patch, PropertyMock
 
 import optscale_client.rest_api_client
 
-from tools.optscale_exceptions.common_exc import InternalServerError
+from tools.opticloud_exceptions.common_exc import InternalServerError
 import optscale_client.rest_api_client.client
 import optscale_client.rest_api_client.client_v2
 from rest_api.rest_api_server.exceptions import Err

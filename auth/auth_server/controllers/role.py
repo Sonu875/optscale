@@ -11,7 +11,7 @@ from auth.auth_server.models.models import (Role, Action, RoleAction,
 from auth.auth_server.utils import (check_action, get_input, unique_list,
                                     check_string_attribute, is_uuid,
                                     pop_or_raise, get_context_values)
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   NotFoundException,
                                                   ForbiddenException,
                                                   ConflictException)

@@ -10,7 +10,7 @@ from rest_api.rest_api_server.models.enums import (
     RolePurposes, InviteAssignmentScopeTypes)
 from rest_api.rest_api_server.utils import CURRENCY_MAP
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 LOG = logging.getLogger(__name__)
 
@@ -36,7 +36,7 @@ class RegisterController(BaseController):
             self.session, self._config, self.token).create(
             name=name, currency=currency, is_demo=is_demo)
         self.assign_role_to_user(user_info['id'], org.id,
-                                 RolePurposes.optscale_manager.value,
+                                 RolePurposes.opticloud_manager.value,
                                  InviteAssignmentScopeTypes.ORGANIZATION.value)
         employee_ctl = EmployeeController(
             self.session, self._config, self.token
@@ -77,7 +77,7 @@ class RegisterController(BaseController):
             url=self._config.herald_url(),
             secret=self._config.cluster_secret()
         ).email_send(
-            [user_info['email']], 'Thank you for registering at OptScale. '
+            [user_info['email']], 'Thank you for registering at OptiCloud. '
                                   'Please proceed with the setup',
             template_type="employee_greetings", template_params=template_params
         )

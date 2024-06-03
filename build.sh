@@ -4,7 +4,7 @@
 # leave registry empty if default registry [docker.io] used
 
 # Initialize default values
-COMPANY="hystax"
+COMPANY="cipe"
 REGISTRY=""
 LOGIN=""
 PASSWORD=""

@@ -14,10 +14,10 @@ from kombu.utils.debug import setup_logging
 from kombu import Exchange, Queue, binding
 import urllib3
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
-from optscale_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
 
 LOG = get_logger(__name__)
 
@@ -33,7 +33,7 @@ CONSTRAINT_TYPES = ['resource_count_anomaly', 'expense_anomaly',
                     'resource_quota', 'recurring_budget', 'expiring_budget',
                     'tagging_policy']
 NOT_SET = 'Not set'
-MANAGER_ROLE = 'optscale_manager'
+MANAGER_ROLE = 'opticloud_manager'
 REGULAR_IDENTITY = 'regular'
 SECONDS_IN_DAY = 24 * 60 * 60
 
@@ -317,7 +317,7 @@ class HeraldExecutorWorker(ConsumerMixin):
         return all_user_info
 
     def _get_service_emails(self):
-        return self.config_cl.optscale_email_recipient()
+        return self.config_cl.opticloud_email_recipient()
 
     @staticmethod
     def _filter_bookings(shareable_bookings, resource_id, now_ts):
@@ -576,7 +576,7 @@ class HeraldExecutorWorker(ConsumerMixin):
             }
         }
         self.herald_cl.email_send(
-            [email], 'Optscale pool limit alert',
+            [email], 'opticloud pool limit alert',
             template_type=HeraldTemplates.POOL_ALERT.value,
             template_params=template_params)
         LOG.info('sending email notification to user %s' % email)
@@ -619,7 +619,7 @@ class HeraldExecutorWorker(ConsumerMixin):
         params = {
             'email': [user['email']],
             'template_type': HeraldTemplates.RESOURCE_OWNER_VIOLATION_ALERT.value,
-            'subject': 'Action required: Hystax OptScale Resource Constraint'
+            'subject': 'Action required: CIPE opticloud Resource Constraint'
                        ' Violation Alert',
             'template_params': {
                 'texts': {

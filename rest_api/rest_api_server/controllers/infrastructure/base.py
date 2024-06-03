@@ -14,8 +14,8 @@ from rest_api.rest_api_server.models.enums import RunStates
 from rest_api.rest_api_server.models.models import CloudAccount, Employee
 from rest_api.rest_api_server.utils import Config, handle_http_exc
 
-from optscale_client.insider_client.client import Client as InsiderClient
-from tools.optscale_exceptions.common_exc import (
+from opticloud_client.insider_client.client import Client as InsiderClient
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 
 CLOUD_TYPE_TO_CLOUD_MAP = {

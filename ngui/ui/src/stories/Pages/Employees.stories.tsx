@@ -20,7 +20,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "business_unit",
         assignment_id: "852fc65c-235d-4b78-87cb-05b55a0e24ec",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -35,7 +35,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "team",
         assignment_id: "979ceeee-df04-44f7-902d-38107fc308b3",
-        purpose: "optscale_engineer"
+        purpose: "opticloud_engineer"
       }
     ]
   },
@@ -51,7 +51,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "0a8c9f17-2b31-445b-bead-f5d37db9279b",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -67,7 +67,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "ec269aa8-66b3-4bf2-b7ae-ee1fd28206ae",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -82,7 +82,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "cicd",
         assignment_id: "d8e3b4cb-b265-4c81-a402-5d9228faba8f",
-        purpose: "optscale_engineer"
+        purpose: "opticloud_engineer"
       }
     ]
   },
@@ -98,7 +98,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "business_unit",
         assignment_id: "5c9e2934-7498-4237-9387-8204eac67031",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -114,7 +114,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "b2274025-687b-464a-970e-63d3f9c91288",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -129,7 +129,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "e4153812-4ea4-4552-a16d-755f6ede31e8",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -144,7 +144,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "team",
         assignment_id: "9a0228df-3583-417e-8031-e766266d08b3",
-        purpose: "optscale_engineer"
+        purpose: "opticloud_engineer"
       }
     ]
   },
@@ -159,7 +159,7 @@ const employees = [
         assignment_resource_type: "pool",
         assignment_resource_purpose: "business_unit",
         assignment_id: "052bb832-e20d-413c-8e20-d3d58e04a45b",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -174,7 +174,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "28d03f6b-32e4-4ca9-88e4-7f828a2174ae",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -189,7 +189,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "c4816d67-f752-47ec-8e88-f1447b39e9b7",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -204,7 +204,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "c78ccaf7-8f05-40bd-94ce-5cf4debe9ddd",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   },
@@ -219,7 +219,7 @@ const employees = [
         assignment_resource_type: "organization",
         assignment_resource_purpose: "business_unit",
         assignment_id: "28e5d374-3cca-4a36-a7d3-dff98e83f465",
-        purpose: "optscale_manager"
+        purpose: "opticloud_manager"
       }
     ]
   }

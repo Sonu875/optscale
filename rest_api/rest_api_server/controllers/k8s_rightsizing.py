@@ -1,12 +1,12 @@
 from collections import defaultdict
-from optscale_client.metroculus_client.client import Client as MetroculusClient
+from opticloud_client.metroculus_client.client import Client as MetroculusClient
 from rest_api.rest_api_server.controllers.base import BaseController, MongoMixin
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import CloudTypes
 from rest_api.rest_api_server.models.models import CloudAccount
 from rest_api.rest_api_server.utils import bytes_to_gb, encoded_tags
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 
 class K8sRightsizingController(BaseController, MongoMixin):

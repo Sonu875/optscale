@@ -11,9 +11,9 @@ from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.utils import run_task, check_int_attribute
 
-from optscale_client.metroculus_client.client import Client as MetroculusClient
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from opticloud_client.metroculus_client.client import Client as MetroculusClient
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 LOG = logging.getLogger(__name__)
 DEFAULT_INTERVAL = 900

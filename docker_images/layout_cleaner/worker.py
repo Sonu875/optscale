@@ -1,7 +1,7 @@
 import os
 import logging
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 LOG = logging.getLogger(__name__)
 

@@ -1,7 +1,7 @@
 import logging
 from collections import OrderedDict
 from datetime import datetime, timedelta
-from optscale_client.metroculus_client.client import Client as MetroculusClient
+from opticloud_client.metroculus_client.client import Client as MetroculusClient
 
 from bumiworker.bumiworker.modules.abandoned_base import AbandonedBase
 

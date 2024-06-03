@@ -6,8 +6,8 @@ from unittest.mock import patch, ANY
 
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.tests.unittests.test_api_base import TestApiBase
-from tools.optscale_exceptions.common_exc import HeraldException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import HeraldException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class TestInviteApi(TestApiBase):

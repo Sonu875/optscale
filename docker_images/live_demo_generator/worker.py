@@ -12,8 +12,8 @@ from kombu import Exchange, Queue
 import urllib3
 from datetime import datetime
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 EXCHANGE_NAME = 'live-demo-generations'
 QUEUE_NAME = 'live-demo-generation'

@@ -3,12 +3,12 @@ import Box from "@mui/material/Box";
 import Link from "@mui/material/Link";
 import { FormattedMessage } from "react-intl";
 import AddToSlackAccountButtonContainer from "containers/AddToSlackAccountButtonContainer";
-import { DOCS_HYSTAX_SLACK_INTEGRATION } from "urls";
+import { DOCS_CIPE_SLACK_INTEGRATION } from "urls";
 import BaseSideModal from "./BaseSideModal";
 
 class SlackIntegrationModal extends BaseSideModal {
   headerProps = {
-    messageId: "optScaleSlackIntegrationTitle",
+    messageId: "optiCloudSlackIntegrationTitle",
     dataTestIds: {
       title: "lbl_connect_slack",
       closeButton: "btn_close"
@@ -37,7 +37,7 @@ class SlackIntegrationModal extends BaseSideModal {
             id="slackIntegrationDescription3"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_read_more" href={DOCS_HYSTAX_SLACK_INTEGRATION} target="_blank" rel="noopener">
+                <Link data-test-id="link_read_more" href={DOCS_CIPE_SLACK_INTEGRATION} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               )

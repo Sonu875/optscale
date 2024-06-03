@@ -25,7 +25,7 @@ from rest_api.rest_api_server.utils import (
     check_int_attribute, raise_does_not_exist_exception,
     raise_invalid_argument_exception, check_bool_attribute,
     BASE_POOL_EXPENSES_EXPORT_LINK_FORMAT as BASE_LINK_FORMAT)
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException, NotFoundException,
     ConflictException, FailedDependency)
 

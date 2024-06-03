@@ -10,8 +10,8 @@ from gemini.gemini_worker.duplicate_object_finder.factory import Factory
 from etcd import Lock as EtcdLock
 from clickhouse_driver import Client as ClickHouseClient
 from pymongo import MongoClient
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from gemini.gemini_worker.migrator import Migrator
 from gemini.gemini_worker.duplicate_object_finder.aws.stats import Stats
 

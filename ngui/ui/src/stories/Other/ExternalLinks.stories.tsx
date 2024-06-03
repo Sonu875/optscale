@@ -3,17 +3,17 @@ import WrapperCard from "components/WrapperCard";
 import TableUseMemoWrapper from "stories/Other/TableUseMemoWrapper";
 import {
   PRODUCTION,
-  HYSTAX,
-  // Hystax documentation urls
-  DOCS_HYSTAX_OPTSCALE,
-  DOCS_HYSTAX_AUTO_BILLING_AWS,
-  DOCS_HYSTAX_DISCOVER_RESOURCES,
-  DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT,
-  DOCS_HYSTAX_RESOURCE_CONSTRAINTS,
-  GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR,
-  GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS,
-  DOCS_HYSTAX_CLUSTERS,
-  DOCS_HYSTAX_CLEANUP_SCRIPTS
+  CIPE,
+  // CIPE documentation urls
+  DOCS_CIPE_OPTICLOUD,
+  DOCS_CIPE_AUTO_BILLING_AWS,
+  DOCS_CIPE_DISCOVER_RESOURCES,
+  DOCS_CIPE_CONNECT_AZURE_ACCOUNT,
+  DOCS_CIPE_RESOURCE_CONSTRAINTS,
+  GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR,
+  GITHUB_CIPE_EXTRACT_LINKED_REPORTS,
+  DOCS_CIPE_CLUSTERS,
+  DOCS_CIPE_CLEANUP_SCRIPTS
 } from "urls";
 import { isEmpty } from "utils/arrays";
 
@@ -31,48 +31,48 @@ const linksDefinition = {
       ]
     },
     {
-      link: HYSTAX,
+      link: CIPE,
       usages: ["On the authorization, registration and reset password pages (top-right corner)"]
     }
   ],
-  "Hystax documentation urls": [
+  "CIPE documentation urls": [
     {
-      link: DOCS_HYSTAX_OPTSCALE,
+      link: DOCS_CIPE_OPTICLOUD,
       usages: ['Page title -> "DOCUMENTATION" button', '"OptiCloud Privacy Policy" alert dialog']
     },
     {
-      link: DOCS_HYSTAX_AUTO_BILLING_AWS,
+      link: DOCS_CIPE_AUTO_BILLING_AWS,
       usages: ["Connect cloud account form description (AWS Root and AWS Linked)"]
     },
     {
-      link: DOCS_HYSTAX_DISCOVER_RESOURCES,
+      link: DOCS_CIPE_DISCOVER_RESOURCES,
       usages: ["Connect cloud account form description (AWS Linked - 'read-only policy for resource discovery' label)"]
     },
     {
-      link: DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT,
+      link: DOCS_CIPE_CONNECT_AZURE_ACCOUNT,
       usages: ["Connect cloud account form description (Azure)"]
     },
     {
-      link: DOCS_HYSTAX_RESOURCE_CONSTRAINTS,
+      link: DOCS_CIPE_RESOURCE_CONSTRAINTS,
       usages: [
         'Pools page -> Constraints tab -> "Get more help" label',
         'Resource details page -> Constraints tab -> "Get more help" label'
       ]
     },
     {
-      link: GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR,
+      link: GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR,
       usages: ["Cloud Accounts -> Add -> Kubernetes"]
     },
     {
-      link: GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS,
+      link: GITHUB_CIPE_EXTRACT_LINKED_REPORTS,
       usages: ["Cloud Accounts -> Add -> AWS Linked"]
     },
     {
-      link: DOCS_HYSTAX_CLUSTERS,
+      link: DOCS_CIPE_CLUSTERS,
       usages: ["Cluster types page"]
     },
     {
-      link: DOCS_HYSTAX_CLEANUP_SCRIPTS,
+      link: DOCS_CIPE_CLEANUP_SCRIPTS,
       usages: ["Recommendations -> Cleanup scripts button -> Tooltip"]
     }
   ]

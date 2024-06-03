@@ -12,12 +12,12 @@ from auth.auth_server.models.models import (Token, Type, User, Role,
                                             PermissionKeys)
 from auth.auth_server.auth_token.token_store import TokenStore
 from auth.auth_server.utils import Config, popkey, get_digest
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   UnauthorizedException,
                                                   NotFoundException,
                                                   ForbiddenException)
-from tools.optscale_exceptions.http_exc import handle503
-from optscale_client.rest_api_client.client_v2 import Client as RestApiClient
+from tools.opticloud_exceptions.http_exc import handle503
+from opticloud_client.rest_api_client.client_v2 import Client as RestApiClient
 
 LOG = logging.getLogger(__name__)
 

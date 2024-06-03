@@ -19,7 +19,7 @@ import IntegrationsGallery from "components/IntegrationsGallery";
 import Logo from "components/Logo";
 import SubTitle from "components/SubTitle";
 import { useIsDownMediaQuery, useIsUpMediaQuery } from "hooks/useMediaQueries";
-import { HYSTAX, LIVE_DEMO } from "urls";
+import { CIPE, LIVE_DEMO } from "urls";
 import { tag as tagHotjar } from "utils/hotjar";
 import { SPACING_4, SPACING_2, SPACING_6 } from "utils/layouts";
 import { isEven } from "utils/math";
@@ -34,30 +34,31 @@ type GreeterProps = {
   oAuthForm: ReactNode;
 };
 
-const OptScaleLink = () => {
+const OptiCloudLink = () => {
   const { classes, cx } = useStyles();
   const intl = useIntl();
 
   return (
-    <Typography component="div" variant="body2" color="white">
-      <IconLabel
-        icon={<LanguageOutlinedIcon className={cx(classes.webIconMargin)} />}
-        label={
-          <Link
-            data-test-id="link_optscale_site"
-            href={HYSTAX}
-            onClick={() => {
-              tagHotjar(["went_optscale_website"]);
-            }}
-            color="inherit"
-            target="_blank"
-            rel="noopener"
-          >
-            {intl.formatMessage({ id: "hystaxDotCom" })}
-          </Link>
-        }
-      />
-    </Typography>
+    <></>
+    // <Typography component="div" variant="body2" color="white">
+    //   <IconLabel
+    //     icon={<LanguageOutlinedIcon className={cx(classes.webIconMargin)} />}
+    //     label={
+    //       <Link
+    //         data-test-id="link_opticloud_site"
+    //         href={CIPE}
+    //         onClick={() => {
+    //           tagHotjar(["went_opticloud_website"]);
+    //         }}
+    //         color="inherit"
+    //         target="_blank"
+    //         rel="noopener"
+    //       >
+    //         {intl.formatMessage({ id: "CIPEDotCom" })}
+    //       </Link>
+    //     }
+    //   />
+    // </Typography>
   );
 };
 
@@ -70,12 +71,12 @@ const ImagesWithCaptions = () => {
   return (
     <Grid container spacing={isUpLg ? SPACING_6 : SPACING_2} className={classes.imagesWithCaptions}>
       {[
-        { caption: "optscale.welcome.caption1", src: finopsCloudCostOptimization },
-        { caption: "optscale.welcome.caption2", src: cloudResourceUsageCostTransparency },
-        { caption: "optscale.welcome.caption3", src: anomalyDetectionToAvoidBudgetOverruns },
-        { caption: "optscale.welcome.caption4", src: mlAiProfilingOptimization },
-        { caption: "optscale.welcome.caption5", src: optimalPerformanceInfrastructureCostForMlAiTasks },
-        { caption: "optscale.welcome.caption6", src: runsetsToRunExperimentsInParallel }
+        { caption: "opticloud.welcome.caption1", src: finopsCloudCostOptimization },
+        { caption: "opticloud.welcome.caption2", src: cloudResourceUsageCostTransparency },
+        { caption: "opticloud.welcome.caption3", src: anomalyDetectionToAvoidBudgetOverruns },
+        { caption: "opticloud.welcome.caption4", src: mlAiProfilingOptimization },
+        { caption: "opticloud.welcome.caption5", src: optimalPerformanceInfrastructureCostForMlAiTasks },
+        { caption: "opticloud.welcome.caption6", src: runsetsToRunExperimentsInParallel }
       ].map(({ caption, src }, index) => (
         <Grid item lg={4} md={4} sm={6} key={caption} className={classes.imageWithCaptionWrapper}>
           <img
@@ -152,7 +153,7 @@ const Greeter = ({ form, oAuthForm }: GreeterProps) => {
       children: (
         <div className={classes.linkWrapper}>
           {/* <LiveDemoButton onClick={() => navigate(LIVE_DEMO)} /> */}
-          {/* <OptScaleLink /> */}
+          {/* <opticloudLink /> */}
         </div>
       )
     },
@@ -191,12 +192,6 @@ const Greeter = ({ form, oAuthForm }: GreeterProps) => {
   const spacing = SPACING_2;
   const halfSpacing = spacing / 2;
 
-  /**
-   * TODO: Remove custom padding and margin when mui-v5 fixes will released
-   *    https://gitlab.com/hystax/ngui/-/merge_requests/2495
-   *    https://github.com/mui-org/material-ui/issues/29266
-   *    https://github.com/mui-org/material-ui/pull/30333
-   */
   return (
     <div
       style={{

@@ -7,7 +7,7 @@ from rest_api.rest_api_server.controllers.organization_constraint import (
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import (
     Organization, OrganizationConstraint, OrganizationLimitHit)
-from tools.optscale_exceptions.common_exc import (ConflictException,
+from tools.opticloud_exceptions.common_exc import (ConflictException,
                                                   NotFoundException)
 
 LOG = logging.getLogger(__name__)

@@ -7,7 +7,7 @@ Create Date: 2022-05-18 17:14:20.769743
 """
 import os
 from pymongo import MongoClient
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 
 
 # revision identifiers, used by Alembic.

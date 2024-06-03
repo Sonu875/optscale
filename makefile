@@ -4,7 +4,7 @@ DOCKER_IMAGE_ETCD=etcd:local
 DOCKER_IMAGE_MARIADB=mariadb:local
 HELM_REPO_NGINX_STABLE=https://helm.nginx.com/stable
 NGINX_RELEASE_NAME=nginx-ingress
-OPTSCALE_RELEASE_NAME=optscale
+OPTICLOUD_RELEASE_NAME=opticloud
 
 # Targets
 .PHONY: all clean build docker helm kubectl
@@ -12,7 +12,7 @@ OPTSCALE_RELEASE_NAME=optscale
 all: clean build docker helm kubectl
 
 clean:
-	helm delete optscale
+	helm delete opticloud
 
 build:
 	./build.sh
@@ -25,9 +25,9 @@ docker:
 	docker tag mariadb $(DOCKER_IMAGE_MARIADB)
 
 helm:
-	helm repo add nginx-stable $(HELM_REPO_NGINX_STABLE)
-	helm install $(NGINX_RELEASE_NAME) nginx-stable/nginx-ingress --set rbac.create=true
-	helm install $(OPTSCALE_RELEASE_NAME) ./optscale-deploy/optscale
+	# helm repo add nginx-stable $(HELM_REPO_NGINX_STABLE) 
+	# helm install $(NGINX_RELEASE_NAME) nginx-stable/nginx-ingress --set rbac.create=true
+	helm install $(OPTICLOUD_RELEASE_NAME) ./opticloud-deploy/opticloud
 
 kubectl:
 	kubectl port-forward svc/nginx-ingress-controller 8002:80

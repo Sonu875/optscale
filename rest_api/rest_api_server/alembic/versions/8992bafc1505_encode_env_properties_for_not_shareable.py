@@ -9,7 +9,7 @@ import os
 import base64
 import binascii
 from pymongo import MongoClient, UpdateOne
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 
 # revision identifiers, used by Alembic.
 revision = '8992bafc1505'

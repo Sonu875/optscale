@@ -1,7 +1,7 @@
 import uuid
 import unittest
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from unittest.mock import MagicMock, PropertyMock, patch
 
 from docker_images.bi_scheduler.scheduler import (

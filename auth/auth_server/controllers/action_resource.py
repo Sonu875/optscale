@@ -7,7 +7,7 @@ from auth.auth_server.auth_token.token_store import TokenStore
 from auth.auth_server.controllers.base import BaseController
 from auth.auth_server.controllers.base_async import BaseAsyncControllerWrapper
 from auth.auth_server.utils import load_payload
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   ForbiddenException)
 
 LOG = logging.getLogger(__name__)

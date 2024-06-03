@@ -8,8 +8,8 @@ from functools import (
 )
 import concurrent.futures
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.insider_client.client import Client as InsiderClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.insider_client.client import Client as InsiderClient
 
 
 SECS_IN_HR = 3600  # seconds in hour

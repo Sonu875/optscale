@@ -6,7 +6,7 @@ import tornado.ioloop
 import tornado.web
 
 from bumischeduler.bumischeduler.controllers.schedule import ScheduleController
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 
 DEFAULT_ETCD_HOST = 'etcd'

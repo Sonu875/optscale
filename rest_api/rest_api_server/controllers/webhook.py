@@ -1,6 +1,6 @@
 import logging
 from sqlalchemy import exists, and_
-from tools.optscale_exceptions.common_exc import NotFoundException, ConflictException
+from tools.opticloud_exceptions.common_exc import NotFoundException, ConflictException
 from rest_api.rest_api_server.controllers.base import BaseController, MongoMixin
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.exceptions import Err

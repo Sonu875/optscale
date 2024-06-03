@@ -10,7 +10,7 @@ from diworker.diworker.utils import bytes_to_gb
 from diworker.diworker.importers.base import BaseReportImporter
 
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
-from optscale_client.insider_client.client import Client as InsiderClient
+from opticloud_client.insider_client.client import Client as InsiderClient
 
 LOG = logging.getLogger(__name__)
 CHUNK_SIZE = 200

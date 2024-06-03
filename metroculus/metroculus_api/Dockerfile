@@ -1,11 +1,9 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH /usr/src/app/
 
-COPY tools/optscale_exceptions tools/optscale_exceptions
-COPY optscale_client/config_client optscale_client/config_client
+COPY tools/opticloud_exceptions tools/opticloud_exceptions
+COPY opticloud_client/config_client opticloud_client/config_client
 COPY tools/cloud_adapter tools/cloud_adapter
 
 COPY metroculus/metroculus_api/requirements.txt metroculus/metroculus_api/requirements.txt

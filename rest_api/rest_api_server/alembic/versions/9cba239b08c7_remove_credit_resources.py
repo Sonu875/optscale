@@ -10,7 +10,7 @@ import logging
 from alembic import op
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import table, column
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 from pymongo import MongoClient
 from sqlalchemy import Integer, select, String, and_
 

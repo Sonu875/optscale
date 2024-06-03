@@ -10,7 +10,7 @@ from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import RunStates
 from rest_api.rest_api_server.models.models import CloudAccount
 
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 
 class RunController(BaseInfraController):

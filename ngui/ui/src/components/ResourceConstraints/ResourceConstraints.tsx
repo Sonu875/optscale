@@ -8,12 +8,12 @@ import InlineSeverityAlert from "components/InlineSeverityAlert";
 import ResourceLink from "components/ResourceLink";
 import ResourceConstraintContainer from "containers/ResourceConstraintContainer";
 import ResourceLimitHitsContainer from "containers/ResourceLimitHitsContainer";
-import { DOCS_HYSTAX_RESOURCE_CONSTRAINTS, CLUSTER_TYPES } from "urls";
+import { DOCS_CIPE_RESOURCE_CONSTRAINTS, CLUSTER_TYPES } from "urls";
 import { RESOURCE_PAGE_TABS } from "utils/constants";
 import { SPACING_1, SPACING_2 } from "utils/layouts";
 
 const linkRender = (chunks) => (
-  <Link href={DOCS_HYSTAX_RESOURCE_CONSTRAINTS} data-test-id="link_help" target="_blank" rel="noopener">
+  <Link href={DOCS_CIPE_RESOURCE_CONSTRAINTS} data-test-id="link_help" target="_blank" rel="noopener">
     {chunks}
   </Link>
 );

@@ -1,6 +1,6 @@
 from sqlalchemy import and_, exists
 
-from tools.optscale_exceptions.common_exc import ConflictException
+from tools.opticloud_exceptions.common_exc import ConflictException
 
 from katara.katara_service.controllers.base import BaseController
 from katara.katara_service.controllers.base_async import (

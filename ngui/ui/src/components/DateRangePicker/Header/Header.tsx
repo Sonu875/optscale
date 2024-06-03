@@ -80,7 +80,6 @@ const Header = ({
         </IconButton>
       </Grid>
       <Grid item>
-        {/* TODO: Replaces with Selector after https://gitlab.com/hystax/ngui/-/merge_requests/1823 */}
         <FormControl>
           <Select
             className={classes.root}
@@ -98,7 +97,6 @@ const Header = ({
         </FormControl>
       </Grid>
       <Grid item>
-        {/* TODO: Replaces with Selector after https://gitlab.com/hystax/ngui/-/merge_requests/1823 */}
         <FormControl>
           <Select
             className={classes.root}

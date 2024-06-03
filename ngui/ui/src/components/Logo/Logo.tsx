@@ -50,7 +50,7 @@ const Logo = ({
       width={width}
       height={height}
       src={getLogo(demo, white, size)}
-      alt={intl.formatMessage({ id: "optscale" })}
+      alt={intl.formatMessage({ id: "opticloud" })}
       data-test-id={dataTestId}
     />
   );

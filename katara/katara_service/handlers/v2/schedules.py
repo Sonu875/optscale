@@ -10,7 +10,7 @@ from katara.katara_service.handlers.v2.base import (
 from katara.katara_service.utils import ModelEncoder
 
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class ScheduleAsyncItemHandler(BaseAsyncItemHandler):

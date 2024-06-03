@@ -13,7 +13,7 @@ from rest_api.rest_api_server.models.enums import CloudTypes
 from rest_api.rest_api_server.models.models import CloudAccount, K8sNode
 from rest_api.rest_api_server.utils import RetriableException, should_retry
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 
 

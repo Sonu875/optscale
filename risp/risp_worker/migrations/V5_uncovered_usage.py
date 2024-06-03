@@ -1,6 +1,6 @@
 import logging
 from datetime import timedelta
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from risp.risp_worker.migrations.base import MigrationBase
 
 

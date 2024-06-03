@@ -6,7 +6,7 @@ from retrying import retry
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.sql import and_
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ConflictException, ForbiddenException,
     NotFoundException)
 from rest_api.rest_api_server.controllers.assignment import AssignmentController

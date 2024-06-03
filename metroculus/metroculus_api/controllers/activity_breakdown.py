@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 from collections import defaultdict
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from metroculus.metroculus_api.exceptions import Err
 from metroculus.metroculus_api.utils import (
     check_string, check_list,

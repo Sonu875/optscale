@@ -1,6 +1,6 @@
 import json
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.controllers.profiling.model import (
     ModelAsyncController)
 from rest_api.rest_api_server.handlers.v1.base_async import (

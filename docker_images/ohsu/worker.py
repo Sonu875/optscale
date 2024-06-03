@@ -1,7 +1,7 @@
 import logging
 import os
 import tornado
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 import docker_images.ohsu.handlers.v2 as handlers
 from docker_images.ohsu.urls import urls_v2
 

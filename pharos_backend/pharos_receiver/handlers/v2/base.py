@@ -7,7 +7,7 @@ import tornado.web
 
 from pharos_backend.pharos_receiver.exceptions import Err
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

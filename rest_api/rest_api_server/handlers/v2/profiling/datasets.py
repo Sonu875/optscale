@@ -12,8 +12,8 @@ from rest_api.rest_api_server.utils import (
 from rest_api.rest_api_server.handlers.v2.profiling.base import (
     ProfilingHandler)
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 def check_timespan_range(data: dict):

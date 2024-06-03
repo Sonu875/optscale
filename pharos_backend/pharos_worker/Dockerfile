@@ -1,11 +1,9 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH=/usr/src/app/
 
 COPY pharos_backend/pharos_worker/requirements.txt ./requirements.txt
-COPY optscale_client/config_client optscale_client/config_client
+COPY opticloud_client/config_client opticloud_client/config_client
 
 RUN pip install --no-cache-dir -r requirements.txt
 

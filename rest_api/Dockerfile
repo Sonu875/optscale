@@ -4,17 +4,17 @@ WORKDIR /usr/src/app/
 ENV PYTHONPATH /usr/src/app/
 
 COPY ../tools/cloud_adapter tools/cloud_adapter
-COPY ../tools/optscale_exceptions tools/optscale_exceptions
-COPY ../tools/optscale_types tools/optscale_types
+COPY ../tools/opticloud_exceptions tools/opticloud_exceptions
+COPY ../tools/opticloud_types tools/opticloud_types
 
-COPY ../optscale_client/config_client optscale_client/config_client
-COPY ../optscale_client/auth_client optscale_client/auth_client
-COPY ../optscale_client/herald_client optscale_client/herald_client
-COPY ../optscale_client/katara_client optscale_client/katara_client
-COPY ../optscale_client/metroculus_client optscale_client/metroculus_client
-COPY ../optscale_client/arcee_client optscale_client/arcee_client
-COPY ../optscale_client/insider_client optscale_client/insider_client
-COPY ../optscale_client/bulldozer_client optscale_client/bulldozer_client
+COPY ../opticloud_client/config_client opticloud_client/config_client
+COPY ../opticloud_client/auth_client opticloud_client/auth_client
+COPY ../opticloud_client/herald_client opticloud_client/herald_client
+COPY ../opticloud_client/katara_client opticloud_client/katara_client
+COPY ../opticloud_client/metroculus_client opticloud_client/metroculus_client
+COPY ../opticloud_client/arcee_client opticloud_client/arcee_client
+COPY ../opticloud_client/insider_client opticloud_client/insider_client
+COPY ../opticloud_client/bulldozer_client opticloud_client/bulldozer_client
 
 COPY live_demo.tar.xz rest_api/live_demo.tar.xz
 COPY google_calendar_client rest_api/google_calendar_client

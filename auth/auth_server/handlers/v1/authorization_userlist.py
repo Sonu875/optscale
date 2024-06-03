@@ -3,9 +3,9 @@ from auth.auth_server.handlers.v1.base import BaseSecretHandler
 from auth.auth_server.controllers.authorization_userlist import (
     AuthorizationUserlistAsyncController)
 from auth.auth_server.utils import ModelEncoder
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class AuthorizationUserlistAsyncHandler(BaseSecretHandler):

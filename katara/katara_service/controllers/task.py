@@ -17,7 +17,7 @@ from katara.katara_service.models.models import (
     TaskState
 )
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException,
     NotFoundException
 )

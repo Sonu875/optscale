@@ -20,7 +20,7 @@ import { useApiState } from "hooks/useApiState";
 import { useDownloadCleanupScript } from "hooks/useDownloadCleanupScript";
 import { useDownloadRecommendationItems } from "hooks/useDownloadRecommendationItems";
 import { useOpenSideModal } from "hooks/useOpenSideModal";
-import { DOCS_HYSTAX_CLEANUP_SCRIPTS } from "urls";
+import { DOCS_CIPE_CLEANUP_SCRIPTS } from "urls";
 import { DOWNLOAD_FILE_FORMATS, SCOPE_TYPES } from "utils/constants";
 import { isEmpty } from "utils/objects";
 import RecommendationDetailsService from "../RecommendationDetailsService";
@@ -85,7 +85,7 @@ const useActionBarItems = ({ downloadLimit, recommendation, dataSourceIds, withD
             id="cleanupScriptDescription"
             values={{
               link: (chunks) => (
-                <Link href={DOCS_HYSTAX_CLEANUP_SCRIPTS} data-test-id="link_cleanup_script" target="_blank" rel="noopener">
+                <Link href={DOCS_CIPE_CLEANUP_SCRIPTS} data-test-id="link_cleanup_script" target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               )

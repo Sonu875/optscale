@@ -10,9 +10,9 @@ venv/
 .vscode/
 .DS_Store
 .python-version
-optscale-deploy/overlay/*.yml
-!optscale-deploy/overlay/user_template.yml
-optscale-deploy/optscale/component_versions.yaml
+opticloud-deploy/overlay/*.yml
+!opticloud-deploy/overlay/user_template.yml
+opticloud-deploy/opticloud/component_versions.yaml
 rest_api/.clickhouse
 **/.pytest_cache/
 # Build files

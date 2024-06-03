@@ -482,49 +482,49 @@ export const getPowerScheduleDetailsUrl = (id: string) => POWER_SCHEDULE_DETAILS
 export const getEditPowerScheduleUrl = (id: string) => EDIT_POWER_SCHEDULE.replace(POWER_SCHEDULE_IDENTIFIER, id);
 
 // External urls
-export const PRODUCTION = "https://my.optscale.com";
-export const DEMO = "https://demo.optscale.com";
-export const HYSTAX = "https://hystax.com";
-export const HYSTAX_PRIVACY_POLICY = "https://hystax.com/privacy-policy/";
+export const PRODUCTION = "";
+export const DEMO = "";
+export const CIPE = "";
+export const CIPE_PRIVACY_POLICY = "";
 
-export const FINOPS = "https://finopsinpractice.org/";
-export const FINOPS_FEATURES = "https://finopsinpractice.org/finops-in-practice-features-for-optscale/";
-export const FINOPS_HOWTOS = "https://finopsinpractice.org/blog-posts-list-for-optscale/";
+export const FINOPS = "";
+export const FINOPS_FEATURES = "";
+export const FINOPS_HOWTOS = "";
 
-export const JIRA_MARKETPLACE = "https://marketplace.atlassian.com/apps/1227110/hystax-optscale-for-jira";
+export const JIRA_MARKETPLACE = "";
 
-// Hystax documentation urls
-export const DOCS_HYSTAX_OPTSCALE = "https://hystax.com/documentation/optscale/";
-export const DOCS_HYSTAX_AUTO_BILLING_AWS = `${DOCS_HYSTAX_OPTSCALE}e2e_guides/e2e_aws_root_cur.html#automatic-billing-data-import-in-aws`;
-export const DOCS_HYSTAX_DISCOVER_RESOURCES = `${DOCS_HYSTAX_OPTSCALE}e2e_guides/e2e_aws_linked.html#discover-resources`;
-export const DOCS_HYSTAX_CONNECT_ALIBABA_CLOUD = `${DOCS_HYSTAX_OPTSCALE}e2e_guides/e2e_alibaba.html`;
-export const DOCS_HYSTAX_CONNECT_GCP_CLOUD = `${DOCS_HYSTAX_OPTSCALE}e2e_guides/e2e_gcp.html`;
-export const DOCS_HYSTAX_CONNECT_AZURE_ACCOUNT = `${DOCS_HYSTAX_OPTSCALE}e2e_guides/e2e_azure.html`;
-export const DOCS_HYSTAX_RESOURCE_CONSTRAINTS = `${DOCS_HYSTAX_OPTSCALE}resource_constraints.html`;
-export const DOCS_HYSTAX_CLUSTERS = `${DOCS_HYSTAX_OPTSCALE}clusters.html`;
-export const DOCS_HYSTAX_CLEANUP_SCRIPTS = `${DOCS_HYSTAX_OPTSCALE}optscales_recommendations.html#clean-up-scripts-based-on-optscale-s-recommendations`;
-export const DOCS_HYSTAX_SLACK_INTEGRATION = `${DOCS_HYSTAX_OPTSCALE}integrations.html#slack-app`;
+// documentation urls
+export const DOCS_CIPE_OPTICLOUD = "";
+export const DOCS_CIPE_AUTO_BILLING_AWS = "";
+export const DOCS_CIPE_DISCOVER_RESOURCES = "";
+export const DOCS_CIPE_CONNECT_ALIBABA_CLOUD = "";
+export const DOCS_CIPE_CONNECT_GCP_CLOUD = "";
+export const DOCS_CIPE_CONNECT_AZURE_ACCOUNT = "";
+export const DOCS_CIPE_RESOURCE_CONSTRAINTS = "";
+export const DOCS_CIPE_CLUSTERS = "";
+export const DOCS_CIPE_CLEANUP_SCRIPTS = "";
+export const DOCS_CIPE_SLACK_INTEGRATION = "";
 
-// Hystax open source links
-export const GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR =
-  "https://github.com/hystax/helm-charts/tree/main/charts/kube-cost-metrics-collector";
-export const GITHUB_HYSTAX_EXTRACT_LINKED_REPORTS = "https://github.com/hystax/optscale_tools/tree/main/extract_linked_reports";
-export const GITHUB_HYSTAX_OPTSCALE_REPO = "https://github.com/hystax/optscale";
-export const PYPI_OPTSCALE_ARCEE = "https://pypi.org/project/optscale-arcee";
+// open source links
+export const GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR =
+  "";
+export const GITHUB_CIPE_EXTRACT_LINKED_REPORTS = "";
+export const GITHUB_CIPE_OPTICLOUD_REPO = "";
+export const PYPI_OPTICLOUD_ARCEE = "";
 
 // Nebius documentation
-export const NEBIUS_CREATE_SERVICE_ACCOUNT = "https://nebius.com/il/docs/iam/quickstart-sa#create-sa";
-export const NEBIUS_CREATING_AUTHORIZED_KEYS = "https://nebius.com/il/docs/iam/operations/authorized-key/create";
-export const NEBIUS_CREATING_STATIC_ACCESS_KEYS = "https://nebius.com/il/docs/iam/operations/sa/create-access-key";
-export const NEBIUS_GET_FOLDER_REPORT = "https://nebius.com/il/docs/billing/operations/get-folder-report";
+export const NEBIUS_CREATE_SERVICE_ACCOUNT = "";
+export const NEBIUS_CREATING_AUTHORIZED_KEYS = "";
+export const NEBIUS_CREATING_STATIC_ACCESS_KEYS = "";
+export const NEBIUS_GET_FOLDER_REPORT = "";
 
 // Databricks documentation
-export const DATABRICKS_CREATE_SERVICE_PRINCIPAL = "https://docs.databricks.com/en/dev-tools/authentication-oauth.html";
+export const DATABRICKS_CREATE_SERVICE_PRINCIPAL = "";
 
 // Emails
-export const EMAIL_SUPPORT = "support@hystax.com";
-export const EMAIL_SALES = "sales@hystax.com";
-export const EMAIL_INFO = "info@hystax.com";
+export const EMAIL_SUPPORT = "";
+export const EMAIL_SALES = "";
+export const EMAIL_INFO = "";
 
 export const isProduction = () => window.location.origin === PRODUCTION;
 export const isDemo = () => window.location.origin === DEMO;

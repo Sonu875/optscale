@@ -13,12 +13,12 @@ from auth.auth_server.exceptions import Err
 from auth.auth_server.models.models import User, gen_salt, Type, Token
 from auth.auth_server.utils import (
     check_action, hash_password, is_email_format, get_input,
-    check_string_attribute, check_bool_attribute, is_hystax_email,
+    check_string_attribute, check_bool_attribute, is_paloalto_email,
     is_demo_email)
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException, NotFoundException,
     ConflictException)
-from optscale_client.config_client.client import etcd
+from opticloud_client.config_client.client import etcd
 
 LOG = logging.getLogger(__name__)
 
@@ -121,7 +121,7 @@ class UserController(BaseController):
         ).one_or_none()
 
     def _sync_user_with_zoho(self, display_name, email):
-        if is_hystax_email(email) or is_demo_email(email):
+        if is_paloalto_email(email) or is_demo_email(email):
             return
         try:
             reg_app = RegisteredApp.get_from_etcd(self._config)

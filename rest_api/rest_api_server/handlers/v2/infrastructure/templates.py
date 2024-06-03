@@ -12,8 +12,8 @@ from rest_api.rest_api_server.utils import (
 from rest_api.rest_api_server.handlers.v2.infrastructure.base import (
     InfrastructureHandler)
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 
 class TemplatesAsyncCollectionHandler(BaseAsyncCollectionHandler,

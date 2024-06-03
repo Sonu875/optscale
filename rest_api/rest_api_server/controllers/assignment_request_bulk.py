@@ -4,7 +4,7 @@ from rest_api.rest_api_server.controllers.assignment_bulk import AssignmentBulkC
 from rest_api.rest_api_server.controllers.assignment_request import (
     AssignmentRequestController)
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException)
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import AssignmentRequest

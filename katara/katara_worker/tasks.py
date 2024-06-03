@@ -10,9 +10,9 @@ from katara.katara_worker.consts import TaskState
 from katara.katara_worker.reports_generators.report import create_report
 
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from optscale_client.katara_client.client import Client as KataraClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.katara_client.client import Client as KataraClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 
 LOG = get_logger(__name__)

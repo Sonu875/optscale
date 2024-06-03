@@ -34,8 +34,8 @@ const EnvironmentCiCdIntegration = ({ text }) => (
         />
       </Typography>
     </Box>
-    <Box mb={2}>
-      <Typography>
+    {/* <Box mb={2}> */}
+      {/* <Typography>
         <FormattedMessage
           id="checkIntegrationsPage"
           values={{
@@ -46,8 +46,8 @@ const EnvironmentCiCdIntegration = ({ text }) => (
             )
           }}
         />
-      </Typography>
-    </Box>
+      </Typography> */}
+    {/* </Box> */}
     <Box mb={2}>
       <Typography>
         <FormattedMessage id="pleaseUseTheFollowingEnvCollectorUrl" />

@@ -1,6 +1,6 @@
 import re
 from tools.cloud_adapter.exceptions import RegionNotFoundException
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from insider.insider_api.exceptions import Err
 from insider.insider_api.controllers.base import (BaseAsyncControllerWrapper,
                                                   CachedThreadPoolExecutor)

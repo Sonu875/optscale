@@ -9,7 +9,7 @@ import uuid
 from katara.katara_service.exceptions import Err
 
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 
 LOG = logging.getLogger(__name__)

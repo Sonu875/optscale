@@ -24,7 +24,7 @@ export const withKnobs = (args) => (
     value={args.value}
     color={args.color}
     caption={args.caption}
-    help={{ show: args.withHelp, messageId: "hystax" }}
+    help={{ show: args.withHelp, messageId: "cipe" }}
     relativeValue={args.relativeValue}
     relativeValueCaption={args.relativeCaption}
     button={{ show: args.withButton, icon: <ArrowForwardOutlinedIcon /> }}

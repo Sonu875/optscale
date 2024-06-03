@@ -18,17 +18,17 @@ from string import ascii_letters, digits
 import json_excel_converter.xlsx.formats as ExcelFormats
 import netaddr
 from bson import ObjectId
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from json_excel_converter import Converter as ExcelConverter
 from json_excel_converter.xlsx import (Writer as ExcelWriter,
                                        DEFAULT_COLUMN_WIDTH)
 from requests import HTTPError
 from sqlalchemy.exc import InternalError, DatabaseError
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, ConflictException,
     FailedDependency, ForbiddenException, TimeoutException, UnauthorizedException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from pymongo.errors import BulkWriteError
 from tools.cloud_adapter.exceptions import CloudAdapterBaseException
 from rest_api.rest_api_server.exceptions import Err

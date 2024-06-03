@@ -6,7 +6,7 @@ from decimal import Decimal
 
 from bson import ObjectId
 from functools import wraps
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   UnauthorizedException)
 
 from insider.insider_api.exceptions import Err

@@ -13,7 +13,7 @@ from rest_api.rest_api_server.models.models import (
     CostModel, Organization, CloudAccount)
 from tools.cloud_adapter.clouds.databricks import DEFAULT_SKU_PRICES
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 
 ENV_DEFAULT_HOURLY_COST = 0.05

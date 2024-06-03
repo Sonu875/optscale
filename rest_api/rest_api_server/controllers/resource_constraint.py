@@ -3,7 +3,7 @@ from datetime import datetime
 
 from sqlalchemy.sql import and_
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     ConflictException, NotFoundException, WrongArgumentsException,
     FailedDependency)
 from rest_api.rest_api_server.models.enums import ConstraintTypes

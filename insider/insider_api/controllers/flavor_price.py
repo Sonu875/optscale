@@ -11,7 +11,7 @@ from tools.cloud_adapter.clouds.alibaba import Alibaba
 from tools.cloud_adapter.clouds.aws import Aws
 from tools.cloud_adapter.clouds.azure import Azure
 from tools.cloud_adapter.clouds.gcp import Gcp
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from botocore.exceptions import ClientError as AwsClientError
 from insider.insider_api.utils import handle_credentials_error
 

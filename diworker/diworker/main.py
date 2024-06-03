@@ -4,7 +4,7 @@ import time
 
 import urllib3
 from threading import Thread
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from datetime import datetime
 from etcd import Lock as EtcdLock
 from kombu import Exchange, Queue, Connection as QConnection
@@ -14,14 +14,14 @@ from kombu.mixins import ConsumerMixin
 from kombu.utils.debug import setup_logging
 from pymongo import MongoClient
 from urllib3.exceptions import InsecureRequestWarning
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 from clickhouse_driver import Client as ClickHouseClient
 
 from diworker.diworker.importers.base import BaseReportImporter
 from diworker.diworker.importers.factory import get_importer_class
 from diworker.diworker.migrator import Migrator
 
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 ACTIVITIES_EXCHANGE_NAME = 'activities-tasks'
 ALERT_THRESHOLD = 60 * 60 * 24
@@ -193,7 +193,7 @@ class DIWorker(ConsumerMixin):
 
         _, organization = self.rest_cl.organization_get(
             cloud_account['organization_id'])
-        recipient = self.config_cl.optscale_error_email_recipient()
+        recipient = self.config_cl.opticloud_error_email_recipient()
         if not recipient:
             return
         title = "Report import failed"

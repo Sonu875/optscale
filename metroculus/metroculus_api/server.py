@@ -5,7 +5,7 @@ import argparse
 import tornado.ioloop
 import tornado.web
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 import metroculus.metroculus_api.handlers.v2 as handlers
 from metroculus.metroculus_api.urls import urls_v2

@@ -6,8 +6,8 @@ import mongomock
 
 from keeper.report_server.server import make_app
 
-import optscale_client.report_client.client
-import optscale_client.report_client.client_v2
+import opticloud_client.report_client.client
+import opticloud_client.report_client.client_v2
 
 
 class TestReportBase(tornado.testing.AsyncHTTPTestCase):
@@ -20,7 +20,7 @@ class TestReportBase(tornado.testing.AsyncHTTPTestCase):
 
     def setUp(self):
         secret = str(uuid.uuid4())
-        p_config = patch("optscale_client.config_client.client.Client").start()
+        p_config = patch("opticloud_client.config_client.client.Client").start()
         p_config.return_value.mongo_params.return_value = (
             "root",
             "pass",
@@ -41,10 +41,10 @@ class TestReportBase(tornado.testing.AsyncHTTPTestCase):
             "keeper.report_server.handlers.base.AuthClient.authorize",
             lambda *args: (200, {"accepted"}),
         ).start()
-        http_provider = optscale_client.report_client.client.FetchMethodHttpProvider(
+        http_provider = opticloud_client.report_client.client.FetchMethodHttpProvider(
             self.fetch, rethrow=False
         )
-        self.client = optscale_client.report_client.client_v2.Client(
+        self.client = opticloud_client.report_client.client_v2.Client(
             http_provider=http_provider
         )
         self.client.token = "token"

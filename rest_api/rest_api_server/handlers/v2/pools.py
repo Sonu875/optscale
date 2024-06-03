@@ -9,9 +9,9 @@ from rest_api.rest_api_server.handlers.v1.base_async import (
     BaseAsyncCollectionHandler, BaseAsyncItemHandler)
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class PoolAsyncCollectionHandler(BaseAsyncCollectionHandler,
@@ -66,7 +66,7 @@ class PoolAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                 - organization_id: 99843c5d-462e-4f1b-8774-661cd108c8a7
                                   id: e1a3bb04-d513-42d2-b9b7-019d24097dec
                                   name: Frontend
-                                  full_name: Development->OptScale->Frontend
+                                  full_name: Development->OptiCloud->Frontend
                                   pool_purpose: team
                                   limit: 0
                                   parent_id: 8ec4bf2e-6e89-4f97-b6a2-c6d3675934f3
@@ -84,7 +84,7 @@ class PoolAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                 - organization_id: 75d0c441-2a3e-47f4-a651-493325a87ae8
                                   id: 7cf3f859-7282-467a-bcd8-c7c2f766f7ba
                                   name: AnyCloud
-                                  full_name: Development->OptScale->AnyCloud
+                                  full_name: Development->OptiCloud->AnyCloud
                                   pool_purpose: pool
                                   limit: 0
                                   parent_id: d6f8fd73-a8f3-402a-9c37-b9cf65c6e94f

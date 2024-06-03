@@ -18,7 +18,7 @@ from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import RunStates
 from rest_api.rest_api_server.models.models import Employee
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, ConflictException)
 
 HOUR_IN_SEC = 3600

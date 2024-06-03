@@ -1,1 +1,1 @@
-window.optscale = window.optscale || {};
+window.opticloud = window.opticloud || {};

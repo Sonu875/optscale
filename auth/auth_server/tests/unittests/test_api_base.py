@@ -9,8 +9,8 @@ from auth.auth_server.models.db_base import BaseDB
 from auth.auth_server.models.models import gen_salt
 from auth.auth_server.server import make_app
 from auth.auth_server.utils import hash_password
-import optscale_client.auth_client.client
-import optscale_client.auth_client.client_v2
+import opticloud_client.auth_client.client
+import opticloud_client.auth_client.client_v2
 
 
 class TestAuthBase(tornado.testing.AsyncHTTPTestCase):
@@ -33,16 +33,16 @@ class TestAuthBase(tornado.testing.AsyncHTTPTestCase):
     @staticmethod
     def get_auth_client(version="v1"):
         return {
-            "v1": optscale_client.auth_client.client,
-            "v2": optscale_client.auth_client.client_v2
+            "v1": opticloud_client.auth_client.client,
+            "v2": opticloud_client.auth_client.client_v2
         }.get(version)
 
     def setUp(self, version='v1'):
         super().setUp()
         secret = gen_id()
-        patch('optscale_client.config_client.client.Client.cluster_secret',
+        patch('opticloud_client.config_client.client.Client.cluster_secret',
               return_value=secret).start()
-        patch('optscale_client.config_client.client.Client.zoho_params',
+        patch('opticloud_client.config_client.client.Client.zoho_params',
               return_value={}).start()
         patch('auth.auth_server.utils.get_encryption_salt',
               return_value=gen_salt()).start()
@@ -53,7 +53,7 @@ class TestAuthBase(tornado.testing.AsyncHTTPTestCase):
         patch("auth.auth_server.controllers.base."
               "BaseController.get_resources_info",
               return_value={}).start()
-        http_provider = optscale_client.auth_client.client.\
+        http_provider = opticloud_client.auth_client.client.\
             FetchMethodHttpProvider(self.fetch, rethrow=False)
         self.client = TestAuthBase.get_auth_client(version).Client(
             http_provider=http_provider)
@@ -72,7 +72,7 @@ class TestAuthBase(tornado.testing.AsyncHTTPTestCase):
             session.commit()
         return type_
 
-    def create_root_user(self, email='root@hystax.com', password='toor'):
+    def create_root_user(self, email='root@paloaltonetworks.com', password='toor'):
         session = self.db_session
         type_ = self.create_root_type()
         salt = gen_salt()

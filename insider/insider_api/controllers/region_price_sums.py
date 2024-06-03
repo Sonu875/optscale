@@ -1,5 +1,5 @@
 import logging
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
 from insider.insider_api.exceptions import Err
 from insider.insider_api.utils import check_string, is_public_region

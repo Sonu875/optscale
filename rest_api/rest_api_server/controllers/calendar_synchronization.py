@@ -14,7 +14,7 @@ from rest_api.rest_api_server.models.models import (
 from rest_api.google_calendar_client.client import (GoogleCalendarClient,
                                                     CalendarException)
 from googleapiclient.errors import HttpError
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException, FailedDependency, ConflictException)
 
 LOG = logging.getLogger(__name__)
@@ -227,7 +227,7 @@ class CalendarSynchronizationController(BaseController, MongoMixin):
             'calendar_id': calendar_id,
             'start': now,
             'end': now + timedelta(hours=1),
-            'summary': "Hystax OptScale test"
+            'summary': "Opticloud test"
         }
         try:
             event = self.google_calendar_cl.create_event(**test_template)

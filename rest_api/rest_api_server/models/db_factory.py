@@ -1,7 +1,7 @@
 from enum import Enum
 import logging
 
-from tools.optscale_exceptions.common_exc import InvalidModelTypeException
+from tools.opticloud_exceptions.common_exc import InvalidModelTypeException
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.db_test import TestDB
 from rest_api.rest_api_server.models.db_mysql import MySQLDB

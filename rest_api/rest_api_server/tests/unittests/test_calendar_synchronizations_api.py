@@ -4,7 +4,7 @@ from freezegun import freeze_time
 from unittest.mock import patch, ANY, call
 
 from rest_api.google_calendar_client.client import CalendarException
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.tests.unittests.test_api_base import TestApiBase
 
@@ -140,7 +140,7 @@ class TestCalendarSynchronizationsApi(TestApiBase):
         self.assertIsNone(res.get('service_account'))
         self.assertDictEqual(c_sync, res['calendar_synchronization'])
 
-        client_email = 'example@hystax.com'
+        client_email = 'example@paloaltonetworks.com'
         patch('optscale_client.config_client.client.Client.google_calendar_service_key',
               return_value={'client_email': client_email}).start()
         code, res = self.client.organization_calendar_get(self.org_id)

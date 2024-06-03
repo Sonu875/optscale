@@ -8,9 +8,9 @@ from rest_api.rest_api_server.handlers.v1.organizations import (
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.utils import ModelEncoder, run_task
 
-from tools.optscale_exceptions.common_exc import (UnauthorizedException,
+from tools.opticloud_exceptions.common_exc import (UnauthorizedException,
                                                   NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 LOG = logging.getLogger(__name__)
 
 

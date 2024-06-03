@@ -1,7 +1,7 @@
 import mongomock
 import tornado.testing
 from unittest.mock import patch, PropertyMock
-import optscale_client.insider_client.client as insider_client
+import opticloud_client.insider_client.client as insider_client
 from insider.insider_api.server import make_app
 
 
@@ -12,9 +12,9 @@ class TestBase(tornado.testing.AsyncHTTPTestCase):
 
     def setUp(self):
         super().setUp()
-        patch('optscale_client.config_client.client.Client.cluster_secret',
+        patch('opticloud_client.config_client.client.Client.cluster_secret',
               return_value='secret').start()
-        patch('optscale_client.config_client.client.Client.restapi_url').start()
+        patch('opticloud_client.config_client.client.Client.restapi_url').start()
         self.mongo_client = mongomock.MongoClient()
         patch('insider.insider_api.controllers.base.BaseController.mongo_client',
               new_callable=PropertyMock, return_value=self.mongo_client

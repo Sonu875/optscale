@@ -26,10 +26,6 @@ const OrganizationSelectorContainer = ({ mainMenu }) => {
     requestManager.cancelAllPendingRequests();
     removeQueryParam(SCOPE_ID);
 
-    // The straightforward solution to persist query parameters when changing the organization
-    // More context:
-    // * https://gitlab.com/hystax/ngui/-/merge_requests/2773
-    // * https://datatrendstech.atlassian.net/browse/OS-4786
     const { type } = getQueryParams();
 
     const to = [getMenuRootUrl(mainMenu), formQueryString({ type })].join("?");

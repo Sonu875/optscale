@@ -22,7 +22,7 @@ from auth.auth_server.controllers.user import UserController
 from auth.auth_server.exceptions import Err
 from auth.auth_server.utils import (
     check_kwargs_is_empty, pop_or_raise, check_string_attribute)
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException)
 
 LOG = logging.getLogger(__name__)

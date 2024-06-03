@@ -2,7 +2,7 @@ import json
 import logging
 from sqlalchemy import and_, or_
 from sqlalchemy.sql.expression import true
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, ForbiddenException)
 from rest_api.rest_api_server.controllers.base import (
     BaseController, OrganizationValidatorMixin)

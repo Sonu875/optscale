@@ -52,11 +52,11 @@ report_table = table(
 
 CRONTAB = "0 0 * * MON"
 modules = [
-    ("violated_constraints", "optscale_engineer",
+    ("violated_constraints", "opticloud_engineer",
      "Resource owner constraints report"),
     (
         "violated_constraints_diff",
-        "optscale_manager",
+        "opticloud_manager",
         "Budget owner constraints report",
     ),
 ]

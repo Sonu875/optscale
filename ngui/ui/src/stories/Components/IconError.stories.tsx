@@ -5,10 +5,10 @@ export default {
   component: IconError
 };
 
-export const basic = () => <IconError messageId="hystax" />;
+export const basic = () => <IconError messageId="cipe" />;
 
 export const withButton = () => (
-  <IconError messageId="hystax">
-    <Button color="primary" messageId="hystax" size="large" />
+  <IconError messageId="cipe">
+    <Button color="primary" messageId="cipe" size="large" />
   </IconError>
 );

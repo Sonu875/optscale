@@ -3,7 +3,7 @@ import Link from "@mui/material/Link";
 import { FormattedMessage } from "react-intl";
 import CodeBlock from "components/CodeBlock";
 import SubTitle from "components/SubTitle";
-import { GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR, isProduction } from "urls";
+import { GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR, isProduction } from "urls";
 import { SPACING_1 } from "utils/layouts";
 
 type KubernetesIntegrationProps = {
@@ -74,8 +74,8 @@ const KubernetesIntegration = ({ dataSourceId, user }: KubernetesIntegrationProp
           id="kubernetesIntegration.moreDetailsDescriptionLink"
           values={{
             kubernetesConnectGuide: (
-              <Link data-test-id="link_guide" href={GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
-                {GITHUB_HYSTAX_K8S_COST_METRICS_COLLECTOR}
+              <Link data-test-id="link_guide" href={GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR} target="_blank" rel="noopener">
+                {GITHUB_CIPE_K8S_COST_METRICS_COLLECTOR}
               </Link>
             )
           }}

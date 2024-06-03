@@ -1,6 +1,6 @@
 {
   "checklist.adoptionScore": "FinOps adoption score",
-  "checklist.item1.description": "Analyze cloud regions in use: the costs may vary from one to another, and it is recommended to optimize the region usage and move to the cheapest one. The cost explorer provides a transparent summary of organization cloud expenses. Get statistics by data sources, pools, and owners for more comfortable separation. Follow the link to read more regarding <link>https://hystax.com/documentation/optscale/home_page.html#cost-explorer|this topic</link>",
+  "checklist.item1.description": "Analyze cloud regions in use: the costs may vary from one to another, and it is recommended to optimize the region usage and move to the cheapest one. The cost explorer provides a transparent summary of organization cloud expenses. Get statistics by data sources, pools, and owners for more comfortable separation",
   "checklist.item1.title": "Analyze cost anomalies in cost explorer",
   "checklist.item3.description": "Engage your engineers in the FinOps process to educate them and keep an eye on the resources in the cloud. Engineers can easily connect a Slack application to monitor their owned resources and limits. Configure the app to get instant alerts at hand. A set of commands is available to execute to set TTLs, get resource details and configure notification settings.",
   "checklist.item3.title": "Connect Slack to receive instant alerts",

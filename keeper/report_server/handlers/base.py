@@ -11,14 +11,14 @@ from keeper.report_server.exceptions import Err
 from keeper.report_server.utils import ModelEncoder
 from keeper.report_server.utils import tp_executor, Config
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException,
     ForbiddenException,
     UnauthorizedException,
 )
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from optscale_client.auth_client.client_v2 import Client as AuthClient
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
 
 
 LOG = logging.getLogger(__name__)

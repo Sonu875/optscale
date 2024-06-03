@@ -3,7 +3,7 @@ from rest_api.rest_api_server.controllers.optimization import (
 from rest_api.rest_api_server.controllers.profiling.base import BaseProfilingController
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.controllers.checklist import ChecklistController
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 from rest_api.rest_api_server.exceptions import Err
 from requests.exceptions import HTTPError
 from datetime import datetime

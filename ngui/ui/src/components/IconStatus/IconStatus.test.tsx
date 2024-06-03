@@ -7,7 +7,7 @@ it("renders without crashing", () => {
   const root = createRoot(div);
   root.render(
     <TestProvider>
-      <IconStatus labelMessageId="optscale" color="error" />
+      <IconStatus labelMessageId="opticloud" color="error" />
     </TestProvider>
   );
   root.unmount();

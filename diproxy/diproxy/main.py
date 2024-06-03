@@ -12,8 +12,8 @@ from tornado.web import (Application, HTTPError as ResponseHttpError,
 from async_lru import alru_cache
 from requests.exceptions import HTTPError
 from typing import Any, Dict
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestApiClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestApiClient
 
 from diproxy.diproxy.storage_client import RemoteWriteStorageClient
 

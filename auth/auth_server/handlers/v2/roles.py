@@ -8,9 +8,9 @@ from auth.auth_server.handlers.v1.roles import (
     RoleAsyncCollectionHandler as RoleAsyncCollectionHandler_v1)
 from auth.auth_server.utils import ModelEncoder, as_dict
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 LOG = logging.getLogger(__name__)
 

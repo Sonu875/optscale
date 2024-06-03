@@ -2,13 +2,13 @@ import uuid
 from datetime import datetime, timedelta
 from freezegun import freeze_time
 from unittest.mock import patch, ANY, PropertyMock
-from tools.optscale_exceptions.common_exc import FailedDependency
+from tools.opticloud_exceptions.common_exc import FailedDependency
 
 from rest_api.rest_api_server.models.db_factory import DBType, DBFactory
 from rest_api.rest_api_server.models.db_base import BaseDB
 from rest_api.rest_api_server.tests.unittests.test_api_base import TestApiBase
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 NEWLY_DISCOVERED_TIME = 300  # 5 min
 
@@ -225,7 +225,7 @@ class TestObserver(TestApiBase):
 
             with patch(
                     'optscale_client.config_client.client.Client.google_calendar_service_key',
-                    return_value={'client_email': 'example@hystax.com'}):
+                    return_value={'client_email': 'example@paloaltonetworks.com'}):
                 code, res = self.client.organization_calendar_get(self.org_id)
                 self.assertEqual(code, 200)
                 c_sync = res['calendar_synchronization']
@@ -354,7 +354,7 @@ class TestObserver(TestApiBase):
                 )
         with freeze_time(dt + timedelta(days=1)):
             with patch('optscale_client.config_client.client.Client.google_calendar_service_key',
-                       return_value={'client_email': 'example@hystax.com'}):
+                       return_value={'client_email': 'example@paloaltonetworks.com'}):
                 code, res = self.client.organization_calendar_get(self.org_id)
                 self.assertEqual(code, 200)
                 c_sync = res['calendar_synchronization']

@@ -7,7 +7,7 @@ it("renders without crashing", () => {
   const root = createRoot(div);
   root.render(
     <TestProvider>
-      <DateRangePicker messageId="hystax" />
+      <DateRangePicker messageId="cipe" />
     </TestProvider>
   );
   root.unmount();

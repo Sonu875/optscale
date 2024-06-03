@@ -12,7 +12,7 @@ from rest_api.rest_api_server.models.enums import CloudTypes
 from rest_api.rest_api_server.models.models import (
     CloudAccount, Employee, Pool, Organization, DiscoveryInfo, ClusterType)
 from rest_api.rest_api_server.utils import encoded_tags, is_uuid
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
 import tools.cloud_adapter.model as ca_model

@@ -1,10 +1,10 @@
 import logging
 import re
 import requests
-from optscale_client.config_client.client import etcd
+from opticloud_client.config_client.client import etcd
 from sqlalchemy import exists, and_, or_, func
 from sqlalchemy.exc import IntegrityError
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, ConflictException, ForbiddenException,
     UnauthorizedException, WrongArgumentsException)
 
@@ -25,8 +25,8 @@ from rest_api.rest_api_server.models.models import (
     ShareableBooking)
 from rest_api.rest_api_server.utils import Config, CURRENCY_MAP
 
-from optscale_client.auth_client.client_v2 import Client as AuthClient
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
+from opticloud_client.auth_client.client_v2 import Client as AuthClient
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
 
 LOG = logging.getLogger(__name__)
 
@@ -195,7 +195,7 @@ class EmployeeController(BaseController, MongoMixin):
         roles_info = dict()
         if roles:
             roles_info = self.get_roles_info(
-                user_ids, organization_id, [RolePurposes.optscale_member.value])
+                user_ids, organization_id, [RolePurposes.opticloud_member.value])
         for employee in employees:
             item = employee.to_dict()
             item.update({'slack_connected': slack_connected.get(
@@ -256,7 +256,7 @@ class EmployeeController(BaseController, MongoMixin):
     def get_org_manager_user(self, organization_id, user_not_equal):
         _, org_managers = self.auth_client.user_roles_get(
             scope_ids=[organization_id],
-            role_purposes=[RolePurposes.optscale_manager.value])
+            role_purposes=[RolePurposes.opticloud_manager.value])
         for candidate in org_managers:
             if candidate['user_id'] != user_not_equal:
                 if self.is_employee_exists(organization_id,
@@ -418,7 +418,7 @@ class EmployeeController(BaseController, MongoMixin):
                 domain_regex = '@{}$'.format(re.escape(domain_exp))
             return re.search(domain_regex, email_str.lower())
 
-        recipient = self._config.optscale_email_recipient()
+        recipient = self._config.opticloud_email_recipient()
         if not recipient:
             return
 

@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from freezegun import freeze_time
 from mongomock import MongoClient
 from unittest.mock import MagicMock, PropertyMock, patch
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 from docker_images.power_schedule.worker import (
     PowerScheduleWorker, PowerScheduleReasons)
 

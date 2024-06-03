@@ -1,7 +1,7 @@
 import logging
 from requests.exceptions import HTTPError
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException)
 
 from rest_api.rest_api_server.controllers.profiling.base import (

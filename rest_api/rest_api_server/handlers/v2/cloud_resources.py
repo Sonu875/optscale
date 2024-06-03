@@ -6,8 +6,8 @@ from rest_api.rest_api_server.handlers.v1.base_async import (
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.utils import run_task, ModelEncoder
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 
 class CloudResourceAsyncCollectionHandler(BaseAsyncCollectionHandler,

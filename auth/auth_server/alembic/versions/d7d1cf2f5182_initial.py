@@ -81,8 +81,8 @@ def create_tables():
                     sa.Column('is_active', sa.Boolean(), nullable=False),
                     sa.Column('shared', sa.Boolean(), nullable=False),
                     sa.Column('purpose',
-                              Enum('optscale_member', 'optscale_engineer',
-                                   'optscale_manager'), nullable=True),
+                              Enum('opticloud_member', 'opticloud_engineer',
+                                   'opticloud_manager'), nullable=True),
                     sa.ForeignKeyConstraint(['type_id'], ['type.id'], ),
                     sa.PrimaryKeyConstraint('id'))
     op.create_index(op.f('ix_role_name'), 'role', ['name'], unique=False)
@@ -299,9 +299,9 @@ class Type(Base, BaseIntKeyMixin):
 
 
 class RolePurpose(enum.Enum):
-    optscale_member = 'optscale_member'
-    optscale_engineer = 'optscale_engineer'
-    optscale_manager = 'optscale_manager'
+    opticloud_member = 'opticloud_member'
+    opticloud_engineer = 'opticloud_engineer'
+    opticloud_manager = 'opticloud_manager'
 
 
 class RoleAction(Base):
@@ -448,21 +448,21 @@ def fill_data():
             session.add(obj)
 
         role_admin = Role(name='Super Admin', type_=type_root,
-                          description='Hystax Admin', lvl_id=type_root.id,
+                          description='CIPE Admin', lvl_id=type_root.id,
                           is_active=True)
         role_drplan_operator = Role(name='Drplan Operator', type_=type_pool,
                                     description='DR plan operator',
                                     lvl_id=type_pool.id, is_active=True)
         role_drplan_operator.deleted_at = deleted_time
         role_manager = Role(name='Manager', type_=type_root, lvl=type_root,
-                            description='Optscale manager', shared=True,
-                            purpose=RolePurpose.optscale_manager)
+                            description='opticloud manager', shared=True,
+                            purpose=RolePurpose.opticloud_manager)
         role_engineer = Role(name='Engineer', type_=type_root, lvl=type_root,
-                             description='Optscale engineer', shared=True,
-                             purpose=RolePurpose.optscale_engineer)
+                             description='opticloud engineer', shared=True,
+                             purpose=RolePurpose.opticloud_engineer)
         role_member = Role(name='Member', type_=type_root, lvl=type_root,
-                           description='Optscale member', shared=True,
-                           purpose=RolePurpose.optscale_member)
+                           description='opticloud member', shared=True,
+                           purpose=RolePurpose.opticloud_member)
         for role in [role_drplan_operator, role_admin, role_manager,
                      role_engineer, role_engineer]:
             session.add(role)
@@ -476,7 +476,7 @@ def fill_data():
         action_group_events = ActionGroup(
             name='MANAGE_NOTIFICATIONS', order=900)
         glob_mgmt_group = ActionGroup(name='GLOBAL_MANAGEMENT', order=1200)
-        optscale_ag = ActionGroup(name='OPTSCALE_MANAGEMENT', order=1300)
+        opticloud_ag = ActionGroup(name='opticloud_MANAGEMENT', order=1300)
         action_group_del_assignment = ActionGroup(name='assignment', order=900)
         action_group_del_assignment.deleted_at = deleted_time
         action_group_del_role = ActionGroup(name='role', order=1000)
@@ -484,7 +484,7 @@ def fill_data():
         for action_group in [action_group_admin, action_group_assign,
                              action_group_role, action_group_del_assignment,
                              action_group_del_role, action_group_partners,
-                             action_group_events, glob_mgmt_group, optscale_ag
+                             action_group_events, glob_mgmt_group, opticloud_ag
                              ]:
             session.add(action_group)
 
@@ -564,31 +564,31 @@ def fill_data():
             action_group=glob_mgmt_group, order=1220)
         action_manage_creds = Action(
             name='MANAGE_CLOUD_CREDENTIALS', type_=type_organization,
-            action_group=optscale_ag, order=1310)
+            action_group=opticloud_ag, order=1310)
         action_manage_resources = Action(
             name='MANAGE_RESOURCES', type_=type_organization,
-            action_group=optscale_ag, order=1320)
+            action_group=opticloud_ag, order=1320)
         action_manage_own_resources = Action(
             name='MANAGE_OWN_RESOURCES', type_=type_organization,
-            action_group=optscale_ag, order=1330)
+            action_group=opticloud_ag, order=1330)
         action_manage_pools = Action(
             name='MANAGE_POOLS', type_=type_organization,
-            action_group=optscale_ag, order=1340)
+            action_group=opticloud_ag, order=1340)
         action_manage_permissions = Action(
             name='MANAGE_PERMISSIONS', type_=type_organization,
-            action_group=optscale_ag, order=1350)
+            action_group=opticloud_ag, order=1350)
         action_info_organization = Action(
             name='INFO_ORGANIZATION', type_=type_organization,
-            action_group=optscale_ag, order=1360)
+            action_group=opticloud_ag, order=1360)
         action_manage_invites = Action(
             name='MANAGE_INVITES', type_=type_organization,
-            action_group=optscale_ag, order=1370)
+            action_group=opticloud_ag, order=1370)
         action_manage_checklists = Action(
             name='MANAGE_CHECKLISTS', type_=type_organization,
-            action_group=optscale_ag, order=1380)
+            action_group=opticloud_ag, order=1380)
         action_manage_booking_env = Action(
             name='BOOK_ENVIRONMENTS', type_=type_organization,
-            action_group=optscale_ag, order=1390)
+            action_group=opticloud_ag, order=1390)
         for action in [
             action_admin, action_list_users, action_create_user,
             action_edit_user_info, action_activate_user, action_delete_user,

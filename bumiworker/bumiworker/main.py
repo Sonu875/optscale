@@ -9,7 +9,7 @@ from kombu.utils.debug import setup_logging
 from bumiworker.bumiworker.transitions import (
     TASKS_TRANSITIONS, GROUP_TASKS_TRANSITIONS)
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 
 EXCHANGE_NAME = 'bumi-tasks'

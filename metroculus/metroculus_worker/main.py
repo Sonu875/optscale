@@ -10,7 +10,7 @@ from kombu import Exchange, Queue
 from metroculus.metroculus_worker.migrator import Migrator
 from metroculus.metroculus_worker.processor import MetricsProcessor
 
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 
 EXCHANGE_NAME = 'metroculus-tasks'

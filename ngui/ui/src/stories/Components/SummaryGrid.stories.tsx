@@ -103,13 +103,13 @@ const extendedCardsSummaryData = [
     captionMessageId: "organization",
     relativeValueComponentType: SUMMARY_VALUE_COMPONENT_TYPES.FormattedMessage,
     relativeValueComponentProps: {
-      id: "hystax"
+      id: "cipe"
     },
     relativeValueCaptionMessageId: "name",
     color: "success",
     help: {
       show: true,
-      messageId: "hystax"
+      messageId: "cipe"
     }
   }
 ];

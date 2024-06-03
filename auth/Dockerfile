@@ -1,6 +1,4 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH /usr/src/app/
 
@@ -9,9 +7,9 @@ RUN apt-get update && apt-get install -y libsodium-dev \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-COPY tools/optscale_exceptions tools/optscale_exceptions
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
+COPY tools/opticloud_exceptions tools/opticloud_exceptions
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
 COPY auth/zoho_integrator auth/zoho_integrator
 
 COPY auth/requirements.txt auth/requirements.txt

@@ -1,7 +1,7 @@
 import logging
 from sqlalchemy import and_
-from optscale_client.herald_client.client_v2 import Client as HeraldClient
-from tools.optscale_exceptions.common_exc import NotFoundException
+from opticloud_client.herald_client.client_v2 import Client as HeraldClient
+from tools.opticloud_exceptions.common_exc import NotFoundException
 from rest_api.rest_api_server.controllers.base import BaseController
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from rest_api.rest_api_server.controllers.employee import EmployeeController
@@ -25,7 +25,7 @@ class AuditSubmitController(BaseController):
 
     def send_submit_audit_service_email(self, org_id, org_name, currency,
                                         employee_id, employee_name):
-        recipient = self._config.optscale_email_recipient()
+        recipient = self._config.opticloud_email_recipient()
         if not recipient:
             return
         public_ip = self._config.public_ip()

@@ -3,7 +3,7 @@ import logging
 from sqlalchemy.sql import and_, exists
 from typing import List
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     ConflictException, FailedDependency, WrongArgumentsException,
     NotFoundException)
 from rest_api.rest_api_server.controllers.base import (

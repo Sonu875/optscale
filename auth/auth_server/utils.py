@@ -7,9 +7,9 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime
 from sqlalchemy import inspect
 from auth.auth_server.exceptions import Err
-from optscale_client.config_client.client import Client as ConfigClient
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import (
+from opticloud_client.config_client.client import Client as ConfigClient
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, UnauthorizedException, ForbiddenException,
     NotFoundException, ConflictException, FailedDependency)
 
@@ -128,8 +128,8 @@ def is_uuid(check_str):
     return bool(re.match(pattern, str(check_str).lower()))
 
 
-def is_hystax_email(email):
-    regex = '^.+@hystax.com$'
+def is_paloalto_email(email):
+    regex = '^.+@paloaltonetworks.com$'
     match = re.match(regex, str(email).lower())
     return bool(match)
 

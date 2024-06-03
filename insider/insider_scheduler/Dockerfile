@@ -1,10 +1,8 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH=/usr/src/app/
 
-COPY optscale_client/config_client optscale_client/config_client
+COPY opticloud_client/config_client opticloud_client/config_client
 
 COPY insider/insider_scheduler/requirements.txt insider/insider_scheduler/requirements.txt
 RUN pip install --no-cache-dir -r insider/insider_scheduler/requirements.txt

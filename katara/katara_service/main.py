@@ -12,7 +12,7 @@ from katara.katara_service.models.db_factory import DBFactory, DBType
 from katara.katara_service.urls import urls_v2
 
 
-import optscale_client.config_client.client
+import opticloud_client.config_client.client
 
 
 DEFAULT_PORT = 8935
@@ -94,7 +94,7 @@ def make_app(db_type, role, etcd_host, etcd_port, wait=False):
         Roles.scheduler: setup_scheduler,
     }
     setup_func = applications_map.get(role)
-    config_cl = optscale_client.config_client.client.Client(
+    config_cl = opticloud_client.config_client.client.Client(
         host=etcd_host, port=etcd_port)
     if wait:
         config_cl.wait_configured()

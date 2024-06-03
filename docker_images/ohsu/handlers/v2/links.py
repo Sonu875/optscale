@@ -2,9 +2,9 @@ import json
 import logging
 from docker_images.ohsu.controllers.link import SHSLinkAsyncController
 from docker_images.ohsu.handlers.v2.base import BaseHandler
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

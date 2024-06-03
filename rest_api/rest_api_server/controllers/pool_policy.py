@@ -4,7 +4,7 @@ from collections import defaultdict
 from sqlalchemy import true
 from sqlalchemy.sql import and_
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.common_exc import ConflictException
+from tools.opticloud_exceptions.common_exc import ConflictException
 from rest_api.rest_api_server.models.enums import ConstraintTypes
 from rest_api.rest_api_server.models.models import (
     PoolPolicy, Pool, ResourceConstraint)

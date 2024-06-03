@@ -15,7 +15,7 @@ from keeper.report_server.constants import urls_v2
 from keeper.report_server.controllers.message_publisher import Publisher
 from keeper.report_server.handlers.base import DefaultHandler
 
-import optscale_client.config_client.client
+import opticloud_client.config_client.client
 
 DEFAULT_PORT = 8973
 DEFAULT_ETCD_HOST = "etcd"
@@ -85,7 +85,7 @@ def get_swagger_urls():
 
 
 def make_app(etcd_host, etcd_port, wait=False, mongo_client_class=None):
-    config_cl = optscale_client.config_client.client.Client(
+    config_cl = opticloud_client.config_client.client.Client(
         host=etcd_host, port=etcd_port
     )
     if wait:

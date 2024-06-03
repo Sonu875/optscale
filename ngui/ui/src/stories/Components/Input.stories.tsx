@@ -17,7 +17,7 @@ export const withHelp = () => (
     InputProps={{
       endAdornment: (
         <InputAdornment position="end">
-          <QuestionMark messageId="hystax" />
+          <QuestionMark messageId="cipe" />
         </InputAdornment>
       )
     }}

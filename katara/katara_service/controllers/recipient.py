@@ -2,11 +2,11 @@ import json
 import logging
 from sqlalchemy import and_, exists
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     ConflictException,
     WrongArgumentsException,
 )
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 from katara.katara_service.controllers.base import BaseController
 from katara.katara_service.controllers.base_async import (

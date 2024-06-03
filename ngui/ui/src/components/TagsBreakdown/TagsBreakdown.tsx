@@ -18,12 +18,6 @@ const useLineData = (breakdown = {}) => {
 
   const getDateString = (date) => format(secondsToMilliseconds(Number(date)));
 
-  /**
-   * Optional chaining and nullish coalescing are required to prevent reading properties
-   * of undefined in cases when the data has not yet been fully loaded
-   *
-   * -> https://gitlab.com/hystax/ngui/-/merge_requests/2865
-   */
   const getResourceTypeBreakdownByDate = (date, countKey) => breakdown[date]?.[countKey] ?? {};
   const getResourceBreakdownProperty = (resourceTypeBreakdown, property) => resourceTypeBreakdown[property];
 

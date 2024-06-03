@@ -6,7 +6,7 @@ from kombu.log import get_logger
 from clickhouse_driver import Client as ClickHouseClient
 
 from tools.cloud_adapter.cloud import Cloud as CloudAdapter
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
 
 LOG = get_logger(__name__)
 CHUNK_SIZE = 10000

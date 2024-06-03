@@ -1,7 +1,7 @@
 import json
 
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   HeraldException)
 from etcd import EtcdKeyNotFound
 
@@ -104,7 +104,7 @@ class InviteAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                                 ('add_employee', 'remove_employee',
                                                  'change_role')"
                                             required: False
-                                            example: optscale_engineer
+                                            example: opticloud_engineer
         responses:
             201:
                 description: Success (returns created objects)
@@ -124,13 +124,13 @@ class InviteAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                     invite_assignments:
                                         -   scope_id: 44e262cb-d861-45c4-ac85-aaef8edf90f0
                                             scope_type: organization
-                                            purpose: optscale_engineer
-                                            scope_name: Optscale Engineering
+                                            purpose: opticloud_engineer
+                                            scope_name: OptiCloud Engineering
                                             id: 08618433-468e-400d-bc4f-136beb2f9bdc
                                         -   scope_id: 5e2bb869-9f5e-487f-aaf5-ce90e88018d8
                                             scope_type: pool
-                                            purpose: optscale_member
-                                            scope_name: Optscale Marketing
+                                            purpose: opticloud_member
+                                            scope_name: OptiCloud Marketing
                                             id: 63ae19a7-c8ff-486d-ac45-c75683e2d611
                                     created_at: 1585680056
                                     deleted_at: 0
@@ -143,8 +143,8 @@ class InviteAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                     invite_assignments:
                                         -   scope_id: 5e2bb869-9f5e-487f-aaf5-ce90e88018d8
                                             scope_type: organization
-                                            purpose: optscale_engineer
-                                            scope_name: Optscale Marketing
+                                            purpose: opticloud_engineer
+                                            scope_name: OptiCloud Marketing
                                     created_at: 1585680056
                                     deleted_at: 0
                                     ttl: 0
@@ -239,14 +239,14 @@ class InviteAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                     organization: Root organization
                                     invite_assignments:
                                         -   scope_id: 44e262cb-d861-45c4-ac85-aaef8edf90f0
-                                            purpose: optscale_engineer
+                                            purpose: opticloud_engineer
                                             scope_type: organization
-                                            scope_name: Optscale Engineering
+                                            scope_name: OptiCloud Engineering
                                             id: 08618433-468e-400d-bc4f-136beb2f9bdc
                                         -   scope_id: 5e2bb869-9f5e-487f-aaf5-ce90e88018d8
-                                            purpose: optscale_member
+                                            purpose: opticloud_member
                                             scope_type: pool
-                                            scope_name: Optscale Marketing
+                                            scope_name: OptiCloud Marketing
                                             id: 63ae19a7-c8ff-486d-ac45-c75683e2d611
                                     created_at: 1585680056
                                     deleted_at: 0
@@ -258,9 +258,9 @@ class InviteAsyncCollectionHandler(BaseAsyncCollectionHandler,
                                     organization: Another root organization
                                     invite_assignments:
                                         -   scope_id: 82d18542-1fb1-4094-b48e-7fa96b4ac6c6
-                                            purpose: optscale_engineer
+                                            purpose: opticloud_engineer
                                             scope_type: pool
-                                            scope_name: Optscale QA
+                                            scope_name: OptiCloud QA
                                     created_at: 1585680056
                                     deleted_at: 0
                                     ttl: 0
@@ -382,21 +382,21 @@ class InvitesAsyncItemHandler(BaseAsyncItemHandler, BaseAuthHandler):
                     example:
                     -   id: 17cb0d9f-2f42-4f26-beeb-220ef946274c
                         email: user1@example.com
-                        owner_email: owner@hystax.com,
+                        owner_email: owner@paloaltonetworks.com,
                         owner_id: 82d18542-1fb1-4094-b48e-7fa96b4ac6c6
                         owner_name: Montezuma
                         organization: Root organization
                         organization_id: 44e262cb-d861-45c4-ac85-aaef8edf90f0
                         invite_assignments:
                             -   scope_id: 44e262cb-d861-45c4-ac85-aaef8edf90f0
-                                purpose: optscale_engineer
+                                purpose: opticloud_engineer
                                 scope_type: organization
-                                scope_name: Optscale Engineering
+                                scope_name: OptiCloud Engineering
                                 id: 08618433-468e-400d-bc4f-136beb2f9bdc
                             -   scope_id: 5e2bb869-9f5e-487f-aaf5-ce90e88018d8
-                                purpose: optscale_member
+                                purpose: opticloud_member
                                 scope_type: pool
-                                scope_name: Optscale Marketing
+                                scope_name: OptiCloud Marketing
                                 id: 63ae19a7-c8ff-486d-ac45-c75683e2d611
                         created_at: 1585680056
                         deleted_at: 0

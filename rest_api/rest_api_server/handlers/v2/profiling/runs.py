@@ -7,9 +7,9 @@ from rest_api.rest_api_server.handlers.v1.base_async import (
     BaseAsyncItemHandler, BaseAsyncCollectionHandler)
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.handlers.v2.profiling.base import ProfilingHandler
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.exceptions import Err
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class RunBulkAsyncHandler(BaseAsyncCollectionHandler,

@@ -6,7 +6,7 @@ from auth.auth_server.exceptions import Err
 from auth.auth_server.models.models import (Token, User, Assignment, Role,
                                             Action, RoleAction, Type)
 from auth.auth_server.utils import get_context_values, get_digest
-from tools.optscale_exceptions.common_exc import (UnauthorizedException,
+from tools.opticloud_exceptions.common_exc import (UnauthorizedException,
                                                   ForbiddenException)
 
 LOG = logging.getLogger(__name__)

@@ -1,6 +1,4 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /src
 
 RUN apt-get update \

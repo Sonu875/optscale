@@ -7,7 +7,7 @@ import UbuntuFilePath from "../assets/fonts/Ubuntu-Regular.ttf";
 import "jspdf-autotable";
 import logo from "../assets/logo/logo_pdf.png";
 
-const defaultFileName = "optscale-report-%___time___%";
+const defaultFileName = "opticloud-report-%___time___%";
 let fileName = "";
 let alsoRenderIntoFileName = {}; // pairs of (pdfId, "%patternName%"")
 

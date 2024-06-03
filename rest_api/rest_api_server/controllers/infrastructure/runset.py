@@ -11,7 +11,7 @@ from rest_api.rest_api_server.controllers.infrastructure.base import (
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import Employee
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, WrongArgumentsException, ConflictException)
 
 

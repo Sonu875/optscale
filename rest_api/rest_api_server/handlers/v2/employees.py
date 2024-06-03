@@ -8,9 +8,9 @@ from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.utils import run_task, ModelEncoder, object_to_xlsx
 
-from tools.optscale_exceptions.common_exc import UnauthorizedException
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import UnauthorizedException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.utils import check_string_attribute
 
 

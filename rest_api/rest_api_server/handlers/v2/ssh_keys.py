@@ -6,7 +6,7 @@ from rest_api.rest_api_server.controllers.ssh_key import (
 from rest_api.rest_api_server.handlers.v1.base_async import (
     BaseAsyncCollectionHandler, BaseAsyncItemHandler)
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class SshKeysBaseHandler(BaseAuthHandler):

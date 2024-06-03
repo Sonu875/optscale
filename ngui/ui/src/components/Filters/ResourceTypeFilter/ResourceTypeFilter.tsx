@@ -2,10 +2,10 @@ import { FormattedMessage } from "react-intl";
 import ResourceTypeLabel from "components/ResourceTypeLabel";
 import { intl } from "translations/react-intl-config";
 import { sortObjects } from "utils/arrays";
-import { OPTSCALE_RESOURCE_TYPES, RESOURCE_TYPE_BE_FILTER, RESOURCE_TYPE_FILTER } from "utils/constants";
+import { OPTICLOUD_RESOURCE_TYPES, RESOURCE_TYPE_BE_FILTER, RESOURCE_TYPE_FILTER } from "utils/constants";
 import Filter from "../Filter";
 
-const getRegularResourceType = (typeName) => [typeName, OPTSCALE_RESOURCE_TYPES.REGULAR].join(":");
+const getRegularResourceType = (typeName) => [typeName, OPTICLOUD_RESOURCE_TYPES.REGULAR].join(":");
 
 const INSTANCE = "Instance";
 export const INSTANCE_REGULAR = getRegularResourceType(INSTANCE);
@@ -33,7 +33,7 @@ class ResourceTypeFilter extends Filter {
       },
       type: {
         type: "string",
-        enum: Object.values(OPTSCALE_RESOURCE_TYPES)
+        enum: Object.values(OPTICLOUD_RESOURCE_TYPES)
       }
     }
   };
@@ -52,18 +52,18 @@ class ResourceTypeFilter extends Filter {
       <ResourceTypeLabel
         resourceInfo={{
           resourceType: filterItem.name,
-          clusterTypeId: filterItem.type === OPTSCALE_RESOURCE_TYPES.CLUSTER,
-          isEnvironment: filterItem.type === OPTSCALE_RESOURCE_TYPES.ENVIRONMENT
+          clusterTypeId: filterItem.type === OPTICLOUD_RESOURCE_TYPES.CLUSTER,
+          isEnvironment: filterItem.type === OPTICLOUD_RESOURCE_TYPES.ENVIRONMENT
         }}
       />
     );
   }
 
   static _getDisplayedValueStringRenderer(filterItem) {
-    if (filterItem.type === OPTSCALE_RESOURCE_TYPES.CLUSTER) {
+    if (filterItem.type === OPTICLOUD_RESOURCE_TYPES.CLUSTER) {
       return `${filterItem.name} (${intl.formatMessage({ id: "cluster" })})`;
     }
-    if (filterItem.type === OPTSCALE_RESOURCE_TYPES.ENVIRONMENT) {
+    if (filterItem.type === OPTICLOUD_RESOURCE_TYPES.ENVIRONMENT) {
       return `${filterItem.name} (${intl.formatMessage({ id: "SharedEnvironment" })})`;
     }
     return filterItem.name;
@@ -75,7 +75,7 @@ class ResourceTypeFilter extends Filter {
       value: INSTANCE_REGULAR,
       label: this.constructor._getDisplayedValueRenderer({
         name: INSTANCE,
-        type: OPTSCALE_RESOURCE_TYPES.REGULAR
+        type: OPTICLOUD_RESOURCE_TYPES.REGULAR
       })
     },
     {
@@ -83,7 +83,7 @@ class ResourceTypeFilter extends Filter {
       value: VOLUME_REGULAR,
       label: this.constructor._getDisplayedValueRenderer({
         name: VOLUME,
-        type: OPTSCALE_RESOURCE_TYPES.REGULAR
+        type: OPTICLOUD_RESOURCE_TYPES.REGULAR
       })
     }
   ];

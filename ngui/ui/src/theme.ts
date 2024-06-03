@@ -1,6 +1,3 @@
-// Hystax palette: https://cdn.hystax.com/Hystax/Hystax-Guideline-2020.pdf
-// Material design color tool: https://material.io/resources/color/
-
 import { common } from "@mui/material/colors";
 import { createTheme, alpha, darken, lighten } from "@mui/material/styles";
 import { isEmpty as isEmptyArray } from "utils/arrays";

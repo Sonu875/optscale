@@ -3,7 +3,7 @@ import Link from "@mui/material/Link";
 import EnabledConstraints from "components/EnabledConstraints";
 import InlineSeverityAlert from "components/InlineSeverityAlert";
 import PoolConstraintContainer from "containers/PoolConstraintContainer";
-import { DOCS_HYSTAX_RESOURCE_CONSTRAINTS } from "urls";
+import { DOCS_CIPE_RESOURCE_CONSTRAINTS } from "urls";
 import { SPACING_1, SPACING_2 } from "utils/layouts";
 
 const PoolConstraints = ({ isLoading, policies, poolId }) => (
@@ -29,7 +29,7 @@ const PoolConstraints = ({ isLoading, policies, poolId }) => (
         messageDataTestId="p_alert"
         messageValues={{
           link: (chunks) => (
-            <Link data-test-id="link_help" href={DOCS_HYSTAX_RESOURCE_CONSTRAINTS} target="_blank" rel="noopener">
+            <Link data-test-id="link_help" href={DOCS_CIPE_RESOURCE_CONSTRAINTS} target="_blank" rel="noopener">
               {chunks}
             </Link>
           )

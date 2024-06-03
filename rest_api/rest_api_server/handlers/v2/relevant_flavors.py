@@ -6,7 +6,7 @@ from rest_api.rest_api_server.controllers.relevant_flavor import (
 from rest_api.rest_api_server.handlers.v1.base_async import BaseAsyncCollectionHandler
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 GLOBAL_REGIONS = ['ap', 'eu', 'ca', 'sa', 'us', 'af', 'me']
 SUPPORTED_CLOUDS = ['aws_cnr', 'azure_cnr', 'nebius']

@@ -1,14 +1,12 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 ENV PYTHONPATH /usr/src/app/
 
 COPY keeper/requirements.txt .
 
-COPY tools/optscale_exceptions tools/optscale_exceptions
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/auth_client optscale_client/auth_client
+COPY tools/opticloud_exceptions tools/opticloud_exceptions
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/auth_client opticloud_client/auth_client
 RUN  pip install --no-cache-dir -r requirements.txt
 
 WORKDIR /usr/src/app/keeper/report_server

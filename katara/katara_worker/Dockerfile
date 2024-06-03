@@ -1,15 +1,13 @@
 FROM python:3.12.3-slim
-LABEL org.opencontainers.image.authors="Hystax"
-
 ENV PYTHONPATH /usr/src/app/
 WORKDIR /usr/src/app/
 COPY katara/katara_worker/requirements.txt .
 
 
-COPY optscale_client/config_client optscale_client/config_client
-COPY optscale_client/auth_client optscale_client/auth_client
-COPY optscale_client/rest_api_client optscale_client/rest_api_client
-COPY optscale_client/katara_client optscale_client/katara_client
+COPY opticloud_client/config_client opticloud_client/config_client
+COPY opticloud_client/auth_client opticloud_client/auth_client
+COPY opticloud_client/rest_api_client opticloud_client/rest_api_client
+COPY opticloud_client/katara_client opticloud_client/katara_client
 
 RUN pip install --no-cache-dir -r requirements.txt
 

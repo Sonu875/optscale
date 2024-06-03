@@ -10,7 +10,7 @@ import base64
 from alembic import op
 import sqlalchemy as sa
 from pymongo import MongoClient, UpdateOne
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 
 
 # revision identifiers, used by Alembic.

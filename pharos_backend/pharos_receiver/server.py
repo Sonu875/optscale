@@ -9,7 +9,7 @@ from pharos_backend.pharos_receiver.urls import urls_v2
 import pharos_backend.pharos_receiver.handlers.v2 as handlers
 
 
-import optscale_client.config_client.client
+import opticloud_client.config_client.client
 
 
 DEFAULT_PORT = 8946
@@ -37,7 +37,7 @@ def get_handlers(handler_kwargs):
 
 
 def make_app(etcd_host, etcd_port, wait=False):
-    config_cl = optscale_client.config_client.client.Client(host=etcd_host, port=etcd_port)
+    config_cl = opticloud_client.config_client.client.Client(host=etcd_host, port=etcd_port)
     if wait:
         config_cl.wait_configured()
     config_cl.tell_everybody_that_i_am_ready()

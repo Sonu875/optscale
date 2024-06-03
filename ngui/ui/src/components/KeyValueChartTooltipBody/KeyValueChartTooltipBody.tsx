@@ -4,8 +4,6 @@ import FormattedMoney from "components/FormattedMoney";
 import IconLabelGrid from "components/IconLabelGrid";
 import KeyValueLabel from "components/KeyValueLabel/KeyValueLabel";
 import { FORMATTED_MONEY_TYPES } from "utils/constants";
-
-// TODO: Check the connection between this style and the styles in the style file (https://gitlab.com/hystax/ngui/-/merge_requests/2017#note_637241676)
 const TooltipTypography = withStyles(Typography, {
   root: {
     fontSize: "0.9rem"

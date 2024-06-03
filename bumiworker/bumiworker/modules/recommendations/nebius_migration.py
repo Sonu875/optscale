@@ -3,7 +3,7 @@ import re
 import json
 from collections import OrderedDict, defaultdict
 from datetime import datetime, timedelta
-from optscale_client.insider_client.client import Client as InsiderClient
+from opticloud_client.insider_client.client import Client as InsiderClient
 from tools.cloud_adapter.clouds.nebius import Nebius, PLATFORMS
 from concurrent.futures.thread import ThreadPoolExecutor
 from bumiworker.bumiworker.modules.base import ModuleBase

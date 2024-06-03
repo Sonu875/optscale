@@ -38,7 +38,7 @@ export const kubernetesDataSourceDetails = () => (
     accountId="01234567-09f2-45ea-b4df-c56d854cda86"
     type="kubernetes_cnr"
     config={{
-      user: "optscale",
+      user: "opticloud",
       cost_model: {
         cpu_hourly_cost: 0.002,
         memory_hourly_cost: 0.001
@@ -61,7 +61,7 @@ export const alibabaDataSourceDetails = () => (
 export const googleCloudDataSourceDetails = () => (
   <DataSourceDetails
     id="01234567-e4d3-4a04-8781-4d7262b585fc"
-    accountId="optscale"
+    accountId="opticloud"
     type="gcp_cnr"
     config={{
       billing_data: {

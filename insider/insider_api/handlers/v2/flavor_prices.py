@@ -1,9 +1,9 @@
 import json
 import logging
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, UnauthorizedException, NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 from insider.insider_api.controllers.flavor_price import (
     FlavorPriceAsyncController, FamilyPriceAsyncController)

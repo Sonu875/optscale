@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     NotFoundException, FailedDependency, WrongArgumentsException)
 from rest_api.rest_api_server.controllers.base import (
     BaseController, MongoMixin, ClickHouseMixin)

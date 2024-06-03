@@ -5,7 +5,7 @@ from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerW
 from rest_api.rest_api_server.controllers.expense import CleanExpenseController
 from rest_api.rest_api_server.exceptions import Err
 
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 LOG = logging.getLogger(__name__)
 DAY_IN_SECONDS = 86400

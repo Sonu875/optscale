@@ -11,7 +11,7 @@ from keeper.report_server.controllers.event_base import EventBaseController
 from keeper.report_server.controllers.base_async import BaseAsyncControllerWrapper
 from keeper.report_server.utils import _check_filter_list
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException,
     NotFoundException,
     ForbiddenException,

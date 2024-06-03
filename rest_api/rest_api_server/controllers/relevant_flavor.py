@@ -2,11 +2,11 @@ import logging
 import requests
 import operator
 from collections import defaultdict
-from tools.optscale_exceptions.common_exc import (NotFoundException)
+from tools.opticloud_exceptions.common_exc import (NotFoundException)
 from rest_api.rest_api_server.controllers.base import BaseController
 from rest_api.rest_api_server.controllers.base_async import BaseAsyncControllerWrapper
 from concurrent.futures import ThreadPoolExecutor
-from optscale_client.insider_client.client import Client as InsiderClient
+from opticloud_client.insider_client.client import Client as InsiderClient
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import Organization
 

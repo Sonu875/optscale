@@ -10,8 +10,8 @@ from kombu.utils.debug import setup_logging
 
 from katara.katara_worker.transitions import TASKS_TRANSITIONS
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.katara_client.client import Client as KataraClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.katara_client.client import Client as KataraClient
 
 
 EXCHANGE_NAME = 'katara-tasks'

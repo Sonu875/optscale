@@ -8,7 +8,7 @@ from rest_api.rest_api_server.controllers.infrastructure.base import (
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import CloudAccount
 
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.common_exc import NotFoundException
 
 
 class RunnerStates(Enum):

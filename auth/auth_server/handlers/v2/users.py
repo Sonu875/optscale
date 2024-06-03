@@ -10,9 +10,9 @@ from auth.auth_server.handlers.v1.users import (
 from auth.auth_server.handlers.v2.base import BaseHandler as BaseHandler_v2
 from auth.auth_server.utils import ModelEncoder, run_task
 
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   ForbiddenException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 LOG = logging.getLogger(__name__)

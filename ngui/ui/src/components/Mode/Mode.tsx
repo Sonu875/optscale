@@ -6,11 +6,11 @@ import ContentBackdropLoader from "components/ContentBackdropLoader";
 import FormButtonsWrapper from "components/FormButtonsWrapper";
 import { useIsAllowed } from "hooks/useAllowedActions";
 import { isEmpty as isEmptyArray } from "utils/arrays";
-import { OPTSCALE_MODE } from "utils/constants";
+import { OPTICLOUD_MODE } from "utils/constants";
 import { SPACING_2 } from "utils/layouts";
 
 type ModeWrapperProps = {
-  option: Record<(typeof OPTSCALE_MODE)[keyof typeof OPTSCALE_MODE], boolean>;
+  option: Record<(typeof OPTICLOUD_MODE)[keyof typeof OPTICLOUD_MODE], boolean>;
   onApply: (mode: ModeWrapperProps["option"]) => void;
   isLoadingProps?: {
     isGetOrganizationOptionLoading?: boolean;
@@ -74,8 +74,8 @@ const Mode = ({ option, onApply, isLoadingProps = {} }: ModeWrapperProps) => {
   const [showApplyModeError, setShowApplyModeError] = useState(false);
 
   const [mode, setModeState] = useState({
-    [OPTSCALE_MODE.FINOPS]: option?.[OPTSCALE_MODE.FINOPS] ?? true,
-    [OPTSCALE_MODE.MLOPS]: option?.[OPTSCALE_MODE.MLOPS] ?? true
+    [OPTICLOUD_MODE.FINOPS]: option?.[OPTICLOUD_MODE.FINOPS] ?? true,
+    [OPTICLOUD_MODE.MLOPS]: option?.[OPTICLOUD_MODE.MLOPS] ?? true
   });
 
   const setMode = (value: keyof ModeWrapperProps["option"]) => {
@@ -93,8 +93,8 @@ const Mode = ({ option, onApply, isLoadingProps = {} }: ModeWrapperProps) => {
       <Stack direction="row" spacing={SPACING_2}>
         <Card
           name="mlops"
-          isSelected={mode[OPTSCALE_MODE.MLOPS]}
-          onSelect={() => setMode(OPTSCALE_MODE.MLOPS)}
+          isSelected={mode[OPTICLOUD_MODE.MLOPS]}
+          onSelect={() => setMode(OPTICLOUD_MODE.MLOPS)}
           isLoading={isGetOrganizationOptionLoading}
           messageIds={["mode.mlops.1", "mode.mlops.2", "mode.mlops.3", "mode.mlops.4", "mode.mlops.5", "mode.mlops.6"]}
           disabled={!isApplyModeAllowed}
@@ -102,16 +102,16 @@ const Mode = ({ option, onApply, isLoadingProps = {} }: ModeWrapperProps) => {
         <Divider orientation="vertical" flexItem />
         <Card
           name="finops"
-          isSelected={mode[OPTSCALE_MODE.FINOPS]}
+          isSelected={mode[OPTICLOUD_MODE.FINOPS]}
           isLoading={isGetOrganizationOptionLoading}
-          onSelect={() => setMode(OPTSCALE_MODE.FINOPS)}
+          onSelect={() => setMode(OPTICLOUD_MODE.FINOPS)}
           messageIds={["mode.finops.1", "mode.finops.2", "mode.finops.3", "mode.finops.4", "mode.finops.5", "mode.finops.6"]}
           disabled={!isApplyModeAllowed}
         />
       </Stack>
       {showApplyModeError && (
         <FormHelperText error>
-          <FormattedMessage id="applyOptscaleModeError" />
+          <FormattedMessage id="applyOPTICLOUDModeError" />
         </FormHelperText>
       )}
       {isApplyModeAllowed && (

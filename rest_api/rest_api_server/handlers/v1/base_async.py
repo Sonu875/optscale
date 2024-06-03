@@ -2,8 +2,8 @@ import logging
 
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.handlers.v1.base import BaseHandler
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import NotFoundException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import NotFoundException
 from rest_api.rest_api_server.utils import run_task
 
 LOG = logging.getLogger(__name__)

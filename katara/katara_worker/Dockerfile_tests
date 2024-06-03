@@ -1,7 +1,5 @@
 ARG BUILDTAG=build
 FROM katara_worker:${BUILDTAG}
-LABEL org.opencontainers.image.authors="Hystax"
-
 WORKDIR /usr/src/app/
 
 

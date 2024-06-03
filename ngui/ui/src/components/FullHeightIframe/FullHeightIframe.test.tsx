@@ -8,9 +8,9 @@ it("renders without crashing", () => {
   root.render(
     <TestProvider>
       <FullHeightIframe
-        source="https://hystax.com"
+        source=""
         iframeTitleMessageId="title"
-        fallbackUrl="https://hystax.com"
+        fallbackUrl=""
         fallbackMessageId="unableToLoad"
         fallbackButtonMessageId="proceedToFinopsWebsite"
       />

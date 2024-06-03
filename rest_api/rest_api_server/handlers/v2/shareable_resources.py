@@ -1,9 +1,9 @@
 import json
 from datetime import datetime, timezone
 from rest_api.rest_api_server.controllers.shareable_resource import ShareableBookingAsyncController
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   ForbiddenException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.handlers.v2.base import BaseHandler
 from rest_api.rest_api_server.handlers.v1.base_async import (
@@ -11,7 +11,7 @@ from rest_api.rest_api_server.handlers.v1.base_async import (
 from rest_api.rest_api_server.handlers.v1.base import BaseAuthHandler
 from rest_api.rest_api_server.models.enums import RolePurposes
 from rest_api.rest_api_server.utils import run_task, ModelEncoder, check_int_attribute
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 
 
 class ShareableBookingBaseAsyncHandler(BaseAuthHandler, BaseHandler):
@@ -21,8 +21,8 @@ class ShareableBookingBaseAsyncHandler(BaseAuthHandler, BaseHandler):
     async def check_booking_permission(self, resource_type, resource_id):
         user_id = await self.check_self_auth()
         user_roles = self.get_roles_info(
-            [user_id], [RolePurposes.optscale_engineer.value,
-                        RolePurposes.optscale_manager.value])
+            [user_id], [RolePurposes.opticloud_engineer.value,
+                        RolePurposes.opticloud_manager.value])
         user_purposes = {user_role.get('role_purpose')
                          for user_role in user_roles}
         cloud_resource_id = resource_id
@@ -34,8 +34,8 @@ class ShareableBookingBaseAsyncHandler(BaseAuthHandler, BaseHandler):
                 raise OptHTTPError.from_opt_exception(404, ex)
             cloud_resource_id = shareable_booking.resource_id
         is_admin_permission = True
-        if (RolePurposes.optscale_manager.value not in user_purposes and
-                RolePurposes.optscale_engineer.value in user_purposes):
+        if (RolePurposes.opticloud_manager.value not in user_purposes and
+                RolePurposes.opticloud_engineer.value in user_purposes):
             is_admin_permission = False
             await self.check_permissions(
                 'MANAGE_OWN_RESOURCES', 'cloud_resource', cloud_resource_id)

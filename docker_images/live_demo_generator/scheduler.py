@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from kombu import Connection as QConnection, Exchange
 from kombu.pools import producers
 from pymongo import MongoClient
-from optscale_client.config_client.client import Client as ConfigClient
+from opticloud_client.config_client.client import Client as ConfigClient
 
 LOG = logging.getLogger(__name__)
 DEMO_LIFETIME_DAYS = 2

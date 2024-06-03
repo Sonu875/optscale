@@ -7,7 +7,7 @@ from sqlalchemy.sql import and_, or_, exists
 from pymongo import UpdateOne
 from pymongo.errors import BulkWriteError
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException, FailedDependency)
 from rest_api.rest_api_server.controllers.base import (
     BaseController, MongoMixin, ResourceFormatMixin)

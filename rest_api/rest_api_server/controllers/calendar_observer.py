@@ -11,7 +11,7 @@ from rest_api.rest_api_server.models.models import (
     Organization, ShareableBooking, CalendarSynchronization)
 
 from rest_api.google_calendar_client.client import CalendarException
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   FailedDependency)
 
 LOG = logging.getLogger(__name__)

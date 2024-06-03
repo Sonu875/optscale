@@ -2,7 +2,7 @@ import uuid
 from unittest.mock import patch
 from datetime import datetime
 import mongomock
-import optscale_client.insider_client.client as insider_client
+import opticloud_client.insider_client.client as insider_client
 from insider.insider_api.tests.unittests.test_api_base import TestBase
 
 

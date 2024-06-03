@@ -10,7 +10,7 @@ from tools.cloud_adapter.clouds.nebius import Nebius
 from tools.cloud_adapter.clouds.gcp import Gcp
 from tools.cloud_adapter.exceptions import (RegionNotFoundException,
                                             ForbiddenException)
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, ForbiddenException as OptForbidden)
 from insider.insider_api.controllers.base import (BaseController,
                                                   BaseAsyncControllerWrapper,

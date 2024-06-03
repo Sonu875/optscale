@@ -13,7 +13,7 @@ import cryptocode
 import etcd
 import uuid
 from alembic import op
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 from sqlalchemy import select, update
 from sqlalchemy.orm import Session
 from sqlalchemy.sql import table, column

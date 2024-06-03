@@ -10,8 +10,8 @@ from rest_api.rest_api_server.utils import (
     run_task, ModelEncoder, check_string_attribute, check_list_attribute,
     check_dict_attribute
 )
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.exceptions import Err
 
 

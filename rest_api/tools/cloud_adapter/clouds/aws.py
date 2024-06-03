@@ -26,7 +26,7 @@ from tools.cloud_adapter.model import *
 from tools.cloud_adapter.utils import CloudParameter, gbs_to_bytes
 
 LOG = logging.getLogger(__name__)
-DEFAULT_REPORT_NAME = 'optscale-report'
+DEFAULT_REPORT_NAME = 'opticloud-report'
 DEFAULT_BUCKET_PREFIX = 'reports'
 DEFAULT_CLIENT_CONFIG = CoreConfig(
     connect_timeout=20, retries={'max_attempts': 3}

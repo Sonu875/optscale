@@ -8,7 +8,7 @@ from auth.auth_server.controllers.base_async import BaseAsyncControllerWrapper
 from auth.auth_server.exceptions import Err
 from auth.auth_server.models.models import Assignment, Role
 from auth.auth_server.utils import check_action
-from tools.optscale_exceptions.common_exc import (ForbiddenException,
+from tools.opticloud_exceptions.common_exc import (ForbiddenException,
                                                   NotFoundException,
                                                   WrongArgumentsException)
 

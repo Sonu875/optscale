@@ -14,9 +14,9 @@ from rest_api.rest_api_server.utils import (
     SupportedFiltersMixin, check_int_attribute, ModelEncoder, run_task,
     check_string_attribute)
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 HOUR_IN_SECONDS = 3600
 

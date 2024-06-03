@@ -44,9 +44,9 @@ class ColumnPermissions(Enum):
 
 
 class RolePurpose(enum.Enum):
-    optscale_member = 'optscale_member'
-    optscale_engineer = 'optscale_engineer'
-    optscale_manager = 'optscale_manager'
+    opticloud_member = 'opticloud_member'
+    opticloud_engineer = 'opticloud_engineer'
+    opticloud_manager = 'opticloud_manager'
 
 
 class Base(object):

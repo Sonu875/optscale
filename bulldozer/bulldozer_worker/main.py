@@ -10,10 +10,10 @@ from kombu.mixins import ConsumerProducerMixin
 
 from bulldozer.bulldozer_worker.transitions import TRANSITIONS
 
-from optscale_client.config_client.client import Client as ConfigClient
-from optscale_client.rest_api_client.client_v2 import Client as RestClient
-from optscale_client.bulldozer_client.client import Client as BulldozerClient
-from optscale_client.arcee_client.client import Client as ArceeClient
+from opticloud_client.config_client.client import Client as ConfigClient
+from opticloud_client.rest_api_client.client_v2 import Client as RestClient
+from opticloud_client.bulldozer_client.client import Client as BulldozerClient
+from opticloud_client.arcee_client.client import Client as ArceeClient
 
 
 LOG = logging.getLogger(__name__)

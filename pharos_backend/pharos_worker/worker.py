@@ -7,7 +7,7 @@ from kombu.mixins import ConsumerProducerMixin
 from kombu.utils.debug import setup_logging
 
 
-import optscale_client.config_client.client
+import opticloud_client.config_client.client
 
 EXCHANGE_NAME = 'pharos-tasks'
 QUEUE_NAME = 'process-logs'
@@ -41,7 +41,7 @@ class Worker(ConsumerProducerMixin):
 
 if __name__ == '__main__':
     setup_logging(loglevel='INFO', loggers=[''])
-    config_cl = optscale_client.config_client.client.Client(
+    config_cl = opticloud_client.config_client.client.Client(
         host=os.environ.get('HX_ETCD_HOST', DEFAULT_ETCD_HOST),
         port=int(os.environ.get('HX_ETCD_PORT', DEFAULT_ETCD_PORT))
     )

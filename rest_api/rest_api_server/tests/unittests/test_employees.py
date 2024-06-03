@@ -8,7 +8,7 @@ from rest_api.rest_api_server.models.db_factory import DBFactory, DBType
 from rest_api.rest_api_server.models.db_base import BaseDB
 from rest_api.rest_api_server.models.models import Employee, OrganizationLimitHit
 from sqlalchemy import and_
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 
 class TestEmployeeApi(TestProfilingBase):

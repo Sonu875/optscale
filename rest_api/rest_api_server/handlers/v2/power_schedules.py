@@ -8,8 +8,8 @@ from rest_api.rest_api_server.controllers.power_schedule import (
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.utils import (
     ModelEncoder, run_task, check_list_attribute)
-from tools.optscale_exceptions.http_exc import OptHTTPError
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException, NotFoundException)
 
 

@@ -9,7 +9,7 @@ from rest_api.rest_api_server.controllers.cloud_resource import CloudResourceCon
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.models import Organization, CloudAccount
 
-from tools.optscale_exceptions.common_exc import (FailedDependency,
+from tools.opticloud_exceptions.common_exc import (FailedDependency,
                                                   NotFoundException)
 
 ENABLE_ACTION = 'activate'

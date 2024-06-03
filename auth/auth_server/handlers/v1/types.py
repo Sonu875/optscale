@@ -1,9 +1,9 @@
 import json
 import logging
 
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   UnauthorizedException)
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 from auth.auth_server.controllers.type import TypeAsyncController
 from auth.auth_server.handlers.v1.base import (BaseAsyncAuthCollectionHandler,
                                                BaseAsyncAuthItemHandler)

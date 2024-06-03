@@ -6,7 +6,7 @@ import ActionBar from "components/ActionBar";
 import ClusterTypesTable from "components/ClusterTypesTable";
 import InlineSeverityAlert from "components/InlineSeverityAlert";
 import PageContentWrapper from "components/PageContentWrapper";
-import { DOCS_HYSTAX_CLUSTERS, RESOURCES } from "urls";
+import { DOCS_CIPE_CLUSTERS, RESOURCES } from "urls";
 import { SPACING_2 } from "utils/layouts";
 
 const actionBarDefinition = {
@@ -27,7 +27,7 @@ const ExplanationMessage = () => (
     messageDataTestId="p_clusters_list"
     messageValues={{
       link: (chunks) => (
-        <Link data-test-id="link_read_more" href={DOCS_HYSTAX_CLUSTERS} target="_blank" rel="noopener">
+        <Link data-test-id="link_read_more" href={DOCS_CIPE_CLUSTERS} target="_blank" rel="noopener">
           {chunks}
         </Link>
       )

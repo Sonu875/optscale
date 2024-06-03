@@ -4,7 +4,7 @@ import datetime
 
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.sql import and_
-from tools.optscale_exceptions.common_exc import (NotFoundException,
+from tools.opticloud_exceptions.common_exc import (NotFoundException,
                                                   WrongArgumentsException)
 from rest_api.rest_api_server.controllers.pool import PoolController
 from rest_api.rest_api_server.exceptions import Err

@@ -6,7 +6,7 @@ from sqlalchemy import (Integer, String, TypeDecorator, TEXT, LargeBinary,
                         Boolean, Enum, BigInteger, Float as FloatAlchemy)
 
 from tools.cloud_adapter.model import ResourceTypes
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.models.enums import (
     CloudTypes, AssignmentRequestStatuses,

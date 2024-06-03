@@ -17,8 +17,8 @@ branch_labels = None
 depends_on = None
 
 
-role_purposes = sa.Enum("optscale_member", "optscale_engineer",
-                        "optscale_manager")
+role_purposes = sa.Enum("opticloud_member", "opticloud_engineer",
+                        "opticloud_manager")
 
 
 def upgrade():

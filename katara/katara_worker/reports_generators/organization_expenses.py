@@ -57,7 +57,7 @@ class OrganizationExpenses(Base):
         return {
             'email': [self.report_data['user_email']],
             'template_type': 'weekly_expense_report',
-            'subject': 'OptScale weekly expense report',
+            'subject': 'opticloud weekly expense report',
             'template_params': {
                 'texts': {
                     'user': self.report_data,

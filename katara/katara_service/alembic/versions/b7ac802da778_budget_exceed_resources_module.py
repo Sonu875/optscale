@@ -78,7 +78,7 @@ def upgrade():
         session.execute(ins_stmt)
 
         recipients_stmt = select([recipient_table]).where(
-            recipient_table.c.role_purpose == "optscale_engineer"
+            recipient_table.c.role_purpose == "opticloud_engineer"
         )
         budget_exceed_resources_stmt = select([report_table]).where(
             report_table.c.module_name == MODULE_NAME
@@ -117,7 +117,7 @@ def downgrade():
 
     try:
         recipients_stmt = select([recipient_table]).where(
-            recipient_table.c.role_purpose == "optscale_engineer"
+            recipient_table.c.role_purpose == "opticloud_engineer"
         )
         engineers = session.execute(recipients_stmt)
         engineers_ids = list(map(lambda x: x["id"], engineers))

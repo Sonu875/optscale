@@ -7,7 +7,7 @@ import Button from "components/Button";
 import ButtonLoader from "components/ButtonLoader";
 import CopyText from "components/CopyText";
 import Input from "components/Input";
-import { DOCS_HYSTAX_OPTSCALE } from "urls";
+import { DOCS_CIPE_OPTICLOUD } from "urls";
 
 const CALENDAR_ID = "calendarId";
 
@@ -33,9 +33,9 @@ const ConnectGoogleCalendarForm = ({ serviceAccount, onCancel, onSubmit, isLoadi
       </Box>
       <Box mb={2}>
         <Box mb={1}>
-          <Typography>
+          {/* <Typography>
             <FormattedMessage
-              id="toConnectGoogleCalendarToOptScale"
+              id="toConnectGoogleCalendarToOptiCloud"
               values={{
                 br: <br />,
                 strong: (chunks) => <strong>{chunks}</strong>,
@@ -46,7 +46,7 @@ const ConnectGoogleCalendarForm = ({ serviceAccount, onCancel, onSubmit, isLoadi
                 )
               }}
             />
-          </Typography>
+          </Typography> */}
         </Box>
         <Input
           required
@@ -67,7 +67,7 @@ const ConnectGoogleCalendarForm = ({ serviceAccount, onCancel, onSubmit, isLoadi
             id="ifYouNeedMoreDescription"
             values={{
               link: (chunks) => (
-                <Link data-test-id="link_read_more" href={DOCS_HYSTAX_OPTSCALE} target="_blank" rel="noopener">
+                <Link data-test-id="link_read_more" href={DOCS_CIPE_OPTICLOUD} target="_blank" rel="noopener">
                   {chunks}
                 </Link>
               )

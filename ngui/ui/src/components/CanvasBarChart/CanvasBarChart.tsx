@@ -317,22 +317,6 @@ const CanvasBarChart = ({
         data={data}
         keys={keys}
         ref={canvasRef}
-        /*
-            According to discussions on the github, with `round: true` the chart allocates a bit blank space
-            for each band from the left and from the right and if there are a lot of bands than this
-            small unused space grows quite large
-            Source
-              * https://github.com/plouc/nivo/issues/929#issuecomment-1192271248
-
-            See also:
-              * https://github.com/plouc/nivo/issues/2019
-              * https://github.com/plouc/nivo/issues/840
-              * https://github.com/plouc/nivo/issues/929
-              * https://github.com/plouc/nivo/pull/1282
-
-            See screenshots with comparisons between round `false` and `true` on large data sets
-              * https://gitlab.com/hystax/ngui/-/merge_requests/2902#note_1091122047
-        */
         indexScale={{ type: "band", round: false }}
         indexBy={indexBy}
         margin={margin}

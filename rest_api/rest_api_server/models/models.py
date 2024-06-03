@@ -12,7 +12,7 @@ from sqlalchemy.orm import validates
 
 from tools.cloud_adapter.cloud import SUPPORTED_BILLING_TYPES
 from tools.cloud_adapter.model import ResourceTypes
-from tools.optscale_exceptions.common_exc import WrongArgumentsException
+from tools.opticloud_exceptions.common_exc import WrongArgumentsException
 from rest_api.rest_api_server.exceptions import Err
 from rest_api.rest_api_server.utils import (
     ModelEncoder, gen_id, now_timestamp, encode_string, decode_config,
@@ -644,7 +644,7 @@ class InviteAssignment(Base, ImmutableMixin, ValidatorMixin):
     scope_id = Column(Uuid('scope_id'), nullable=False, primary_key=True)
     scope_type = Column(InviteAssignmentScopeType,
                         nullable=False, info=ColumnPermissions.create_only)
-    purpose = Column(RolePurpose, default=RolePurposes.optscale_member,
+    purpose = Column(RolePurpose, default=RolePurposes.opticloud_member,
                      nullable=False, info=ColumnPermissions.full)
     invite = relationship(
         "Invite", backref="invite_assignments",

@@ -1,13 +1,13 @@
 import json
 
-from tools.optscale_exceptions.common_exc import (
+from tools.opticloud_exceptions.common_exc import (
     WrongArgumentsException,
     NotFoundException,
     ConflictException,
     ForbiddenException,
     UnauthorizedException
 )
-from tools.optscale_exceptions.http_exc import OptHTTPError
+from tools.opticloud_exceptions.http_exc import OptHTTPError
 
 from katara.katara_service.controllers.task import TaskAsyncController
 from katara.katara_service.exceptions import Err

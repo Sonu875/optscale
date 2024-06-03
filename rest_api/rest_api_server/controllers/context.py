@@ -8,7 +8,7 @@ from rest_api.rest_api_server.models.models import (
     Organization, CloudAccount, Employee, Pool, ReportImport, PoolAlert,
     PoolPolicy, ResourceConstraint, Rule, ShareableBooking, Webhook,
     OrganizationConstraint, OrganizationBI, OrganizationGemini, PowerSchedule)
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   NotFoundException)
 from rest_api.rest_api_server.utils import tp_executor_context
 

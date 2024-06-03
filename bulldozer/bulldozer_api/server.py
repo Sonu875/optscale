@@ -17,7 +17,7 @@ from bulldozer.bulldozer_api.producer import TaskProducer
 from bulldozer.bulldozer_api.name_generator import NameGenerator
 from bulldozer.bulldozer_api.utils import permutation
 
-from optscale_client.aconfig_cl.aconfig_cl import AConfigCl
+from opticloud_client.aconfig_cl.aconfig_cl import AConfigCl
 
 
 app = Sanic("bulldozer")

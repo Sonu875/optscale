@@ -12,10 +12,10 @@ from auth.auth_server.auth_token.macaroon import MacaroonToken
 from auth.auth_server.utils import (hash_password, popkey,
                                     raise_not_provided_error)
 
-from tools.optscale_exceptions.common_exc import (WrongArgumentsException,
+from tools.opticloud_exceptions.common_exc import (WrongArgumentsException,
                                                   ForbiddenException,
                                                   NotFoundException)
-from optscale_client.config_client.client import etcd
+from opticloud_client.config_client.client import etcd
 
 LOG = logging.getLogger(__name__)
 DEFAULT_TOKEN_EXPIRATION = 168
@@ -90,7 +90,7 @@ class TokenController(BaseController):
         now = datetime.datetime.utcnow()
         macaroon_token = MacaroonToken(user.salt, user.id).create(
             xstr(kwargs.get('register', False)),
-            xstr(kwargs.get('provider', 'optscale'))
+            xstr(kwargs.get('provider', 'opticloud'))
         )
         params = {
             'user_id': user.id,

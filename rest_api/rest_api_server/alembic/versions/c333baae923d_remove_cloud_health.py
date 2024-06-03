@@ -9,7 +9,7 @@ import os
 from alembic import op
 import sqlalchemy as sa
 
-from optscale_client.config_client.client import Client as EtcdClient
+from opticloud_client.config_client.client import Client as EtcdClient
 from pymongo import MongoClient
 from kombu import Connection as QConnection, Exchange, Queue
 

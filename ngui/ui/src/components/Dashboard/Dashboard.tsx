@@ -14,7 +14,7 @@ import RecommendationsCardContainer from "containers/RecommendationsCardContaine
 import TopResourcesExpensesCardContainer from "containers/TopResourcesExpensesCardContainer";
 import { useApiData } from "hooks/useApiData";
 import { useIsUpMediaQuery } from "hooks/useMediaQueries";
-import { EMAIL_SUPPORT, DOCS_HYSTAX_OPTSCALE, SHOW_POLICY_QUERY_PARAM } from "urls";
+import { EMAIL_SUPPORT, DOCS_CIPE_OPTICLOUD, SHOW_POLICY_QUERY_PARAM } from "urls";
 import { ENVIRONMENT } from "utils/constants";
 import { getQueryParams, removeQueryParam } from "utils/network";
 import DashboardMocked from "./DashboardMocked";
@@ -53,26 +53,26 @@ const Dashboard = () => {
 
   return (
     <>
-      <Mocked mock={<DashboardMocked />} backdropMessageType={MESSAGE_TYPES.DASHBOARD}>
+      {/* <Mocked mock={<DashboardMocked />} backdropMessageType={MESSAGE_TYPES.DASHBOARD}>
         <PageContentWrapper>
           <DashboardGridLayout {...dashboardGridItems} />
         </PageContentWrapper>
-      </Mocked>
-      <AlertDialog
+      </Mocked> */}
+      {/* <AlertDialog
         show={firstTimeOpen}
         dataTestIds={{
           title: "lbl_privacy_policy",
           paper: "window_privacy_policy",
           button: "btn_proceed"
         }}
-        header={<FormattedMessage id="optScalePrivacyPolicy" />}
+        header={<FormattedMessage id="optiCloudPrivacyPolicy" />}
         message={
           <FormattedMessage
             id="privacyWarning"
             values={{
               email: <MailTo email={EMAIL_SUPPORT} text={EMAIL_SUPPORT} />,
               docs: (chunks) => (
-                <Link target="_blank" href={DOCS_HYSTAX_OPTSCALE} data-test-id="link_documentation">
+                <Link target="_blank" href={DOCS_CIPE_OPTICLOUD} data-test-id="link_documentation">
                   {chunks}
                 </Link>
               ),
@@ -84,9 +84,9 @@ const Dashboard = () => {
             }}
           />
         }
-        buttonMessageId="proceedToOptScale"
+        buttonMessageId="proceedToOptiCloud"
         onClose={() => closeAlert(SHOW_POLICY_QUERY_PARAM)}
-      />
+      /> */}
     </>
   );
 };
